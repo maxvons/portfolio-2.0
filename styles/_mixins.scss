@@ -86,4 +86,17 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  li {
+    display: block;
+  }
+}
+
+@mixin resetButton() {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
 }
