@@ -1,87 +1,77 @@
-@mixin lightTheme() {
+@mixin light-theme() {
+  // Primary and secondary color variations.
+  $primary-color: #3300FF;
+  $primary-color-hover: #3300FF;
+  $secondary-color: #E30053;
+  $secondary-color-hover: #E30053;
 
-    // Primary and secondary color variations.
-    $primary-color: #3300FF;
-    $primary-color-hover: #3300FF;
-    $secondary-color: #E30053;
-    $secondary-color-hover: #E30053;
+  // Background colors.
+  $background-color-primary: #FFFFFF;
+  $background-color-secondary: #F4F5F7;
+  $background-color-card: #FFFFFF;
+  $background-color-button-primary: #231D3C;
+  $background-color-button-primary-hover: #231D3C;
+  $background-color-navbar: #FFFFFF; /* TODO: Fill out */
 
-    // Background colors.
-    $background-color-primary: #FFFFFF;
-    $background-color-secondary: #F4F5F7;
-    $background-color-card: #FFFFFF;
-    $background-color-button-primary: #231D3C;
-    $background-color-button-primary-hover: #231D3C;
-    $background-color-navbar: #FFFFFF; /* TODO: Fill out */
+  // Text colors.
+  $text-color-emhasis: #231D3C;
+  $text-color-primary: #534F61;
+  $text-color-secondary: #717077;
 
-    // Text colors.
-    $text-color-emhasis: #231D3C;
-    $text-color-primary: #534F61;
-    $text-color-secondary: #717077;
+  // Misc colors.
+  $border-color-card: #EBE7FF;
+  $divider-color: #FFFFFF;
 
-    // Misc colors.
-    $border-color-card: #EBE7FF;
-    $divider-color: #FFFFFF;
-
-    // Shadows.
-    $shadow-image-large: 0px 12px 30px rgba(106, 106, 106, 0.2);
-    $shadow-image-medium: 0px 10px 25px rgba(106, 106, 106, 0.2);
-
-    $shadow-card-large: 0px 8px 20px rgba(106, 106, 106, 0.2);
-    $shadow-card-large-hover: 0px 8px 20px rgba(106, 106, 106, 0.2);
-    $shadow-card-large-active: 0px 8px 20px rgba(106, 106, 106, 0.2);
-
-    $shadow-card-medium: 0px 6px 15px rgba(106, 106, 106, 0.2);
-    $shadow-card-medium-hover: 0px 6px 15px rgba(106, 106, 106, 0.2);
-    $shadow-card-medium-focus: 0px 6px 15px rgba(106, 106, 106, 0.2);
-
-    $shadow-button: 0px 6px 15px rgba(106, 106, 106, 0.2);
-    $shadow-button-hover: 0px 6px 15px rgba(106, 106, 106, 0.2);
-    $shadow-button-active: 0px 6px 15px rgba(106, 106, 106, 0.2);
-
-    $shadow-toggle: inset 0 4px 10px rgba(106, 106, 106, 0.2);
+  // Shadows.
+  $shadow-image-large: 0 12px 30px rgb(106 106 106 / 20%);
+  $shadow-image-medium: 0 10px 25px rgb(106 106 106 / 20%);
+  $shadow-card-large: 0 8px 20px rgb(106 106 106 / 20%);
+  $shadow-card-large-hover: 0 8px 20px rgb(106 106 106 / 20%);
+  $shadow-card-large-active: 0 8px 20px rgb(106 106 106 / 20%);
+  $shadow-card-medium: 0 6px 15px rgb(106 106 106 / 20%);
+  $shadow-card-medium-hover: 0 6px 15px rgb(106 106 106 / 20%);
+  $shadow-card-medium-focus: 0 6px 15px rgb(106 106 106 / 20%);
+  $shadow-button: 0 6px 15px rgb(106 106 106 / 20%);
+  $shadow-button-hover: 0 6px 15px rgb(106 106 106 / 20%);
+  $shadow-button-active: 0 6px 15px rgb(106 106 106 / 20%);
+  $shadow-toggle: inset 0 4px 10px rgb(106 106 106 / 20%);
 }
 
-@mixin darkTheme() {
+@mixin dark-theme() {
+  // Primary and secondary color variations.
+  $primary-color: #B495FF;
+  $primary-color-hover: #B495FF;
+  $secondary-color: #F38AA8;
+  $secondary-color-hover: #F38AA8;
 
-    // Primary and secondary color variations.
-    $primary-color: #B495FF;
-    $primary-color-hover: #B495FF;
-    $secondary-color: #F38AA8;
-    $secondary-color-hover: #F38AA8;
+  // Background colors.
+  $background-color-primary: #151125;
+  $background-color-card: #211D30;
+  $background-color-button-primary: #211D30;
+  $background-color-button-primary-hover: #211D30;
+  $background-color-toggle: #444151;
+  $background-color-navbar: #151125; /* TODO: Fill out */
 
-    // Background colors.
-    $background-color-primary: #151125;
-    $background-color-card: #211D30;
-    $background-color-button-primary: #211D30;
-    $background-color-button-primary-hover: #211D30;
-    $background-color-toggle: #444151;
-    $background-color-navbar: #151125; /* TODO: Fill out */
+  // Text colors.
+  $text-color-emhasis: #FBFAFF;
+  $text-color-primary: #B9B7C0;
+  $text-color-secondary: #8B8894;
 
-    // Text colors.
-    $text-color-emhasis: #FBFAFF;
-    $text-color-primary: #B9B7C0;
-    $text-color-secondary: #8B8894;
+  // Misc colors.
+  $border-color-card: #2C283A;
+  $divider-color: #2C283A;
 
-    // Misc colors.
-    $border-color-card: #2C283A;
-    $divider-color: #2C283A;
-
-    // Shadows.
-    $shadow-image-large: none;
-    $shadow-image-medium: none;
-
-    $shadow-card-large: none;
-    $shadow-card-large-hover: none;
-    $shadow-card-large-active: none;
-
-    $shadow-card-medium: none;
-    $shadow-card-medium-hover: none;
-    $shadow-card-medium-focus: none;
-
-    $shadow-button: none;
-    $shadow-button-hover: none;
-    $shadow-button-active: none;
-
-    $shadow-toggle: inset 0 4px 10px rgba(21, 17, 37, 0.4);
+  // Shadows.
+  $shadow-image-large: none;
+  $shadow-image-medium: none;
+  $shadow-card-large: none;
+  $shadow-card-large-hover: none;
+  $shadow-card-large-active: none;
+  $shadow-card-medium: none;
+  $shadow-card-medium-hover: none;
+  $shadow-card-medium-focus: none;
+  $shadow-button: none;
+  $shadow-button-hover: none;
+  $shadow-button-active: none;
+  $shadow-toggle: inset 0 4px 10px rgb(21 17 37 / 40%);
 }
