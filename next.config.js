@@ -4,7 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   sassOptions: {
     prependData: `@import "variables"; @import "mixins";`,
-  }
-}
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
