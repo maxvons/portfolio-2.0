@@ -1,0 +1,76 @@
+// Borders.
+$image-border: 4px solid #A9AAB7;
+
+// Misc.
+$max-width: 1200px;
+$max-width-input: 500px;
+$max-width-input-text: 500px;
+$max-width-input-date: 200px;
+$max-width-input-date-desktop: 250px;
+$max-width-input-time: 120px;
+$max-width-input-time-desktop: 150px;
+$max-width-input-number: 100px;
+$max-width-button: 500px;
+$max-width-card: 500px;
+$page-width-mobile: 90%;
+$page-width-desktop: 80%;
+$img-height-card: 350px;
+$background-blur: 8px;
+$animation-duration: 0.3s;
+
+// Border radii.
+$border-radius-regular: 20px;
+$border-radius-inside-card: 12px;
+$border-radius-round: 50%;
+
+// Font families.
+$header-font: "Open Sauce Sans", sans-serif;
+$primary-font: "Recursive", sans-serif;
+$mono-font: "Space Mono", monospace;
+
+// Font weights.
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+/* Mobile font sizes. */
+$font-size-title: 4rem;
+$font-size-heading: 1.875rem;
+$font-size-primary: 1.125rem;
+$font-size-secondary: 0.875rem;
+$font-size-tertiary: 0.75rem;
+
+/* Desktop font sizes. */
+$font-size-title-desktop: 8.75rem;
+$font-size-heading-desktop: 3rem;
+$font-size-primary-desktop: 1.375rem;
+$font-size-secondary-desktop: 1.125rem;
+$font-size-tertiary-desktop: 0.875rem;
+
+// Line heights.
+$line-height-title: 1;
+$line-height-sub-title: 1.2;
+$line-height-heading: 1;
+$line-height-text: 1.5;
+
+// Letter spacing
+$letter-spacing-title: -0.05em;
+$letter-spacing-header: -0.05em;
+$letter-spacing-uppercase: 0.15em;
+
+// Spacers
+$spacer-mini: 0.25rem;
+$spacer-very-small: 0.5rem;
+$spacer-very-small-plus: 0.75rem;
+$spacer-small: 1rem;
+$spacer-small-plus: 1.5rem;
+$spacer-medium: 2rem;
+$spacer-medium-plus: 3rem;
+$spacer-large: 4rem;
+$spacer-large-plus: 6rem;
+$spacer-very-large: 8rem;
+
+// Break points.
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
