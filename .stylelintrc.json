@@ -1,0 +1,19 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "indentation": 2,
+    "color-no-invalid-hex": true,
+    "font-family-no-missing-generic-family-keyword": true,
+    "property-no-unknown": true,
+    "block-no-empty": true,
+    "selector-pseudo-class-no-unknown": true,
+    "selector-type-no-unknown": true,
+    "color-hex-length": "long",
+    "font-weight-notation": "numeric",
+    "declaration-no-important": true,
+    "color-named": "never",
+    "color-hex-case": "upper",
+    "order/properties-alphabetical-order": true
+  }
+}
