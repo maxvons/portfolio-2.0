@@ -1,3 +1,13 @@
+:root {
+  /* The default theme. */
+  @include lightTheme();
+}
+
+[data-theme="dark"] {
+  /* The dark theme. */
+  @include darkTheme();
+}
+
 html,
 body {
   padding: 0;
