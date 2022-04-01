@@ -1,0 +1,17 @@
+.wrapper {
+  align-items: center;
+  background-color: $background-color-primary;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: $max-width;
+  width: $page-width;
+
+  @include desktop {
+    width: $page-width-desktop;
+  }
+}

@@ -1,3 +1,40 @@
+// Primary and secondary color variations.
+$primary-color: #3300FF;
+$primary-color-hover: #3300FF;
+$secondary-color: #E30053;
+$secondary-color-hover: #E30053;
+
+// Background colors.
+$background-color-primary: #FFFFFF;
+$background-color-secondary: #F4F5F7;
+$background-color-card: #FFFFFF;
+$background-color-button-primary: #231D3C;
+$background-color-button-primary-hover: #231D3C;
+$background-color-navbar: #FFFFFF; /* TODO: Fill out */
+
+// Text colors.
+$text-color-emhasis: #231D3C;
+$text-color-primary: #534F61;
+$text-color-secondary: #717077;
+
+// Misc colors.
+$border-color-card: #EBE7FF;
+$divider-color: #FFFFFF;
+
+// Shadows.
+$shadow-image-large: 0 12px 30px rgb(106 106 106 / 20%);
+$shadow-image-medium: 0 10px 25px rgb(106 106 106 / 20%);
+$shadow-card-large: 0 8px 20px rgb(106 106 106 / 20%);
+$shadow-card-large-hover: 0 8px 20px rgb(106 106 106 / 20%);
+$shadow-card-large-active: 0 8px 20px rgb(106 106 106 / 20%);
+$shadow-card-medium: 0 6px 15px rgb(106 106 106 / 20%);
+$shadow-card-medium-hover: 0 6px 15px rgb(106 106 106 / 20%);
+$shadow-card-medium-focus: 0 6px 15px rgb(106 106 106 / 20%);
+$shadow-button: 0 6px 15px rgb(106 106 106 / 20%);
+$shadow-button-hover: 0 6px 15px rgb(106 106 106 / 20%);
+$shadow-button-active: 0 6px 15px rgb(106 106 106 / 20%);
+$shadow-toggle: inset 0 4px 10px rgb(106 106 106 / 20%);
+
 // Borders.
 $image-border: 4px solid #A9AAB7;
 
@@ -12,7 +49,7 @@ $max-width-input-time-desktop: 150px;
 $max-width-input-number: 100px;
 $max-width-button: 500px;
 $max-width-card: 500px;
-$page-width-mobile: 90%;
+$page-width: 90%;
 $page-width-desktop: 80%;
 $img-height-card: 350px;
 $background-blur: 8px;

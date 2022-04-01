@@ -1,11 +1,11 @@
 :root {
   /* The default theme. */
-  @include lightTheme;
+  @include light-theme;
 }
 
 [data-theme="dark"] {
   /* The dark theme. */
-  @include darkTheme;
+  @include dark-theme;
 }
 
 html,
