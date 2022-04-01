@@ -1,0 +1,15 @@
+.wrapper {
+  align-items: center;
+  background-color: $background-color-primary;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+  max-width: $max-width;
+  width: 100%;
+}

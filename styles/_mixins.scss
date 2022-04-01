@@ -75,3 +75,9 @@
   $shadow-button-active: none;
   $shadow-toggle: inset 0 4px 10px rgb(21 17 37 / 40%);
 }
+
+@mixin desktop() {
+  @media screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
