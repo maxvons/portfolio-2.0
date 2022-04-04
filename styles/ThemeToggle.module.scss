@@ -27,13 +27,9 @@
 }
 
 .icon {
-  fill: $text-color-secondary;
   margin-left: $spacer-small;
-  stroke-width: 2;
-}
-
-.lightIcon {
   stroke: $text-color-secondary;
+  stroke-width: 2;
 }
 
 .active {
@@ -43,11 +39,7 @@
   font-weight: $font-weight-bold;
 
   .icon {
-    fill: $text-color-button;
-    stroke-width: 2.5;
-  }
-
-  .lightIcon {
     stroke: $text-color-button;
+    stroke-width: 2.5;
   }
 }

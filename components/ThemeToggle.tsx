@@ -18,7 +18,7 @@ const ThemeToggle = ({ dark }: ThemeToggleProps) => {
         }`}
       >
         Light
-        <LightIcon className={`${styles.icon} ${styles.lightIcon}`} />
+        <LightIcon className={styles.icon} />
       </button>
       <button
         className={`${styles.toggleButton} ${styles.right} ${
