@@ -8,6 +8,9 @@ import { NextPage } from "next";
 import { useState } from "react";
 
 import styles from "../styles/Test.module.scss";
+import DarkIcon from "../components/svgs/DarkIcon";
+import IconLink from "../components/IconLink";
+import GitHubIcon from "../components/svgs/GitHubIcon";
 
 const Test: NextPage = () => {
   const [open, setOpen] = useState(false);
@@ -21,6 +24,12 @@ const Test: NextPage = () => {
         <h1>Test</h1>
         <Button text="Button text" href="/resume" />
         <IconButton Icon={LightIcon} onClick={() => console.log("clicked")} />
+        <IconButton
+          Icon={DarkIcon}
+          onClick={() => console.log("clicked")}
+          active
+        />
+        <IconLink href="https://www.google.com" Icon={GitHubIcon} />
         <h1>Test</h1>
         <h1>Test</h1>
         <h1>Test</h1>
