@@ -14,13 +14,11 @@ const ExternalLinkIcon = ({ className }: ExternalLinkIconProps) => {
     >
       <path
         d="M8.75 21.25L21.25 8.75"
-        strokeWidth="4"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M8.75 8.75H21.25V21.25"
-        strokeWidth="4"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
