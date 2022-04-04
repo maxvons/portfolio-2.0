@@ -1,0 +1,14 @@
+.button {
+  @include resetButton();
+}
+
+.icon {
+  height: 32px;
+  stroke: $text-color-secondary;
+  stroke-width: 2;
+  width: 32px;
+}
+
+.active {
+  stroke: $text-color-emphasis;
+}
