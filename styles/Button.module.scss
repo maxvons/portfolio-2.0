@@ -1,0 +1,17 @@
+.button {
+  @include resetButton();
+  align-items: center;
+  background-color: $background-color-button-primary;
+  border-radius: $border-radius-regular;
+  box-shadow: $shadow-button;
+  color: $text-color-button;
+  display: flex;
+  font-size: $font-size-primary;
+  font-weight: $font-weight-bold;
+  justify-content: center;
+  padding: $spacer-small $spacer-medium;
+
+  @include desktop() {
+    font-size: $font-size-primary-desktop;
+  }
+}
