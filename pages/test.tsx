@@ -11,6 +11,7 @@ import styles from "../styles/Test.module.scss";
 import DarkIcon from "../components/svgs/DarkIcon";
 import IconLink from "../components/IconLink";
 import GitHubIcon from "../components/svgs/GitHubIcon";
+import Toolbar from "../components/ToolBar";
 
 const Test: NextPage = () => {
   const [open, setOpen] = useState(false);
@@ -30,6 +31,7 @@ const Test: NextPage = () => {
           active
         />
         <IconLink href="https://www.google.com" Icon={GitHubIcon} />
+        <Toolbar dark />
         <h1>Test</h1>
         <h1>Test</h1>
         <h1>Test</h1>
