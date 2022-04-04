@@ -1,6 +1,8 @@
+/* Components. */
+import LinkWithIcon from "./LinkWithIcon";
+
 /* Styles. */
 import styles from "../styles/Button.module.scss";
-import LinkWithIcon from "./LinkWithIcon";
 
 interface ButtonProps {
   text: string;
