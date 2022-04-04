@@ -1,6 +1,8 @@
 import Layout from "../components/Layout";
 import Navbar from "../components/Navbar";
 import Button from "../components/Button";
+import IconButton from "../components/IconButton";
+import LightIcon from "../components/svgs/LightIcon";
 
 import { NextPage } from "next";
 import { useState } from "react";
@@ -12,12 +14,13 @@ const Test: NextPage = () => {
   return (
     <>
       <Navbar open={open} onClick={() => setOpen(!open)} />
-      <div className={open ? styles.removeScroll : ""}>
+      <div className={`${styles.container} ${open ? styles.removeScroll : ""}`}>
         <h1>Test</h1>
         <h1>Test</h1>
         <h1>Test</h1>
         <h1>Test</h1>
-        <Button text="Button text" onClick={() => console.log("clicked")} />
+        <Button text="Button text" href="/resume" />
+        <IconButton Icon={LightIcon} onClick={() => console.log("clicked")} />
         <h1>Test</h1>
         <h1>Test</h1>
         <h1>Test</h1>

@@ -1,18 +1,33 @@
+/* Next.js. */
+import Link from "next/link";
+
 /* Components. */
-import LinkWithIcon from "./LinkWithIcon";
+import ExternalLinkIcon from "./svgs/ExternalLinkIcon";
 
 /* Styles. */
 import styles from "../styles/Button.module.scss";
 
 interface ButtonProps {
   text: string;
-  onClick: () => void;
+  onClick?: () => void;
+  href?: string;
 }
 
-const Button = ({ text, onClick }: ButtonProps) => {
+const Button = ({ text, onClick, href }: ButtonProps) => {
+  if (href) {
+    return (
+      <Link href={href}>
+        <a className={styles.button}>
+          {text}
+          <ExternalLinkIcon className={styles.icon} />
+        </a>
+      </Link>
+    );
+  }
+
   return (
     <button className={styles.button} onClick={onClick}>
-      <LinkWithIcon text="Grab my resume" href="/resume" external button />
+      {text}
     </button>
   );
 };
