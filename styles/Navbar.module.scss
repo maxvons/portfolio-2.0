@@ -1,0 +1,114 @@
+.navbar {
+  align-items: center;
+  backdrop-filter: blur($background-blur);
+  background-color: $background-color-navbar;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.flexColumn {
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.open {
+  background-color: $background-color-primary;
+  height: 100vh;
+}
+
+.navContent {
+  border: 1px solid red;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-medium-plus;
+  max-width: $max-width;
+  overflow-y: auto;
+  padding: $spacer-small-plus 0;
+  width: $navbar-width;
+
+  @include desktop() {
+    flex-flow: row nowrap;
+    gap: $spacer-large-plus;
+    justify-content: space-between;
+    padding: $spacer-small 0;
+  }
+}
+
+.linkSection {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-small-plus;
+
+  @include desktop() {
+    gap: $spacer-medium;
+  }
+}
+
+.column {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-medium-plus;
+
+  @include desktop() {
+    gap: $spacer-large-plus;
+  }
+}
+
+.navList {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: $max-width;
+  padding: $spacer-very-small 0;
+  width: $navbar-width;
+
+  @include desktop() {
+    padding: $spacer-small 0;
+  }
+}
+
+.smallLinksContainer {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-small;
+}
+
+.homeLink {
+  border: 4px solid $text-color-emphasis;
+  border-radius: $border-radius-regular;
+  color: $text-color-emphasis;
+  cursor: pointer;
+  font-size: $font-size-heading;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading;
+  padding: $spacer-mini $spacer-very-small-plus $spacer-very-small $spacer-very-small-plus;
+
+  @include desktop() {
+    font-size: $font-size-heading-desktop;
+    padding: $spacer-mini $spacer-small $spacer-very-small-plus $spacer-small;
+  }
+}
+
+.navButton {
+  @include resetButton();
+
+  svg {
+    fill: $text-color-emphasis;
+  }
+}
+
+.heading {
+  color: $text-color-emphasis;
+  font-size: $font-size-heading;
+  font-weight: $font-weight-black;
+  margin-bottom: $spacer-small;
+
+  @include desktop() {
+    font-size: $font-size-heading-desktop;
+  }
+}
