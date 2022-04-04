@@ -2,10 +2,14 @@
   align-items: center;
   display: flex;
   font-size: $font-size-primary;
-  justify-content: space-between;
+  font-weight: $font-weight-bold;
 
   @include desktop() {
     font-size: $font-size-primary-desktop;
+  }
+
+  .marginRight {
+    margin-right: $spacer-very-small-plus;
   }
 
   .icon {
@@ -30,6 +34,14 @@
     font-size: $font-size-heading-desktop;
   }
 
+  .marginRight {
+    margin-right: $spacer-small;
+
+    @include desktop() {
+      margin-right: $spacer-medium;
+    }
+  }
+
   .icon {
     height: $font-size-heading;
     stroke: $text-color-emphasis;
@@ -41,8 +53,4 @@
       width: $font-size-heading-desktop;
     }
   }
-}
-
-.marginRight {
-  margin-right: $spacer-medium;
 }
