@@ -13,9 +13,16 @@ interface LinkWithIcon {
   href: string;
   large?: boolean;
   external?: boolean;
+  button?: boolean;
 }
 
-const LinkWithIcon = ({ text, href, large, external }: LinkWithIcon) => {
+const LinkWithIcon = ({
+  text,
+  href,
+  large,
+  external,
+  button,
+}: LinkWithIcon) => {
   if (external) {
     return (
       <a
@@ -25,7 +32,9 @@ const LinkWithIcon = ({ text, href, large, external }: LinkWithIcon) => {
         rel="noreferrer"
       >
         <span className={styles.marginRight}>{text}</span>
-        <ExternalLinkIcon className={styles.icon} />
+        <ExternalLinkIcon
+          className={`${styles.icon} ${button && styles.button}`}
+        />
       </a>
     );
   }
@@ -34,7 +43,9 @@ const LinkWithIcon = ({ text, href, large, external }: LinkWithIcon) => {
     <Link href={href}>
       <a className={`${styles.link} ${large && styles.large}`}>
         <span className={styles.marginRight}>{text}</span>
-        <InternalLinkIcon className={styles.icon} />
+        <InternalLinkIcon
+          className={`${styles.icon} ${button && styles.button}`}
+        />
       </a>
     </Link>
   );

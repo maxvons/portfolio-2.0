@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import Navbar from "../components/Navbar";
+import Button from "../components/Button";
 
 import { NextPage } from "next";
 import { useState } from "react";
@@ -16,6 +17,7 @@ const Test: NextPage = () => {
         <h1>Test</h1>
         <h1>Test</h1>
         <h1>Test</h1>
+        <Button text="Button text" onClick={() => console.log("clicked")} />
         <h1>Test</h1>
         <h1>Test</h1>
         <h1>Test</h1>
