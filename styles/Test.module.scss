@@ -2,3 +2,9 @@
   height: 100vh;
   overflow: hidden;
 }
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap
+}

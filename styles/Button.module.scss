@@ -1,11 +1,12 @@
 .button {
   @include resetButton();
-  align-items: center;
+  align-items: flex-end;
   background-color: $background-color-button-primary;
   border-radius: $border-radius-regular;
   box-shadow: $shadow-button;
   color: $text-color-button;
   display: flex;
+  flex-flow: row nowrap;
   font-size: $font-size-primary;
   font-weight: $font-weight-bold;
   justify-content: center;
@@ -13,5 +14,18 @@
 
   @include desktop() {
     font-size: $font-size-primary-desktop;
+  }
+}
+
+.icon {
+  height: $font-size-primary;
+  margin-left: $spacer-small;
+  stroke: $text-color-button;
+  stroke-width: 4;
+  width: $font-size-primary;
+
+  @include desktop() {
+    height: $font-size-primary-desktop;
+    width: $font-size-primary-desktop;
   }
 }

@@ -1,16 +1,28 @@
+/* Components. */
+import ExternalLinkIcon from "./svgs/ExternalLinkIcon";
+
 /* Styles. */
 import styles from "../styles/Button.module.scss";
-import LinkWithIcon from "./LinkWithIcon";
 
 interface ButtonProps {
   text: string;
-  onClick: () => void;
+  onClick?: () => void;
+  href?: string;
 }
 
-const Button = ({ text, onClick }: ButtonProps) => {
+const Button = ({ text, onClick, href }: ButtonProps) => {
+  if (href) {
+    return (
+      <a className={styles.button}>
+        {text}
+        <ExternalLinkIcon className={styles.icon} />
+      </a>
+    );
+  }
+
   return (
     <button className={styles.button} onClick={onClick}>
-      <LinkWithIcon text="Grab my resume" href="/resume" external button />
+      {text}
     </button>
   );
 };
