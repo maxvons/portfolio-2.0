@@ -14,7 +14,7 @@
   $background-color-navbar: #FFFFFF; /* TODO: Fill out */
 
   // Text colors.
-  $text-color-emhasis: #231D3C;
+  $text-color-emphasis: #231D3C;
   $text-color-primary: #534F61;
   $text-color-secondary: #717077;
 
@@ -53,7 +53,7 @@
   $background-color-navbar: #151125; /* TODO: Fill out */
 
   // Text colors.
-  $text-color-emhasis: #FBFAFF;
+  $text-color-emphasis: #FBFAFF;
   $text-color-primary: #B9B7C0;
   $text-color-secondary: #8B8894;
 
@@ -86,10 +86,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-
-  li {
-    display: block;
-  }
 }
 
 @mixin resetButton() {
@@ -98,5 +94,6 @@
   color: inherit;
   cursor: pointer;
   font: inherit;
+  margin: 0;
   padding: 0;
 }
