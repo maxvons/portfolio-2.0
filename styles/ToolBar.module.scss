@@ -1,0 +1,13 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.section {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: $spacer-small-plus;
+}
