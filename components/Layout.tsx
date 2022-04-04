@@ -1,3 +1,4 @@
+/* Styles. */
 import styles from "../styles/Layout.module.scss";
 
 interface LayoutProps {

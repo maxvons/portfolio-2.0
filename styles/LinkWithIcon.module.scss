@@ -1,0 +1,56 @@
+.link {
+  align-items: center;
+  display: flex;
+  font-size: $font-size-primary;
+  font-weight: $font-weight-bold;
+
+  @include desktop() {
+    font-size: $font-size-primary-desktop;
+  }
+
+  .marginRight {
+    margin-right: $spacer-very-small-plus;
+  }
+
+  .icon {
+    height: $font-size-primary;
+    stroke: $text-color-emphasis;
+    stroke-width: 2;
+    width: $font-size-primary;
+
+    @include desktop() {
+      height: $font-size-primary-desktop;
+      width: $font-size-primary-desktop;
+    }
+  }
+}
+
+.large {
+  font-size: $font-size-heading;
+  font-weight: $font-weight-black;
+  line-height: $line-height-heading;
+
+  @include desktop() {
+    font-size: $font-size-heading-desktop;
+  }
+
+  .marginRight {
+    margin-right: $spacer-small;
+
+    @include desktop() {
+      margin-right: $spacer-medium;
+    }
+  }
+
+  .icon {
+    height: $font-size-heading;
+    stroke: $text-color-emphasis;
+    stroke-width: 4;
+    width: $font-size-heading;
+
+    @include desktop() {
+      height: $font-size-heading-desktop;
+      width: $font-size-heading-desktop;
+    }
+  }
+}

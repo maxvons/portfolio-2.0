@@ -1,3 +1,4 @@
+/* Next.js. */
 import Head from "next/head";
 
 interface CustomHeadProps {

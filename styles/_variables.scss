@@ -10,10 +10,11 @@ $background-color-secondary: #F4F5F7;
 $background-color-card: #FFFFFF;
 $background-color-button-primary: #231D3C;
 $background-color-button-primary-hover: #231D3C;
-$background-color-navbar: #FFFFFF; /* TODO: Fill out */
+$background-color-navbar: rgb(255 255 255 / 70%);
 
 // Text colors.
-$text-color-emhasis: #231D3C;
+$text-color-emphasis: #231D3C;
+$text-color-button: #FBFAFF;
 $text-color-primary: #534F61;
 $text-color-secondary: #717077;
 
@@ -50,6 +51,7 @@ $max-width-input-number: 100px;
 $max-width-button: 500px;
 $max-width-card: 500px;
 $page-width: 90%;
+$navbar-width: 90%;
 $page-width-desktop: 80%;
 $img-height-card: 350px;
 $background-blur: 8px;
