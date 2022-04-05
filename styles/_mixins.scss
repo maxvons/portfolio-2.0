@@ -82,6 +82,12 @@
   }
 }
 
+@mixin desktopWide() {
+  @media screen and (min-width: $breakpoint-desktop-wide) {
+    @content;
+  }
+}
+
 @mixin tablet() {
   @media screen and (min-width: $breakpoint-tablet) {
     @content;
@@ -134,6 +140,7 @@
   font-weight: $font-weight-regular;
   letter-spacing: 0;
   line-height: $line-height-sub-title;
+  max-width: 500px;
   text-align: center;
 }
 
@@ -145,5 +152,9 @@
 
   @include desktop() {
     font-size: $font-size-title-desktop;
+  }
+
+  @include desktopWide() {
+    font-size: $font-size-title-desktop-wide;
   }
 }
