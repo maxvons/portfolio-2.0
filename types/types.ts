@@ -7,5 +7,6 @@ export enum ImageSize {
   SMALL,
   MEDIUM,
   LARGE,
+  LARGEHORIZONTAL,
   AVATAR,
 }
