@@ -159,9 +159,21 @@
   }
 }
 
-@mixin contentMargin() {
-  margin-left: $spacer-large;
-  margin-right: $spacer-large;
+@mixin normalText() {
+  color: $text-color-primary;
+  font-size: $font-size-primary;
+  line-height: $line-height-text;
+  max-width: 500px;
+
+  @include desktop() {
+    font-size: $font-size-primary-desktop;
+    max-width: 620px;
+  }
+}
+
+@mixin contentPadding() {
+  padding-left: $spacer-large;
+  padding-right: $spacer-large;
 }
 
 @mixin negativeContentMargin() {
