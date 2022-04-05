@@ -69,7 +69,7 @@ const CustomImage = ({
         objectPosition={objectPosition}
         width={width}
         height={height}
-        sizes="50vw"
+        /* Consider adding the `sizes` prop here. */
       />
     </div>
   );
