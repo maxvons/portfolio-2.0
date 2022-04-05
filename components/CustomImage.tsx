@@ -14,8 +14,8 @@ interface CustomImageProps {
   height: number;
   objectPosition?: string;
   size: ImageSize;
-  className?: string;
   round?: boolean;
+  className?: string;
 }
 
 const CustomImage = ({
@@ -25,8 +25,8 @@ const CustomImage = ({
   height,
   objectPosition,
   size,
-  className,
   round,
+  className,
 }: CustomImageProps) => {
   const getContainerStyles = () => {
     if (round) {
