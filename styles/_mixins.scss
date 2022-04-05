@@ -82,6 +82,12 @@
   }
 }
 
+@mixin tablet() {
+  @media screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
 @mixin resetList() {
   list-style: none;
   margin: 0;
