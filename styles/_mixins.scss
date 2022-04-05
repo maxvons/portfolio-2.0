@@ -103,3 +103,15 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin uppercase() {
+  color: $text-color-secondary;
+  font-size: $font-size-tertiary;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  @include desktop() {
+    font-size: $font-size-tertiary-desktop;
+  }
+}
