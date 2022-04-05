@@ -1,0 +1,68 @@
+
+.container {
+  align-items: start;
+  background-color: $background-color-secondary;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "image"
+    "text";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  margin-bottom: $spacer-large;
+  width: 100%;
+
+  @include desktopWide() {
+    column-gap: $spacer-medium;
+    grid-template-areas:
+      ".      .      .      .       image"
+      "header header header header  image"
+      "text   text   text   text    image"
+      ".      .      .      .       image";
+    grid-template-columns: auto;
+    justify-items: start;
+    margin-bottom: $spacer-medium;
+    @include contentPadding();
+  }
+}
+
+.header {
+  grid-area: header;
+  margin-bottom: $spacer-medium;
+  max-width: 500px;
+  @include header();
+
+  @include desktop() {
+    max-width: 620px;
+  }
+}
+
+.textContainer {
+  grid-area: text;
+
+  .text {
+    @include normalText();
+  }
+}
+
+.image {
+  grid-area: image;
+  margin-bottom: $spacer-medium;
+
+  @include desktopWide() {
+    margin-bottom: 0;
+  }
+}
+
+.marginBottomMedium {
+  margin-bottom: $spacer-medium;
+}
+
+.marginBottomMediumPlus {
+  margin-bottom: $spacer-medium-plus;
+
+  @include desktopWide() {
+    margin-bottom: $spacer-large;
+  }
+}
