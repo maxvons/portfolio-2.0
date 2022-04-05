@@ -158,3 +158,8 @@
     font-size: $font-size-title-desktop-wide;
   }
 }
+
+@include contentMargin() {
+  margin-left: $spacer-large;
+  margin-right: $spacer-large;
+}
