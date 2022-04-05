@@ -17,17 +17,15 @@ import Toolbar from "../components/ToolBar";
 import CustomImage from "../components/CustomImage";
 import Portrait from "/public/images/portrait.jpg";
 import Landing from "../components/Landing";
+import AboutSection from "../components/AboutSection";
 
 const Test: NextPage = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
       <Navbar open={open} onClick={() => setOpen(!open)} />
-      <Layout
-        className={`${styles.marginTop} ${open ? styles.removeScroll : ""}`}
-      >
-        <Landing />
-      </Layout>
+      <Landing />
+      <AboutSection />
     </>
   );
 };
