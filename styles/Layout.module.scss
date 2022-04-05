@@ -9,9 +9,9 @@
   display: flex;
   justify-content: center;
   max-width: $max-width;
-  width: $page-width;
+  width: $navbar-width;
 
   @include desktop {
-    width: $page-width-desktop;
+    width: $navbar-width;
   }
 }

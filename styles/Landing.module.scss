@@ -25,6 +25,7 @@
       "toolbar toolbar toolbar toolbar toolbar toolbar";
     justify-items: start;
     margin-bottom: $spacer-medium;
+    @include contentMargin();
   }
 }
 
@@ -35,6 +36,10 @@
 
   @include desktop() {
     margin-bottom: $spacer-very-small;
+    margin-top: $spacer-medium;
+  }
+
+  @include desktopWide() {
     margin-top: $spacer-large;
   }
 }
@@ -80,6 +85,7 @@
 
   @include desktop() {
     display: block;
+    @include negativeContentMargin();
   }
 }
 
