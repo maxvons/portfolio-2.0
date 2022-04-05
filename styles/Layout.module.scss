@@ -1,17 +1,27 @@
 .wrapper {
   align-items: center;
-  background-color: $background-color-primary;
   display: flex;
   justify-content: center;
 }
 
 .container {
+  align-items: center;
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   max-width: $max-width;
-  width: $navbar-width;
+  width: $page-width;
+}
 
-  @include desktop {
-    width: $navbar-width;
+.primary {
+  background-color: $background-color-primary;
+}
+
+.secondary {
+  background-color: $background-color-secondary;
+  padding: $spacer-large 0;
+
+  @include desktop() {
+    padding: $spacer-very-large 0;
   }
 }
