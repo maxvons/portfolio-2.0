@@ -1,0 +1,92 @@
+.container {
+  align-items: start;
+  display: grid;
+  grid-auto-rows: min-max(0, auto);
+  grid-template-areas:
+    "tag"
+    "title"
+    "subheader"
+    "image"
+    "button";
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin-bottom: $spacer-large;
+  width: 100%;
+
+  @include desktop() {
+    align-content: start;
+    grid-auto-columns: min-max(0, auto);
+    grid-template-areas:
+      "tag       tag  tag tag      . image"
+      "title     title title title     . image"
+      "subheader subheader subheader subheader . image"
+      "button    button button button    . image"
+      ".    .        .        .        . image"
+      "toolbar toolbar toolbar toolbar toolbar toolbar";
+    justify-items: start;
+    margin-bottom: $spacer-medium;
+  }
+}
+
+.tag {
+  @include uppercase();
+  grid-area: tag;
+  margin-bottom: $spacer-mini;
+
+  @include desktop() {
+    margin-bottom: $spacer-very-small;
+    margin-top: $spacer-large;
+  }
+}
+
+.title {
+  grid-area: title;
+  margin-bottom: $spacer-small;
+  @include title();
+
+  @include desktop() {
+    margin-bottom: $spacer-medium;
+  }
+}
+
+.subTitle {
+  grid-area: subheader;
+  margin-bottom: $spacer-medium;
+  @include subheader();
+
+  @include desktop() {
+    margin-bottom: $spacer-large;
+    text-align: left;
+  }
+}
+
+.image {
+  grid-area: image;
+  margin-bottom: $spacer-medium;
+
+  @include desktop() {
+    margin-bottom: $spacer-large-plus;
+  }
+}
+
+.button {
+  grid-area: button;
+}
+
+.toolbar {
+  display: none;
+  grid-area: toolbar;
+  justify-self: stretch;
+
+  @include desktop() {
+    display: block;
+  }
+}
+
+.flare {
+  background: linear-gradient(45deg, $primary-color, $secondary-color);
+  background-clip: text;
+  font-style: italic;
+  padding-right: 10px;
+  -webkit-text-fill-color: transparent;
+}
