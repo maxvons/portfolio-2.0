@@ -40,7 +40,8 @@ $shadow-toggle: inset 0 4px 10px rgb(106 106 106 / 20%);
 $image-border: 4px solid #A9AAB7;
 
 // Misc.
-$max-width: 1200px;
+$max-width: 1500px;
+$max-width-nav-menu: 1200px;
 $max-width-input: 500px;
 $max-width-input-text: 500px;
 $max-width-input-date: 200px;
@@ -81,7 +82,8 @@ $font-size-secondary: 0.875rem;
 $font-size-tertiary: 0.75rem;
 
 /* Desktop font sizes. */
-$font-size-title-desktop: 8.75rem;
+$font-size-title-desktop-wide: 8.75rem;
+$font-size-title-desktop: 6rem;
 $font-size-heading-desktop: 3rem;
 $font-size-primary-desktop: 1.375rem;
 $font-size-secondary-desktop: 1.125rem;
@@ -113,3 +115,4 @@ $spacer-very-large: 8rem;
 // Break points.
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
+$breakpoint-desktop-wide: 1450px;

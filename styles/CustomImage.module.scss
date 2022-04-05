@@ -52,6 +52,7 @@
 }
 
 .avatar {
+  box-shadow: $shadow-image-large;
   height: 220px;
   width: 220px;
 
@@ -61,7 +62,12 @@
   }
 
   @include desktop() {
-    height: 650px;
-    width: 500px;
+    height: 450px;
+    width: 350px;
+  }
+
+  @include desktopWide() {
+    height: 550px;
+    width: 450px;
   }
 }

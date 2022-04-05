@@ -35,11 +35,15 @@ const Toolbar = ({ dark }: ToolbarProps) => {
         />
       </div>
       <div className={styles.section}>
-        <IconButton Icon={LightIcon} onClick={() => console.log("clicked")} />
+        <IconButton
+          Icon={LightIcon}
+          onClick={() => console.log("clicked")}
+          active={dark}
+        />
         <IconButton
           Icon={DarkIcon}
           onClick={() => console.log("clicked")}
-          active={dark}
+          active={!dark}
         />
       </div>
     </div>

@@ -82,6 +82,12 @@
   }
 }
 
+@mixin desktopWide() {
+  @media screen and (min-width: $breakpoint-desktop-wide) {
+    @content;
+  }
+}
+
 @mixin tablet() {
   @media screen and (min-width: $breakpoint-tablet) {
     @content;
@@ -102,4 +108,53 @@
   font: inherit;
   margin: 0;
   padding: 0;
+}
+
+@mixin uppercase() {
+  color: $text-color-secondary;
+  font-size: $font-size-tertiary;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  @include desktop() {
+    font-size: $font-size-tertiary-desktop;
+  }
+}
+
+@mixin header() {
+  color: $text-color-emphasis;
+  font-size: $font-size-heading;
+  font-weight: $font-weight-black;
+  letter-spacing: -0.05em;
+  line-height: $line-height-heading;
+
+  @include desktop() {
+    font-size: $font-size-heading-desktop;
+  }
+}
+
+@mixin subheader() {
+  @include header();
+  color: $text-color-primary;
+  font-weight: $font-weight-regular;
+  letter-spacing: 0;
+  line-height: $line-height-sub-title;
+  max-width: 500px;
+  text-align: center;
+}
+
+@mixin title() {
+  @include header();
+  font-size: $font-size-title;
+  line-height: $line-height-title;
+  text-align: center;
+
+  @include desktop() {
+    font-size: $font-size-title-desktop;
+  }
+
+  @include desktopWide() {
+    font-size: $font-size-title-desktop-wide;
+  }
 }

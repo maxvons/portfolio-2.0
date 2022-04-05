@@ -17,13 +17,14 @@
 .open {
   background-color: $background-color-primary;
   height: 100vh;
+  z-index: 999;
 }
 
 .navContent {
   display: flex;
   flex-flow: column nowrap;
   gap: $spacer-medium-plus;
-  max-width: $max-width;
+  max-width: $max-width-nav-menu;
   overflow-y: auto;
   padding: $spacer-small-plus 0;
   width: $navbar-width;

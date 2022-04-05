@@ -3,6 +3,14 @@
   overflow: hidden;
 }
 
+.marginTop {
+  margin-top: 66px + 32px;
+
+  @include desktop() {
+    margin-top: 104px + 32px;
+  }
+}
+
 .container {
   align-items: center;
   display: flex;
