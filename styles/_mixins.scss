@@ -122,17 +122,26 @@
   font-weight: $font-weight-black;
   letter-spacing: -0.05em;
   line-height: $line-height-heading;
-  word-break: break-all;
 
   @include desktop() {
     font-size: $font-size-heading-desktop;
   }
 }
 
+@mixin subheader() {
+  @include header();
+  color: $text-color-primary;
+  font-weight: $font-weight-regular;
+  letter-spacing: 0;
+  line-height: $line-height-sub-title;
+  text-align: center;
+}
+
 @mixin title() {
   @include header();
   font-size: $font-size-title;
   line-height: $line-height-title;
+  text-align: center;
 
   @include desktop() {
     font-size: $font-size-title-desktop;
