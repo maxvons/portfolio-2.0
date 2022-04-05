@@ -17,11 +17,11 @@
     align-content: start;
     grid-auto-columns: min-max(0, auto);
     grid-template-areas:
-      "tag       tag  tag tag      . image"
-      "title     title title title     . image"
+      "tag       tag       tag       tag       . image"
+      "title     title     title     title     . image"
       "subheader subheader subheader subheader . image"
-      "button    button button button    . image"
-      ".    .        .        .        . image"
+      "button    button    button    button    . image"
+      ".         .         .         .         . image"
       "toolbar toolbar toolbar toolbar toolbar toolbar";
     justify-items: start;
     margin-bottom: $spacer-medium;
@@ -86,7 +86,5 @@
 .flare {
   background: linear-gradient(45deg, $primary-color, $secondary-color);
   background-clip: text;
-  font-style: italic;
-  padding-right: 10px;
   -webkit-text-fill-color: transparent;
 }
