@@ -159,7 +159,7 @@
   }
 }
 
-@include contentMargin() {
+@mixin contentMargin() {
   margin-left: $spacer-large;
   margin-right: $spacer-large;
 }
