@@ -1,0 +1,67 @@
+.imageContainer {
+  border-radius: $border-radius-regular;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.round {
+  border-radius: $border-radius-round;
+
+  @include desktop() {
+    border-radius: $border-radius-regular;
+  }
+}
+
+.medium {
+  box-shadow: $shadow-image-medium;
+  height: auto;
+  height: 380px;
+  max-width: 500px;
+  width: 100%;
+
+  @include desktop() {
+    height: 600px;
+    width: 500px;
+  }
+}
+
+.large {
+  box-shadow: $shadow-image-large;
+  height: 380px;
+  max-width: 500px;
+  width: 100%;
+
+  @include desktop() {
+    height: 650px;
+    width: 550px;
+  }
+}
+
+.largeHorizontal {
+  box-shadow: $shadow-image-large;
+  height: 300px;
+  max-width: 500px;
+  width: 100%;
+
+  @include desktop() {
+    height: 500px;
+    width: 700px;
+  }
+}
+
+.avatar {
+  height: 220px;
+  width: 220px;
+
+  @include tablet() {
+    height: 400px;
+    width: 400px;
+  }
+
+  @include desktop() {
+    height: 650px;
+    width: 500px;
+  }
+}
