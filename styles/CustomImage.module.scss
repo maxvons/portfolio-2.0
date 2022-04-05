@@ -1,0 +1,30 @@
+.imageContainer {
+  border-radius: $border-radius-regular;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.round {
+  border-radius: $border-radius-round;
+
+  @include desktop() {
+    border-radius: $border-radius-regular;
+  }
+}
+
+.medium {
+  box-shadow: $shadow-image-medium;
+  height: auto;
+  width: 100%;
+}
+
+.large{
+  box-shadow: $shadow-image-large;
+}
+
+.avatar {
+  height: 220px;
+  width: 220px;
+}
