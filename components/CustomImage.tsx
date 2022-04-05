@@ -35,6 +35,8 @@ const CustomImage = ({
           return `${styles.imageContainer}  ${styles.medium} ${styles.round} ${className}`;
         case ImageSize.LARGE:
           return `${styles.imageContainer} ${styles.large} ${styles.round} ${className}`;
+        case ImageSize.LARGEHORIZONTAL:
+          return `${styles.imageContainer} ${styles.largeHorizontal} ${styles.round} ${className}`;
         case ImageSize.AVATAR:
           return `${styles.imageContainer} ${styles.avatar} ${styles.round} ${className}`;
         default:
@@ -46,6 +48,8 @@ const CustomImage = ({
           return `${styles.imageContainer} ${styles.medium} ${className}`;
         case ImageSize.LARGE:
           return `${styles.imageContainer} ${styles.large} ${className}`;
+        case ImageSize.LARGEHORIZONTAL:
+          return `${styles.imageContainer} ${styles.largeHorizontal} ${className}`;
         case ImageSize.AVATAR:
           return `${styles.imageContainer} ${styles.avatar} ${className}`;
         default:
