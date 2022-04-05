@@ -163,3 +163,8 @@
   margin-left: $spacer-large;
   margin-right: $spacer-large;
 }
+
+@mixin negativeContentMargin() {
+  margin-left: -$spacer-large;
+  margin-right: -$spacer-large;
+}
