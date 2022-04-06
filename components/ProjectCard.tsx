@@ -1,15 +1,18 @@
 /* Components. */
+import IconLink from "./IconLink";
+
 import ProjectIcon from "./svgs/ProjectIcon";
+import GitHubIcon from "./svgs/GitHubIcon";
+import HrefIcon from "./svgs/HrefIcon";
+
+/* Utils. */
+import { getProjectData } from "../utils/functions";
 
 /* Types. */
 import { Project } from "../types/types";
 
 /* Styles. */
 import styles from "../styles/ProjectCard.module.scss";
-import { getProjectData } from "../utils/functions";
-import GitHubIcon from "./svgs/GitHubIcon";
-import IconLink from "./IconLink";
-import HrefIcon from "./svgs/HrefIcon";
 
 interface ProjectCardProps {
   project: Project;
