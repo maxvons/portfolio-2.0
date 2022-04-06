@@ -1,5 +1,5 @@
 .card {
-  @include card();
+  @include card($shadow-card-large, $shadow-card-large-hover, $shadow-card-large-active);
   margin-bottom: 100px;
   transition: all $animation-duration ease;
   width: initial;
