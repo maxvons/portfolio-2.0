@@ -180,3 +180,33 @@
   margin-left: -$spacer-large;
   margin-right: -$spacer-large;
 }
+
+@mixin card() {
+  align-items: center;
+  background-color: $background-color-card;
+  border: 1px solid $border-color-card;
+  border-radius: $border-radius-regular;
+  box-shadow: $shadow-card-medium;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: $spacer-small-plus;
+
+  &:active {
+    box-shadow: $shadow-card-medium-active;
+  }
+
+  @include desktop() {
+    box-shadow: $shadow-card-large;
+    padding: $spacer-medium;
+
+    &:hover {
+      box-shadow: $shadow-card-large-hover;
+      transform: translateY(-5px);
+    }
+
+    &:active {
+      box-shadow: $shadow-card-large-active;
+    }
+  }
+}
