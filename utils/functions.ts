@@ -1,5 +1,6 @@
-import { Project } from "../types/types";
+import { Project, Social } from "../types/types";
 
+/* Get data for project cards. */
 function getProjectData(project: Project): {
   title: string;
   description: string;
@@ -73,4 +74,38 @@ function getProjectData(project: Project): {
   }
 }
 
-export { getProjectData };
+/* Get data for social cards. */
+function getSocialData(social: Social): {
+  title: string;
+  href: string;
+} {
+  switch (social) {
+    case Social.GITHUB:
+      return {
+        href: "https://github.com/maxvons",
+        title: "maxvons",
+      };
+    case Social.LINKEDIN:
+      return {
+        href: "https://www.linkedin.com/in/maximilian-von-stephanides/",
+        title: "Maximilian von Stephanides",
+      };
+    case Social.INSTAGRAM:
+      return {
+        href: "https://www.instagram.com/maximilian.codes/",
+        title: "maximilian.codes",
+      };
+    case Social.TWITTER:
+      return {
+        href: "https://twitter.com/Maximilianvons",
+        title: "Maximilianvons",
+      };
+    default:
+      return {
+        href: "",
+        title: "",
+      };
+  }
+}
+
+export { getProjectData, getSocialData };
