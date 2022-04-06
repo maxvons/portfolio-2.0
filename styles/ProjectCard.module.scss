@@ -1,0 +1,135 @@
+.card {
+  @include card();
+  margin-bottom: 100px;
+  transition: all $animation-duration ease;
+  width: initial;
+
+  @include desktop() {
+    width: initial;
+  }
+
+  a {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.cardIcons {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: $spacer-small-plus;
+  width: 100%;
+}
+
+.linkIcons {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: $spacer-small;
+}
+
+.cardTitle, .cardDescription {
+  text-align: center;
+}
+
+.cardTitle {
+  color: $text-color-emphasis;
+  font-size: $font-size-heading-medium;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading;
+  margin-bottom: $spacer-small;
+  max-width: $max-width-card-content;
+
+  a {
+    position: static;
+
+    &::before {
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 0;
+    }
+  }
+
+
+
+  @include desktop() {
+    font-size: $font-size-heading-medium-desktop;
+    max-width: $max-width-card-content-desktop;
+  }
+}
+
+.cardDescription {
+  color: $text-color-primary;
+  font-size: $font-size-secondary;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-text;
+  margin-bottom: $spacer-small;
+  max-width: $max-width-card-content;
+
+  @include desktop() {
+    font-size: $font-size-secondary-desktop;
+    max-width: $max-width-card-content-desktop;
+  }
+}
+
+.cardTags {
+  align-items: center;
+  align-self: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: $spacer-small;
+  justify-content: center;
+}
+
+.cardTag {
+  color: $text-color-secondary;
+  font-size: $font-size-tertiary;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-heading;
+
+  @include desktop() {
+    font-size: $font-size-tertiary-desktop;
+  }
+}
+
+.projectIcon {
+  height: 30px;
+  stroke-width: 2;
+  width: 30px;
+
+  @include desktop() {
+    height: 48px;
+    stroke-width: 2;
+    width: 48px;
+  }
+}
+
+.wilfoBlog {
+  stroke: $project-color-wilfo-blog;
+}
+
+.portfolio2 {
+  stroke: $project-color-portfolio-2;
+}
+
+.revmatologen {
+  stroke: $project-color-revmatologen
+}
+
+.haugesund {
+  stroke: $project-color-haugesund
+}
+
+.cleanList {
+  stroke: $project-color-clean-list
+}
+
+.portfolio {
+  stroke: $project-color-portfolio
+}

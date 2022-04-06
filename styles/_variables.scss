@@ -18,6 +18,14 @@ $text-color-button: #FBFAFF;
 $text-color-primary: #534F61;
 $text-color-secondary: #717077;
 
+// Project colors.
+$project-color-wilfo-blog: #EC0035;
+$project-color-portfolio-2: #3300FF;
+$project-color-revmatologen: #006C6D;
+$project-color-haugesund: #0026B6;
+$project-color-clean-list: #003CE4;
+$project-color-portfolio: #FF6363;
+
 // Misc colors.
 $border-color-card: #EBE7FF;
 $divider-color: #FFFFFF;
@@ -26,11 +34,11 @@ $divider-color: #FFFFFF;
 $shadow-image-large: 0 12px 30px rgb(106 106 106 / 20%);
 $shadow-image-medium: 0 10px 25px rgb(106 106 106 / 20%);
 $shadow-card-large: 0 8px 20px rgb(106 106 106 / 20%);
-$shadow-card-large-hover: 0 8px 20px rgb(106 106 106 / 20%);
+$shadow-card-large-hover: 6px 6px 0px rgb(0 0 0 / 100%);
 $shadow-card-large-active: 0 8px 20px rgb(106 106 106 / 20%);
 $shadow-card-medium: 0 6px 15px rgb(106 106 106 / 20%);
 $shadow-card-medium-hover: 0 6px 15px rgb(106 106 106 / 20%);
-$shadow-card-medium-focus: 0 6px 15px rgb(106 106 106 / 20%);
+$shadow-card-medium-active: 0 6px 15px rgb(106 106 106 / 20%);
 $shadow-button: 0 6px 15px rgb(106 106 106 / 20%);
 $shadow-button-hover: 0 6px 15px rgb(106 106 106 / 20%);
 $shadow-button-active: 0 6px 15px rgb(106 106 106 / 20%);
@@ -42,6 +50,8 @@ $image-border: 4px solid #A9AAB7;
 // Misc.
 $max-width: 1500px;
 $max-width-nav-menu: 1200px;
+$max-width-card-content: 260px;
+$max-width-card-content-desktop: 300px;
 $max-width-input: 500px;
 $max-width-input-text: 500px;
 $max-width-input-date: 200px;
@@ -77,6 +87,7 @@ $font-weight-black: 900;
 /* Mobile font sizes. */
 $font-size-title: 4rem;
 $font-size-heading: 1.875rem;
+$font-size-heading-medium: 1.5rem;
 $font-size-primary: 1.125rem;
 $font-size-secondary: 0.875rem;
 $font-size-tertiary: 0.75rem;
@@ -85,6 +96,7 @@ $font-size-tertiary: 0.75rem;
 $font-size-title-desktop-wide: 8.75rem;
 $font-size-title-desktop: 6rem;
 $font-size-heading-desktop: 3rem;
+$font-size-heading-medium-desktop: 2rem;
 $font-size-primary-desktop: 1.375rem;
 $font-size-secondary-desktop: 1.125rem;
 $font-size-tertiary-desktop: 0.875rem;
