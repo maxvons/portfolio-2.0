@@ -10,3 +10,12 @@ export enum ImageSize {
   LARGEHORIZONTAL,
   AVATAR,
 }
+
+export enum Project {
+  WILFO,
+  PORTFOLIONEW,
+  REVMATOLOGEN,
+  HAUGESUND,
+  CLEANLIST,
+  PORTFOLIO,
+}
