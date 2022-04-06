@@ -84,6 +84,7 @@
   color: $text-color-emphasis;
   cursor: pointer;
   font-size: $font-size-heading;
+  font-variation-settings: $sans-casual-bold;
   font-weight: $font-weight-bold;
   line-height: $line-height-heading;
   padding: $spacer-mini $spacer-very-small-plus $spacer-very-small $spacer-very-small-plus;
@@ -103,12 +104,6 @@
 }
 
 .heading {
-  color: $text-color-emphasis;
-  font-size: $font-size-heading;
-  font-weight: $font-weight-black;
+  @include header();
   margin-bottom: $spacer-small;
-
-  @include desktop() {
-    font-size: $font-size-heading-desktop;
-  }
 }
