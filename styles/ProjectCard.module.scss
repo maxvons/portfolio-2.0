@@ -2,7 +2,8 @@
   @include card();
   margin-bottom: 100px;
   transition: all $animation-duration ease;
-  width: 100%;
+  width: initial;
+
   @include desktop() {
     width: initial;
   }
