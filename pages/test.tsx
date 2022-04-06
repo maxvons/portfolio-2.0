@@ -29,7 +29,7 @@ const Test: NextPage = () => {
       <Landing />
       <AboutSection />
       <Layout>
-        <ProjectCard project={Project.WILFO} />
+        <ProjectCard project={Project.REVMATOLOGEN} />
       </Layout>
     </>
   );
