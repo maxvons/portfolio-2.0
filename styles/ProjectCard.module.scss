@@ -7,6 +7,11 @@
   @include desktop() {
     width: initial;
   }
+
+  a {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .cardIcons {
@@ -16,10 +21,6 @@
   justify-content: space-between;
   margin-bottom: $spacer-small-plus;
   width: 100%;
-
-  @include desktop() {
-    margin-bottom: $spacer-medium;
-  }
 }
 
 .linkIcons {
@@ -40,6 +41,22 @@
   line-height: $line-height-heading;
   margin-bottom: $spacer-small;
   max-width: $max-width-card-content;
+
+  a {
+    position: static;
+
+    &::before {
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 0;
+    }
+  }
+
+
 
   @include desktop() {
     font-size: $font-size-heading-medium-desktop;
@@ -63,6 +80,7 @@
 
 .cardTags {
   align-items: center;
+  align-self: flex-start;
   display: flex;
   flex-flow: row nowrap;
   gap: $spacer-small;
