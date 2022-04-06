@@ -50,7 +50,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           <IconLink Icon={HrefIcon} href={projectHref} />
         </div>
       </div>
-      <h3 className={styles.cardTitle}>{projectTitle}</h3>
+      <a className={styles.cardTitle} href={projectHref}>
+        {projectTitle}
+      </a>
       <p className={styles.cardDescription}>{projectDescription}</p>
       <div className={styles.cardTags}>
         {projectTags.map((tag) => (
