@@ -30,13 +30,7 @@
 }
 
 .large {
-  font-size: $font-size-heading;
-  font-weight: $font-weight-black;
-  line-height: $line-height-heading;
-
-  @include desktop() {
-    font-size: $font-size-heading-desktop;
-  }
+  @include header();
 
   .marginRight {
     margin-right: $spacer-small;

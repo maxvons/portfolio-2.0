@@ -26,8 +26,13 @@ body {
   padding: 0;
 }
 
+p, a {
+  font-family: $primary-font;
+}
+
 a {
   color: inherit;
+  font-variation-settings: $mono-bold;
   text-decoration: none;
 
   &:visited {
@@ -40,10 +45,53 @@ a {
   }
 }
 
+h1, h2, h3 {
+  font-family: $header-font;
+}
+
 h1, h2, h3, h4, h6, p {
   margin: 0;
 }
 
 * {
   box-sizing: border-box;
+}
+
+// Recursive.
+@font-face {
+  font-display: swap;
+  font-family: "Recursive";
+  font-weight: 300 1000;
+  src: local(''),
+    url("/fonts/recursive/Recursive_VF_1.078--subset-GF_latin_basic.woff2") format("woff2");
+}
+
+// Open Sauce Sans Bold.
+@font-face {
+  font-display: swap;
+  font-family: "Open Sauce Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+    url("/fonts/open-sauce-sans/OpenSauceSans-Bold.ttf") format("ttf");
+}
+
+// Open Sauce Sans Extra Bold.
+@font-face {
+  font-display: swap;
+  font-family: "Open Sauce Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: local(''),
+    url("/fonts/open-sauce-sans/OpenSauceSans-ExtraBold.ttf") format("ttf");
+}
+
+// Open Sauce Sans Black.
+@font-face {
+  font-display: swap;
+  font-family: "Open Sauce Sans";
+  font-style: normal;
+  font-weight: 900;
+  src: local(''),
+    url("/fonts/open-sauce-sans/OpenSauceSans-Black.ttf") format("ttf");
 }

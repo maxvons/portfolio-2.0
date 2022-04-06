@@ -100,5 +100,6 @@
 .flare {
   background: linear-gradient(45deg, $primary-color, $secondary-color);
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-variation-settings: $sans-casual;
+  -webkit-text-fill-color: transparent
 }

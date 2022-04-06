@@ -105,7 +105,6 @@
   border: none;
   color: inherit;
   cursor: pointer;
-  font: inherit;
   margin: 0;
   padding: 0;
 }
@@ -124,6 +123,7 @@
 
 @mixin header() {
   color: $text-color-emphasis;
+  font-family: $header-font;
   font-size: $font-size-heading;
   font-weight: $font-weight-black;
   letter-spacing: -0.05em;
@@ -137,8 +137,9 @@
 @mixin subheader() {
   @include header();
   color: $text-color-primary;
+  font-family: $primary-font;
   font-weight: $font-weight-regular;
-  letter-spacing: 0;
+  letter-spacing: 0em;
   line-height: $line-height-sub-title;
   max-width: 500px;
   text-align: center;

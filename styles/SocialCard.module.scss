@@ -23,8 +23,8 @@
 
 .title {
   color: $text-color-emphasis;
-  font-family: monospace;
   font-size: $font-size-primary;
+  font-variation-settings: $mono;
   font-weight: $font-weight-regular;
   line-height: $line-height-sub-title;
 }

@@ -1,6 +1,6 @@
 .button {
   @include resetButton();
-  align-items: flex-end;
+  align-items: center;
   background-color: $background-color-button-primary;
   border-radius: $border-radius-regular;
   box-shadow: $shadow-button;
@@ -8,7 +8,6 @@
   display: flex;
   flex-flow: row nowrap;
   font-size: $font-size-primary;
-  font-weight: $font-weight-bold;
   justify-content: center;
   padding: $spacer-small $spacer-medium;
 
@@ -21,7 +20,7 @@
   height: $font-size-primary;
   margin-left: $spacer-small;
   stroke: $text-color-button;
-  stroke-width: 4;
+  stroke-width: 3.5;
   width: $font-size-primary;
 
   @include desktop() {

@@ -43,6 +43,7 @@
   max-width: $max-width-card-content;
 
   a {
+    font-family: $header-font;
     position: static;
 
     &::before {
@@ -89,7 +90,9 @@
 
 .cardTag {
   color: $text-color-secondary;
+  font-family: $primary-font;
   font-size: $font-size-tertiary;
+  font-variation-settings: $mono;
   font-weight: $font-weight-regular;
   line-height: $line-height-heading;
 

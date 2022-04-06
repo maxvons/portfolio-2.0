@@ -30,7 +30,6 @@ const Test: NextPage = () => {
       <Landing />
       <AboutSection />
       <Layout>
-        <ProjectCard project={Project.REVMATOLOGEN} />
         <SocialCard social={Social.GITHUB} />
       </Layout>
     </>
