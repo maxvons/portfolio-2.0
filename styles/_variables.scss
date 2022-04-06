@@ -84,7 +84,13 @@ $font-weight-medium: 500;
 $font-weight-bold: 700;
 $font-weight-black: 900;
 
-/* Mobile font sizes. */
+// Font variations.
+$sans-casual: "MONO" 0, "CASL" 1, "wght" $font-weight-regular, "slnt" 0, "CRSV" 0.5;
+$sans-casual-bold: "MONO" 0, "CASL" 1, "wght" $font-weight-bold, "slnt" 0, "CRSV" 0.5;
+$mono: "MONO" 1, "CASL" 0, "wght" $font-weight-regular, "slnt" 0, "CRSV" 0.5;
+$mono-bold: "MONO" 1, "CASL" 0, "wght" $font-weight-bold, "slnt" 0, "CRSV" 0.5;
+
+// Mobile font sizes.
 $font-size-title: 4rem;
 $font-size-heading: 1.875rem;
 $font-size-heading-medium: 1.5rem;
@@ -92,7 +98,7 @@ $font-size-primary: 1.125rem;
 $font-size-secondary: 0.875rem;
 $font-size-tertiary: 0.75rem;
 
-/* Desktop font sizes. */
+// Desktop font sizes.
 $font-size-title-desktop-wide: 8.75rem;
 $font-size-title-desktop: 6rem;
 $font-size-heading-desktop: 3rem;
