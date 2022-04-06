@@ -7,7 +7,7 @@ import LightIcon from "../components/svgs/LightIcon";
 import { NextPage } from "next";
 import { useState } from "react";
 
-import { ImageSize } from "../types/types";
+import { ImageSize, Social } from "../types/types";
 import { Project } from "../types/types";
 
 import styles from "../styles/Test.module.scss";
@@ -20,6 +20,7 @@ import Portrait from "/public/images/portrait.jpg";
 import Landing from "../components/Landing";
 import AboutSection from "../components/AboutSection";
 import ProjectCard from "../components/ProjectCard";
+import SocialCard from "../components/SocialCard";
 
 const Test: NextPage = () => {
   const [open, setOpen] = useState(false);
@@ -30,6 +31,7 @@ const Test: NextPage = () => {
       <AboutSection />
       <Layout>
         <ProjectCard project={Project.REVMATOLOGEN} />
+        <SocialCard social={Social.GITHUB} />
       </Layout>
     </>
   );
