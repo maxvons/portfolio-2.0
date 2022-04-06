@@ -19,3 +19,10 @@ export enum Project {
   CLEANLIST,
   PORTFOLIO,
 }
+
+export enum Social {
+  GITHUB,
+  LINKEDIN,
+  INSTAGRAM,
+  TWITTER,
+}

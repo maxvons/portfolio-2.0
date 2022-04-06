@@ -181,32 +181,33 @@
   margin-right: -$spacer-large;
 }
 
-@mixin card() {
+@mixin card($shadow-size, $shadow-size-hover, $shadow-size-active) {
   align-items: center;
   background-color: $background-color-card;
   border: 1px solid $border-color-card;
   border-radius: $border-radius-regular;
-  box-shadow: $shadow-card-medium;
+  box-shadow: $shadow-size;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   padding: $spacer-small-plus;
+  transition: all $animation-duration ease;
 
   &:active {
-    box-shadow: $shadow-card-medium-active;
+    box-shadow: $shadow-size-hover;
   }
 
   @include desktop() {
-    box-shadow: $shadow-card-large;
+    box-shadow: $shadow-size;
     padding: $spacer-medium;
 
     &:hover {
-      box-shadow: $shadow-card-large-hover;
+      box-shadow: $shadow-size-hover;
       transform: translateY(-5px);
     }
 
     &:active {
-      box-shadow: $shadow-card-large-active;
+      box-shadow: $shadow-size-active;
     }
   }
 }

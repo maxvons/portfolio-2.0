@@ -1,0 +1,30 @@
+.card {
+  @include card($shadow-card-medium, $shadow-card-medium-hover, $shadow-card-medium-active);
+  margin-bottom: 100px;
+  padding: $spacer-small-plus $spacer-medium;
+
+  @include desktop() {
+    padding: $spacer-medium $spacer-medium-plus;
+  }
+}
+
+.icon {
+  height: $font-size-heading;
+  margin-bottom: $spacer-small;
+  stroke: $text-color-emphasis;
+  stroke-width: 2;
+  width: $font-size-heading;
+
+  @include desktop() {
+    height: $font-size-heading-desktop;
+    width: $font-size-heading-desktop;
+  }
+}
+
+.title {
+  color: $text-color-emphasis;
+  font-family: monospace;
+  font-size: $font-size-primary;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-sub-title;
+}
