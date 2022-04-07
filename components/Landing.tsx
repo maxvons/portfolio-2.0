@@ -20,7 +20,7 @@ const Landing = () => {
         <p className={styles.tag}>My name is</p>
         <h1 className={styles.title}>Maximilian</h1>
         <h2 className={styles.subTitle}>
-          I create <span className={styles.flare}>exceptional</span> digital
+          I create <span className={styles.flair}>exceptional</span> digital
           experiences.
         </h2>
         <Button
