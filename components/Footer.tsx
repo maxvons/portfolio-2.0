@@ -1,5 +1,6 @@
 /* Components. */
 import LinkWithIcon from "./LinkWithIcon";
+import Layout from "./Layout";
 
 /* Assets. */
 import { internalLinks, externalLinks } from "../assets/linkData";
@@ -9,7 +10,7 @@ import styles from "../styles/Footer.module.scss";
 
 const Footer = () => {
   return (
-    <>
+    <Layout>
       <span className={styles.divider} />
       <div className={styles.container}>
         <ul className={`${styles.links} ${styles.internalLinks}`}>
@@ -47,7 +48,7 @@ const Footer = () => {
           <span className={styles.flair}>Maximilian von Stephanides</span>
         </p>
       </div>
-    </>
+    </Layout>
   );
 };
 
