@@ -3,17 +3,19 @@ import styles from "../styles/Layout.module.scss";
 
 interface LayoutProps {
   children: React.ReactNode;
-  className?: string;
   secondary?: boolean;
+  noPadding?: boolean;
 }
 
-const Layout = ({ children, className, secondary }: LayoutProps) => {
+const Layout = ({ children, secondary, noPadding }: LayoutProps) => {
+  const wrapperStyles = (() => {
+    return `${styles.wrapper} ${secondary && styles.secondary} ${
+      noPadding && styles.noPadding
+    }`;
+  })();
+
   return (
-    <div
-      className={`${styles.wrapper} ${
-        secondary ? styles.secondary : styles.primary
-      } ${className}`}
-    >
+    <div className={wrapperStyles}>
       <div className={styles.container}>{children}</div>
     </div>
   );
