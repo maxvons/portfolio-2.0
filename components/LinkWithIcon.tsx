@@ -12,6 +12,7 @@ interface LinkWithIcon {
   text: string;
   href: string;
   large?: boolean;
+  footer?: boolean;
   external?: boolean;
   button?: boolean;
 }
@@ -20,17 +21,23 @@ const LinkWithIcon = ({
   text,
   href,
   large,
+  footer,
   external,
   button,
 }: LinkWithIcon) => {
+  const linkStyles = (() => {
+    if (large) {
+      return `${styles.link} ${styles.large}`;
+    } else if (footer) {
+      return `${styles.link} ${styles.footer}`;
+    } else {
+      return styles.link;
+    }
+  })();
+
   if (external) {
     return (
-      <a
-        className={`${styles.link} ${large && styles.large}`}
-        href={href}
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a className={linkStyles} href={href} target="_blank" rel="noreferrer">
         <span className={styles.marginRight}>{text}</span>
         <ExternalLinkIcon
           className={`${styles.icon} ${button && styles.button}`}
@@ -41,7 +48,7 @@ const LinkWithIcon = ({
 
   return (
     <Link href={href}>
-      <a className={`${styles.link} ${large && styles.large}`}>
+      <a className={linkStyles}>
         <span className={styles.marginRight}>{text}</span>
         <InternalLinkIcon
           className={`${styles.icon} ${button && styles.button}`}

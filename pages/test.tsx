@@ -21,6 +21,7 @@ import Landing from "../components/Landing";
 import AboutSection from "../components/AboutSection";
 import ProjectCard from "../components/ProjectCard";
 import SocialCard from "../components/SocialCard";
+import Footer from "../components/Footer";
 
 const Test: NextPage = () => {
   const [open, setOpen] = useState(false);
@@ -31,6 +32,7 @@ const Test: NextPage = () => {
       <AboutSection />
       <Layout>
         <SocialCard social={Social.GITHUB} />
+        <Footer />
       </Layout>
     </>
   );
