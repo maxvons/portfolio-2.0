@@ -164,14 +164,26 @@
   color: $text-color-primary;
   font-size: $font-size-primary;
   line-height: $line-height-text;
-  max-width: 500px;
+  max-width: $max-width-text;
 
   @include desktop() {
     font-size: $font-size-primary-desktop;
-    max-width: 620px;
+    max-width: $max-width-text-desktop;
   }
 }
 
+
+@mixin footer() {
+  color: $text-color-primary;
+  font-size: $font-size-secondary;
+  line-height: $line-height-text;
+  max-width: $max-width-text;
+
+  @include desktop() {
+    font-size: $font-size-secondary-desktop;
+    max-width: $max-width-text-desktop;
+  }
+}
 @mixin contentPadding() {
   padding-left: $spacer-large;
   padding-right: $spacer-large;
