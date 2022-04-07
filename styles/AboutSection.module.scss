@@ -9,7 +9,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   justify-items: center;
-  margin-bottom: $spacer-large;
   width: 100%;
 
   @include desktopWide() {
@@ -21,7 +20,6 @@
       ".      .      .      .       image";
     grid-template-columns: auto;
     justify-items: start;
-    margin-bottom: $spacer-medium;
     @include contentPadding();
   }
 }
