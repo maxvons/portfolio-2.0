@@ -1,12 +1,7 @@
 .card {
   @include card($shadow-card-large, $shadow-card-large-hover, $shadow-card-large-active);
-  margin-bottom: 100px;
-  transition: all $animation-duration ease;
-  width: initial;
 
-  @include desktop() {
-    width: initial;
-  }
+  justify-content: stretch;
 
   a {
     position: relative;
@@ -75,7 +70,7 @@
   font-size: $font-size-secondary;
   font-weight: $font-weight-regular;
   line-height: $line-height-text;
-  margin-bottom: $spacer-small;
+  margin-bottom: $spacer-small-plus;
   max-width: $max-width-card-content;
 
   @include desktop() {
@@ -85,11 +80,12 @@
 }
 
 .cardTags {
-  align-items: center;
+  align-items: flex-end;
   align-self: flex-start;
   display: flex;
   flex-flow: row nowrap;
   gap: $spacer-small;
+  height: 100%;
   justify-content: center;
 }
 
