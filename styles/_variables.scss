@@ -28,7 +28,7 @@ $project-color-portfolio: #FF6363;
 
 // Misc colors.
 $border-color-card: #EBE7FF;
-$divider-color: #FFFFFF;
+$divider-color: #E1E1E1;
 
 // Shadows.
 $shadow-image-large: 0 12px 30px rgb(106 106 106 / 20%);
@@ -86,6 +86,7 @@ $font-weight-black: 900;
 // Font variations.
 $sans-casual: "MONO" 0, "CASL" 1, "wght" $font-weight-regular, "slnt" 0, "CRSV" 0.5;
 $sans-casual-italic: "MONO" 0, "CASL" 1, "wght" $font-weight-regular, "slnt" -15, "CRSV" 0.5;
+$sans-italic: "MONO" 0, "CASL" 0, "wght" $font-weight-regular, "slnt" -15, "CRSV" 0.5;
 $sans-casual-bold: "MONO" 0, "CASL" 1, "wght" $font-weight-bold, "slnt" 0, "CRSV" 0.5;
 $mono: "MONO" 1, "CASL" 0, "wght" $font-weight-regular, "slnt" 0, "CRSV" 0.5;
 $mono-bold: "MONO" 1, "CASL" 0, "wght" $font-weight-bold, "slnt" 0, "CRSV" 0.5;
