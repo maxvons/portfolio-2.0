@@ -16,9 +16,10 @@ import styles from "../styles/ProjectCard.module.scss";
 
 interface ProjectCardProps {
   project: Project;
+  highlight?: boolean;
 }
 
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard = ({ project, highlight }: ProjectCardProps) => {
   const {
     title: projectTitle,
     description: projectDescription,
@@ -45,7 +46,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   };
 
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${highlight && styles.highlight}`}>
       <div className={styles.cardIcons}>
         <ProjectIcon className={`${styles.projectIcon} ${getProjectClass()}`} />
         <div className={styles.linkIcons}>
