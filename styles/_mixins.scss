@@ -172,18 +172,31 @@
   }
 }
 
-
 @mixin footer() {
   color: $text-color-primary;
   font-size: $font-size-secondary;
+  font-weight: $font-weight-regular;
   line-height: $line-height-text;
   max-width: $max-width-text;
+
+  a {
+    font-variation-settings: $mono;
+  }
 
   @include desktop() {
     font-size: $font-size-secondary-desktop;
     max-width: $max-width-text-desktop;
   }
 }
+
+@mixin italicText() {
+  font-variation-settings: $sans-italic;
+}
+
+@mixin casualItalicText() {
+  font-variation-settings: $sans-casual-italic;
+}
+
 @mixin contentPadding() {
   padding-left: $spacer-large;
   padding-right: $spacer-large;
@@ -192,6 +205,13 @@
 @mixin negativeContentMargin() {
   margin-left: -$spacer-large;
   margin-right: -$spacer-large;
+}
+
+@mixin divider() {
+  background-color: $divider-color;
+  border-radius: $border-radius-regular;
+  height: 2px;
+  width: 100%;
 }
 
 @mixin card($shadow-size, $shadow-size-hover, $shadow-size-active) {
