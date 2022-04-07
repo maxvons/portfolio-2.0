@@ -197,6 +197,14 @@
   font-variation-settings: $sans-casual-italic;
 }
 
+@mixin sectionPadding() {
+  padding: $spacer-large 0;
+
+  @include desktop() {
+    padding: $spacer-very-large 0;
+  }
+}
+
 @mixin contentPadding() {
   padding-left: $spacer-large;
   padding-right: $spacer-large;
