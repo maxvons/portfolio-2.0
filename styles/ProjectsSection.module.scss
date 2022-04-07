@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+.header {
+  margin-bottom: $spacer-medium;
+  @include header($max-width-header, $max-width-header-desktop);
+
+  @include desktop() {
+    margin-bottom: $spacer-large;
+  }
+}
+
+.projectGrid {
+  display: grid;
+  gap: $spacer-medium;
+  grid-template-columns: repeat(auto-fill, minmax(200px, $max-width-card));
+  margin-bottom: $spacer-medium-plus;
+
+  @include desktop() {
+    margin-bottom: $spacer-large;
+  }
+}
