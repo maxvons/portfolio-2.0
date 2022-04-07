@@ -1,0 +1,89 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "internalLinks"
+    "externalLinks"
+    "attributions"
+    "signature";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-content: start;
+  justify-items: start;
+  padding-bottom: $spacer-medium;
+  row-gap: $spacer-medium-plus;
+  width: 100%;
+
+  a {
+    @include footer();
+    font-variation-settings: $mono;
+  }
+
+  @include tablet() {
+    grid-template-areas:
+      "internalLinks externalLinks"
+      "attributions ."
+      "signature .";
+  }
+
+  @include desktop() {
+    align-items: center;
+    column-gap: $spacer-medium-plus;
+    grid-template-areas:
+      "internalLinks externalLinks signature attributions";
+    justify-content: stretch;
+    padding-bottom: $spacer-large;
+  }
+}
+
+.internalLinks {
+  grid-area: internalLinks;
+}
+
+.externalLinks {
+  grid-area: externalLinks;
+}
+
+.attributions {
+  grid-area: attributions;
+
+  @include desktop() {
+    justify-self: end;
+  }
+}
+
+.signature {
+  grid-area: signature;
+  text-align: center;
+  @include footer();
+
+  @include desktop() {
+    justify-self: center;
+  }
+}
+
+.links {
+  @include resetList();
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-small;
+
+  @include desktop() {
+    gap: $spacer-small-plus;
+  }
+}
+
+.flair {
+  background: linear-gradient(45deg, $primary-color, $secondary-color);
+  background-clip: text;
+  font-variation-settings: $sans-casual;
+  -webkit-text-fill-color: transparent;
+}
+
+.divider {
+  @include divider();
+  margin-bottom: $spacer-medium;
+
+  @include desktop() {
+    margin-bottom: $spacer-large;
+  }
+}
