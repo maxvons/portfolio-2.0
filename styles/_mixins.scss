@@ -128,9 +128,11 @@
   font-weight: $font-weight-black;
   letter-spacing: -0.05em;
   line-height: $line-height-heading;
+  max-width: $max-width-header;
 
   @include desktop() {
     font-size: $font-size-heading-desktop;
+    max-width: $max-width-header-desktop;
   }
 }
 
@@ -141,7 +143,6 @@
   font-weight: $font-weight-regular;
   letter-spacing: 0em;
   line-height: $line-height-sub-title;
-  max-width: 500px;
   text-align: center;
 }
 
