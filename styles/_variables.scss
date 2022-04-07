@@ -47,23 +47,22 @@ $shadow-toggle: inset 0 4px 10px rgb(106 106 106 / 20%);
 // Borders.
 $image-border: 4px solid #A9AAB7;
 
-// Misc.
+// Max widths.
 $max-width: 1500px;
 $max-width-nav-menu: 1200px;
 $max-width-card-content: 260px;
 $max-width-card-content-desktop: 300px;
-$max-width-input: 500px;
-$max-width-input-text: 500px;
-$max-width-input-date: 200px;
-$max-width-input-date-desktop: 250px;
-$max-width-input-time: 120px;
-$max-width-input-time-desktop: 150px;
-$max-width-input-number: 100px;
+$max-width-text: 500px;
+$max-width-text-desktop: 620px;
 $max-width-button: 500px;
 $max-width-card: 500px;
+
+// Widhts.
 $page-width: 90%;
 $navbar-width: 90%;
 $page-width-desktop: 80%;
+
+// Misc.
 $img-height-card: 350px;
 $background-blur: 8px;
 $animation-duration: 0.3s;
@@ -86,6 +85,7 @@ $font-weight-black: 900;
 
 // Font variations.
 $sans-casual: "MONO" 0, "CASL" 1, "wght" $font-weight-regular, "slnt" 0, "CRSV" 0.5;
+$sans-casual-italic: "MONO" 0, "CASL" 1, "wght" $font-weight-regular, "slnt" -15, "CRSV" 0.5;
 $sans-casual-bold: "MONO" 0, "CASL" 1, "wght" $font-weight-bold, "slnt" 0, "CRSV" 0.5;
 $mono: "MONO" 1, "CASL" 0, "wght" $font-weight-regular, "slnt" 0, "CRSV" 0.5;
 $mono-bold: "MONO" 1, "CASL" 0, "wght" $font-weight-bold, "slnt" 0, "CRSV" 0.5;
