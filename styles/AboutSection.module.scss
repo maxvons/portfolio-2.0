@@ -27,12 +27,7 @@
 .header {
   grid-area: header;
   margin-bottom: $spacer-medium;
-  max-width: 500px;
   @include header();
-
-  @include desktop() {
-    max-width: 620px;
-  }
 }
 
 .textContainer {
