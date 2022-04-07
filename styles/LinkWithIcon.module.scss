@@ -1,5 +1,5 @@
 .link {
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   font-size: $font-size-primary;
   font-weight: $font-weight-bold;
@@ -23,9 +23,24 @@
       width: $font-size-primary-desktop;
     }
   }
+}
 
-  .button {
-    stroke: $text-color-button;
+.footer {
+
+  .marginRight {
+    margin-right: $spacer-very-small;
+  }
+
+  .icon {
+    height: $font-size-secondary;
+    stroke: $text-color-primary;
+    stroke-width: 3;
+    width: $font-size-secondary;
+
+    @include desktop() {
+      height: $font-size-secondary-desktop;
+      width: $font-size-secondary-desktop;
+    }
   }
 }
 
@@ -50,8 +65,8 @@
       width: $font-size-heading-desktop;
     }
   }
+}
 
-  .button {
-    stroke: $text-color-button;
-  }
+.button {
+  stroke: $text-color-button;
 }
