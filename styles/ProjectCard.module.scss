@@ -1,33 +1,11 @@
 .card {
   @include card($shadow-card-large, $shadow-card-large-hover, $shadow-card-large-active);
-
   justify-content: stretch;
+  position: relative;
 
   a {
-    position: relative;
     z-index: 1;
   }
-}
-
-.highlight {
-  // TODO: Add some special styles here.
-  background-color: lightgray;
-}
-
-.cardIcons {
-  align-items: center;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  margin-bottom: $spacer-small-plus;
-  width: 100%;
-}
-
-.linkIcons {
-  align-items: center;
-  display: flex;
-  flex-flow: row nowrap;
-  gap: $spacer-small;
 }
 
 .cardTitle, .cardDescription {
@@ -57,12 +35,26 @@
     }
   }
 
-
-
   @include desktop() {
     font-size: $font-size-heading-medium-desktop;
     max-width: $max-width-card-content-desktop;
   }
+}
+
+.cardIcons {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-bottom: $spacer-small-plus;
+  width: 100%;
+}
+
+.linkIcons {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: $spacer-small;
 }
 
 .cardDescription {
@@ -123,7 +115,7 @@
 }
 
 .revmatologen {
-  stroke: $project-color-revmatologen
+  stroke: $project-color-revmatologen;
 }
 
 .haugesund {

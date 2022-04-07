@@ -46,9 +46,13 @@ const ProjectCard = ({ project, highlight }: ProjectCardProps) => {
   };
 
   return (
-    <div className={`${styles.card} ${highlight && styles.highlight}`}>
+    <div
+      className={`${styles.card} ${getProjectClass()} ${
+        highlight && styles.highlight
+      }`}
+    >
       <div className={styles.cardIcons}>
-        <ProjectIcon className={`${styles.projectIcon} ${getProjectClass()}`} />
+        <ProjectIcon className={styles.projectIcon} />
         <div className={styles.linkIcons}>
           <IconLink Icon={GitHubIcon} href={projectGitHref} />
           <IconLink Icon={HrefIcon} href={projectHref} />
