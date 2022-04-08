@@ -5,8 +5,8 @@ import ProjectIcon from "./svgs/ProjectIcon";
 import GitHubIcon from "./svgs/GitHubIcon";
 import HrefIcon from "./svgs/HrefIcon";
 
-/* Utils. */
-import { getProjectData } from "../utils/functions";
+/* Assets. */
+import { projectData } from "../assets/projectData";
 
 /* Types. */
 import { Project } from "../types/types";
@@ -26,9 +26,9 @@ const ProjectCard = ({ project, highlight }: ProjectCardProps) => {
     tags: projectTags,
     gitHref: projectGitHref,
     href: projectHref,
-  } = getProjectData(project);
+  } = projectData[project];
 
-  const getProjectClass = () => {
+  const projectClass = (() => {
     switch (project) {
       case Project.WILFO:
         return styles.wilfoBlog;
@@ -43,11 +43,11 @@ const ProjectCard = ({ project, highlight }: ProjectCardProps) => {
       case Project.PORTFOLIO:
         return styles.portfolio;
     }
-  };
+  })();
 
   return (
     <div
-      className={`${styles.card} ${getProjectClass()} ${
+      className={`${styles.card} ${projectClass} ${
         highlight && styles.highlight
       }`}
     >
