@@ -2,6 +2,10 @@
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
+
+  @include desktop() {
+    @include contentPadding();
+  }
 }
 
 .header {
@@ -16,10 +20,144 @@
 .projectGrid {
   display: grid;
   gap: $spacer-medium;
-  grid-template-columns: repeat(auto-fill, minmax(200px, $max-width-card));
+  grid-template-columns: repeat(auto-fill, minmax(150px, $max-width-card));
+}
+
+.highlightedProjects {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-large;
+  margin-bottom: $spacer-large;
+
+  @include desktop() {
+    gap: $spacer-very-large-plus;
+    margin-bottom: $spacer-very-large;
+  }
+}
+
+.highlightedProject {
+  align-items: stretch;
+  display: grid;
+  grid-template-areas:
+    "infoContainer"
+    "image";
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 2fr;
+  row-gap: $spacer-medium;
+
+  @include desktop() {
+    align-items: center;
+    column-gap: $spacer-large;
+    grid-template-areas:
+      "infoContainer image";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+  }
+}
+
+.projectInfoContainer {
+  grid-area: infoContainer;
+}
+
+.projectImage {
+  border-radius: $border-radius-regular;
+  grid-area: image;
+  height: auto;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.projects {
   margin-bottom: $spacer-medium-plus;
 
   @include desktop() {
     margin-bottom: $spacer-large;
+  }
+}
+
+.headerContainer {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: $spacer-medium;
+  justify-content: space-between;
+}
+
+.projectHeader {
+  @include header($max-width-header, $max-width-header-desktop);
+  font-size: $font-size-heading-medium;
+  font-weight: $font-weight-bold;
+  letter-spacing: -0.03em;
+  margin-bottom: $spacer-small;
+
+  @include desktop() {
+    font-size: $font-size-heading-medium-desktop;
+    margin-bottom: $spacer-small-plus;
+  }
+}
+
+.tag {
+  @include uppercase();
+  color: $project-color-portfolio-2;
+  margin-bottom: $spacer-mini;
+
+  @include desktop() {
+    margin-bottom: $spacer-very-small;
+  }
+}
+
+.descriptionBox {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-medium;
+  justify-content: center;
+  margin-bottom: $spacer-small-plus;
+  padding: $spacer-medium;
+  z-index: 2;
+}
+
+.projectDescription {
+  @include normalText();
+  max-width: $max-width-description;
+
+  @include desktop() {
+    max-width: $max-width-description;
+  }
+}
+
+.cardTags {
+  align-items: flex-end;
+  align-self: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: $spacer-small;
+}
+
+.cardTag {
+  color: $text-color-secondary;
+  font-family: $primary-font;
+  font-size: $font-size-tertiary;
+  font-variation-settings: $mono;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-heading;
+  margin-bottom: $spacer-small-plus;
+
+  @include desktop() {
+    font-size: $font-size-tertiary-desktop;
+  }
+}
+
+.linkIcons {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: $spacer-small;
+
+  svg {
+    stroke: $project-color-portfolio-2;
   }
 }
