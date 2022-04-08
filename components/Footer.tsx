@@ -33,6 +33,7 @@ const Footer = () => {
               text="Built with Next.js"
               href="https://nextjs.org/"
               footer
+              external
             />
           </li>
           <li>
@@ -40,6 +41,7 @@ const Footer = () => {
               text="Photography by Julie Liland"
               href="https://google.com"
               footer
+              external
             />
           </li>
         </ul>
