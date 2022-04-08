@@ -8,6 +8,9 @@ $secondary-color-hover: #E30053;
 $background-color-primary: #FFFFFF;
 $background-color-secondary: #F4F5F7;
 $background-color-card: #FFFFFF;
+$background-color-info-box-portfolio-2: #EBE5FF;
+$background-color-info-box-wilfo-blog: #FDDEE5;
+$background-color-info-box-revmatologen: #E0EDED;
 $background-color-button-primary: #231D3C;
 $background-color-button-primary-hover: #231D3C;
 $background-color-navbar: rgb(255 255 255 / 70%);
@@ -33,6 +36,12 @@ $divider-color: #E1E1E1;
 // Shadows.
 $shadow-image-large: 0 12px 30px rgb(106 106 106 / 20%);
 $shadow-image-medium: 0 10px 25px rgb(106 106 106 / 20%);
+$shadow-image-portfolio-medium: 0 6px 15px rgb(51 0 255 / 10%);
+$shadow-image-portfolio-large: 0 10px 25px rgb(51 0 255 / 10%);
+$shadow-image-wilfo-medium: 0 6px 15px rgb(236 0 53 / 10%);
+$shadow-image-wilfo-large: 0 10px 25px rgb(236 0 53 / 10%);
+$shadow-image-revmatologen-medium: 0 6px 15px rgb(0 108 109 / 15%);
+$shadow-image-revmatologen-large: 0 10px 25px rgb(0 108 109 / 15%);
 $shadow-card-large: 0 6px 15px rgb(106 106 106 / 15%);
 $shadow-card-large-hover: 0 10px 25px rgb(106 106 106 / 30%);
 $shadow-card-large-active: 0 0px 0px rgb(106 106 106 / 20%);
@@ -54,6 +63,7 @@ $max-width-card-content: 260px;
 $max-width-card-content-desktop: 300px;
 $max-width-text: 500px;
 $max-width-text-desktop: 620px;
+$max-width-description: 480px;
 $max-width-title: 500px;
 $max-width-title-desktop: 800px;
 $max-width-header: 500px;
@@ -136,6 +146,7 @@ $spacer-medium-plus: 3rem;
 $spacer-large: 4rem;
 $spacer-large-plus: 6rem;
 $spacer-very-large: 8rem;
+$spacer-very-large-plus: 12rem;
 
 // Break points.
 $breakpoint-tablet: 768px;
