@@ -26,3 +26,11 @@ export enum Social {
   INSTAGRAM,
   TWITTER,
 }
+
+export interface ProjectData {
+  title: string;
+  description: string;
+  tags: string[];
+  gitHref: string;
+  href: string;
+}
