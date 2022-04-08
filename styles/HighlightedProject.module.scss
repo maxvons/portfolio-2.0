@@ -1,0 +1,216 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "infoContainer"
+    "image";
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 2fr;
+  row-gap: $spacer-medium;
+
+  @include desktop() {
+    align-items: center;
+    column-gap: $spacer-large;
+    grid-template-areas:
+      "infoContainer image";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+  }
+
+  @include desktopWide() {
+    column-gap: $spacer-large-plus;
+    grid-template-areas:
+      ".             image"
+      "infoContainer image"
+      ".             image";
+    grid-template-columns: 5fr 6fr;
+    grid-template-rows: 1fr 6fr 1fr;
+  }
+}
+
+.placeRight {
+  @include desktop() {
+    grid-template-areas:
+      "image infoContainer";
+  }
+
+  @include desktopWide() {
+    grid-template-areas:
+      "image ."
+      "image infoContainer"
+      "image .";
+    grid-template-columns: 6fr 5fr;
+  }
+}
+
+.projectInfoContainer {
+  grid-area: infoContainer;
+}
+
+.tag {
+  @include uppercase();
+  color: $project-color-portfolio-2;
+  margin-bottom: $spacer-mini;
+
+  @include desktop() {
+    margin-bottom: $spacer-very-small;
+  }
+}
+
+.headerContainer {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: $spacer-medium;
+  justify-content: space-between;
+}
+
+.projectHeader {
+  margin-bottom: $spacer-small;
+
+  @include desktop() {
+    margin-bottom: $spacer-small-plus;
+  }
+
+  a {
+    @include header($max-width-header, $max-width-header-desktop);
+    font-size: $font-size-heading-medium;
+    letter-spacing: -0.03em;
+
+    @include desktop() {
+      font-size: $font-size-heading-medium-desktop;
+    }
+  }
+}
+
+.linkIcons {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: $spacer-small;
+
+  svg {
+    stroke: $project-color-portfolio-2;
+  }
+}
+
+.descriptionBox {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-medium;
+  justify-content: center;
+  margin-bottom: $spacer-small-plus;
+  padding: $spacer-medium;
+  z-index: 2;
+}
+
+.projectDescription {
+  @include normalText();
+  max-width: $max-width-description;
+
+  @include desktop() {
+    max-width: $max-width-description;
+  }
+}
+
+.cardTags {
+  align-items: flex-end;
+  align-self: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: $spacer-small;
+}
+
+.cardTag {
+  color: $text-color-secondary;
+  font-family: $primary-font;
+  font-size: $font-size-tertiary;
+  font-variation-settings: $mono;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-heading;
+
+  @include desktop() {
+    font-size: $font-size-tertiary-desktop;
+  }
+}
+
+.projectImage {
+  border-radius: $border-radius-regular;
+  grid-area: image;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.wilfoBlog {
+  .projectImage {
+    box-shadow: $shadow-image-wilfo-medium;
+
+    @include desktop() {
+      box-shadow: $shadow-image-wilfo-large;
+    }
+  }
+
+  .descriptionBox {
+    background-color: $background-color-info-box-wilfo-blog;
+  }
+
+  .tag {
+    color: $project-color-wilfo-blog;
+  }
+
+  .linkIcons {
+    svg {
+      stroke: $project-color-wilfo-blog;
+    }
+  }
+}
+
+.portfolio2 {
+  .projectImage {
+    box-shadow: $shadow-image-portfolio-medium;
+
+    @include desktop() {
+      box-shadow: $shadow-image-portfolio-large;
+    }
+  }
+
+  .descriptionBox {
+    background-color: $background-color-info-box-portfolio-2;
+  }
+
+  .tag {
+    color: $project-color-portfolio-2
+  }
+
+  .linkIcons {
+    svg {
+      stroke: $project-color-portfolio-2;
+    }
+  }
+}
+
+.revmatologen {
+  .projectImage {
+    box-shadow: $shadow-image-revmatologen-medium;
+
+    @include desktop() {
+      box-shadow: $shadow-image-revmatologen-large;
+    }
+  }
+
+  .descriptionBox {
+    background-color: $background-color-info-box-revmatologen;
+  }
+
+  .tag {
+    color: $project-color-revmatologen;
+  }
+
+  .linkIcons {
+    svg {
+      stroke: $project-color-revmatologen;
+    }
+  }
+}
