@@ -104,6 +104,6 @@
 }
 
 .heading {
-  @include header();
+  @include header($max-width-header, $max-width-header-desktop);
   margin-bottom: $spacer-small;
 }

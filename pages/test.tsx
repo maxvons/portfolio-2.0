@@ -22,6 +22,7 @@ import AboutSection from "../components/AboutSection";
 import ProjectCard from "../components/ProjectCard";
 import SocialCard from "../components/SocialCard";
 import Footer from "../components/Footer";
+import ProjectsSection from "../components/ProjectsSection";
 
 const Test: NextPage = () => {
   const [open, setOpen] = useState(false);
@@ -30,10 +31,8 @@ const Test: NextPage = () => {
       <Navbar open={open} onClick={() => setOpen(!open)} />
       <Landing />
       <AboutSection />
-      <Layout>
-        <SocialCard social={Social.GITHUB} />
-        <Footer />
-      </Layout>
+      <ProjectsSection />
+      <Footer />
     </>
   );
 };

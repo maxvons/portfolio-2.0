@@ -53,8 +53,11 @@
 
 .signature {
   grid-area: signature;
-  text-align: center;
   @include footer();
+
+  @include tablet() {
+    text-align: center;
+  }
 
   @include desktop() {
     justify-self: center;

@@ -1,5 +1,6 @@
 /* Components. */
 import LinkWithIcon from "./LinkWithIcon";
+import Layout from "./Layout";
 
 /* Assets. */
 import { internalLinks, externalLinks } from "../assets/linkData";
@@ -9,7 +10,7 @@ import styles from "../styles/Footer.module.scss";
 
 const Footer = () => {
   return (
-    <>
+    <Layout>
       <span className={styles.divider} />
       <div className={styles.container}>
         <ul className={`${styles.links} ${styles.internalLinks}`}>
@@ -32,6 +33,7 @@ const Footer = () => {
               text="Built with Next.js"
               href="https://nextjs.org/"
               footer
+              external
             />
           </li>
           <li>
@@ -39,6 +41,7 @@ const Footer = () => {
               text="Photography by Julie Liland"
               href="https://google.com"
               footer
+              external
             />
           </li>
         </ul>
@@ -47,7 +50,7 @@ const Footer = () => {
           <span className={styles.flair}>Maximilian von Stephanides</span>
         </p>
       </div>
-    </>
+    </Layout>
   );
 };
 

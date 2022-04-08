@@ -9,8 +9,11 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   justify-items: center;
-  margin-bottom: $spacer-large;
   width: 100%;
+
+  @include desktop() {
+    @include contentPadding();
+  }
 
   @include desktopWide() {
     column-gap: $spacer-medium;
@@ -21,20 +24,13 @@
       ".      .      .      .       image";
     grid-template-columns: auto;
     justify-items: start;
-    margin-bottom: $spacer-medium;
-    @include contentPadding();
   }
 }
 
 .header {
   grid-area: header;
   margin-bottom: $spacer-medium;
-  max-width: 500px;
-  @include header();
-
-  @include desktop() {
-    max-width: 620px;
-  }
+  @include header($max-width-header, $max-width-header-desktop);
 }
 
 .textContainer {

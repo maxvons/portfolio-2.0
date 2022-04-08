@@ -45,7 +45,7 @@
 }
 
 .large {
-  @include header();
+  @include header($max-width-header, $max-width-header-desktop);
 
   .marginRight {
     margin-right: $spacer-small;

@@ -15,7 +15,7 @@ import styles from "../styles/Landing.module.scss";
 
 const Landing = () => {
   return (
-    <Layout>
+    <Layout noPadding>
       <div className={`${styles.container} ${styles.marginTop}`}>
         <p className={styles.tag}>My name is</p>
         <h1 className={styles.title}>Maximilian</h1>

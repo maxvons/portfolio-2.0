@@ -1,16 +1,16 @@
-/* Components. */
+// Components.
 import GitHubIcon from "./svgs/GitHubIcon";
 import LinkedInIcon from "./svgs/LinkedInIcon";
 import InstagramIcon from "./svgs/InstagramIcon";
 import TwitterIcon from "./svgs/TwitterIcon";
 
-/* Utils. */
-import { getSocialData } from "../utils/functions";
+// Assets.
+import { socialData } from "../assets/socialData";
 
-/* Types. */
+// Types.
 import { Social } from "../types/types";
 
-/* Styles. */
+// Styles.
 import styles from "../styles/SocialCard.module.scss";
 
 interface SocialCardProps {
@@ -18,7 +18,7 @@ interface SocialCardProps {
 }
 
 const SocialCard = ({ social }: SocialCardProps) => {
-  const { href: socialHref, title: socialTitle } = getSocialData(social);
+  const { href: socialHref, title: socialTitle } = socialData[social];
 
   const icon = (() => {
     switch (social) {

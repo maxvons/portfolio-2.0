@@ -1,7 +1,9 @@
 .wrapper {
   align-items: center;
+  background-color: $background-color-primary;
   display: flex;
   justify-content: center;
+  @include sectionPadding();
 }
 
 .container {
@@ -13,15 +15,10 @@
   width: $page-width;
 }
 
-.primary {
-  background-color: $background-color-primary;
-}
-
 .secondary {
   background-color: $background-color-secondary;
-  padding: $spacer-large 0;
+}
 
-  @include desktop() {
-    padding: $spacer-very-large 0;
-  }
+.noPadding {
+  padding: 0;
 }
