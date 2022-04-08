@@ -11,6 +11,10 @@
   justify-items: center;
   width: 100%;
 
+  @include desktop() {
+    @include contentPadding();
+  }
+
   @include desktopWide() {
     column-gap: $spacer-medium;
     grid-template-areas:
@@ -20,7 +24,6 @@
       ".      .      .      .       image";
     grid-template-columns: auto;
     justify-items: start;
-    @include contentPadding();
   }
 }
 
