@@ -95,13 +95,18 @@
 }
 
 .descriptionBox {
+  border-radius: $border-radius-regular;
   display: flex;
   flex-flow: column nowrap;
   gap: $spacer-medium;
   justify-content: center;
   margin-bottom: $spacer-small-plus;
-  padding: $spacer-medium;
+  padding: $spacer-small;
   z-index: 2;
+
+  @include desktop() {
+    padding: $spacer-medium;
+  }
 }
 
 .projectDescription {
