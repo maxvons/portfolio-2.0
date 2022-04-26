@@ -129,10 +129,12 @@
   letter-spacing: -0.05em;
   line-height: $line-height-heading;
   max-width: $max-width;
+  text-align: center;
 
   @include desktop() {
     font-size: $font-size-heading-desktop;
     max-width: $max-width-desktop;
+    text-align: left;
   }
 }
 
