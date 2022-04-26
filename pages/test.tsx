@@ -23,6 +23,7 @@ import ProjectCard from "../components/ProjectCard";
 import SocialCard from "../components/SocialCard";
 import Footer from "../components/Footer";
 import ProjectsSection from "../components/ProjectsSection";
+import SocialSection from "../components/SocialSection";
 
 const Test: NextPage = () => {
   const [open, setOpen] = useState(false);
@@ -32,6 +33,7 @@ const Test: NextPage = () => {
       <Landing />
       <AboutSection />
       <ProjectsSection />
+      <SocialSection />
       <Footer />
     </>
   );
