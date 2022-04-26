@@ -1,13 +1,13 @@
-/* Components. */
+// Components.
 import Layout from "./Layout";
 import HighlightedProject from "./HighlightedProject";
 import ProjectCard from "./ProjectCard";
 import LinkWithIcon from "./LinkWithIcon";
 
-/* Types. */
+// Types.
 import { Project } from "../types/types";
 
-/* Styles. */
+// Styles.
 import styles from "../styles/ProjectsSection.module.scss";
 
 const ProjectsSection = () => {
