@@ -31,6 +31,14 @@
   grid-area: header;
   margin-bottom: $spacer-medium;
   @include header($max-width-header, $max-width-header-desktop);
+
+  @include desktop() {
+    text-align: center;
+  }
+
+  @include desktopWide() {
+    text-align: left;
+  }
 }
 
 .textContainer {

@@ -93,6 +93,7 @@
   font-weight: $font-weight-bold;
   letter-spacing: -0.03em;
   margin-bottom: $spacer-small;
+  text-align: left;
 
   @include desktop() {
     font-size: $font-size-heading-medium-desktop;
