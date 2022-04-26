@@ -1,0 +1,84 @@
+.container {
+  align-items: start;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "image"
+    "text";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  width: 100%;
+
+  @include desktop() {
+    @include contentPadding();
+    column-gap: $spacer-large;
+    grid-template-areas:
+      ".      image"
+      "header image"
+      "text   image"
+      ".      image";
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+  }
+
+  @include desktopWide() {
+    column-gap: $spacer-large-plus;
+  }
+}
+
+.header {
+  grid-area: header;
+  margin-bottom: $spacer-medium;
+  @include header($max-width-header, $max-width-header-desktop);
+}
+
+.textContainer {
+  grid-area: text;
+
+  .text {
+    @include normalText();
+  }
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.marginBottomMedium {
+  margin-bottom: $spacer-medium;
+}
+
+.marginBottomMediumPlus {
+  margin-bottom: $spacer-medium-plus;
+
+  @include desktopWide() {
+    margin-bottom: $spacer-large;
+  }
+}
+
+.imageContainer {
+  border-radius: $border-radius-regular;
+  box-shadow: $shadow-image-medium;
+  grid-area: image;
+  height: 380px;
+  margin-bottom: $spacer-medium;
+  max-width: 500px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @include desktop() {
+    box-shadow: $shadow-image-large;
+    height: 600px;
+    margin-bottom: 0;
+  }
+}
+
+.flair {
+  background: linear-gradient(45deg, $primary-color, $secondary-color);
+  background-clip: text;
+  font-variation-settings: $sans-casual;
+  -webkit-text-fill-color: transparent;
+}
