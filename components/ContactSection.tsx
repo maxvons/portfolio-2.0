@@ -28,13 +28,11 @@ const ContactSection = () => {
             </span>{" "}
             🌞
           </p>
-          <div className={styles.linkContainer}>
-            <LinkWithIcon
-              text="maximilianvons@gmail.com"
-              href="mailto:maximilianvons@gmail.com"
-              external
-            />
-          </div>
+          <LinkWithIcon
+            text="maximilianvons@gmail.com"
+            href="mailto:maximilianvons@gmail.com"
+            external
+          />
         </div>
         <div className={styles.imageContainer}>
           <Image
