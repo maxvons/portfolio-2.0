@@ -1,7 +1,7 @@
 .card {
   @include card($shadow-card-medium, $shadow-card-medium-hover, $shadow-card-medium-active);
-  margin-bottom: 100px;
   padding: $spacer-small-plus $spacer-medium;
+  text-align: center;
 
   @include desktop() {
     padding: $spacer-medium $spacer-medium-plus;
