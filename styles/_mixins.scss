@@ -218,6 +218,14 @@
   margin-right: -$spacer-large;
 }
 
+@mixin navbarMargin() {
+  margin-top: 66px + 32px;
+
+  @include desktop() {
+    margin-top: 104px + 32px;
+  }
+}
+
 @mixin divider() {
   background-color: $divider-color;
   border-radius: $border-radius-regular;
