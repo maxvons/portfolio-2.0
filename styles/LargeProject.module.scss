@@ -1,0 +1,130 @@
+.wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  @include sectionPadding();
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  max-width: $max-width;
+  width: $page-width;
+
+  @include desktop() {
+    width: $page-width-desktop;
+    @include contentPadding();
+  }
+}
+
+.projectInfoContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: $spacer-large;
+
+  @include desktop() {
+    margin-bottom: $spacer-large-plus;
+  }
+}
+
+.date {
+  @include uppercase();
+  color: $text-color-primary;
+  margin-bottom: $spacer-mini;
+
+  @include desktop() {
+    margin-bottom: $spacer-very-small;
+  }
+}
+
+.uppercase {
+  @include uppercase();
+  color: $text-color-primary;
+}
+
+.metaContainer {
+  display: flex;
+  flex-flow: row wrap;
+  gap: $spacer-medium;
+  margin-bottom: $spacer-medium-plus;
+  margin-top: $spacer-medium;
+
+  @include desktop() {
+    gap: $spacer-medium-plus;
+    margin-bottom: $spacer-large;
+  }
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-medium;
+}
+
+.projectDescription {
+  @include normalText();
+}
+
+.metaContainerItem {
+  p {
+    margin-bottom: $spacer-very-small-plus;
+  }
+}
+
+.list {
+  @include resetList();
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-small;
+}
+
+.listItem {
+  color: $text-color-emphasis;
+  font-family: $primary-font;
+  font-size: $font-size-secondary;
+  font-variation-settings: $mono;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-heading;
+
+  @include desktop() {
+    font-size: $font-size-secondary-desktop;
+  }
+}
+
+.imageGrid {
+  display: grid;
+  gap: $spacer-medium;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+
+.imageContainer {
+  border-radius: $border-radius-regular;
+  box-shadow: $shadow-image-medium;
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.imageContainer:first-child {
+  grid-column: span 3;
+}
+
+.imageContainer:nth-child(6) {
+  grid-column: span 2;
+}
+
+.wilfoBlog {
+  background-color: $background-color-wilfo-blog;
+}
+
+.portfolio2 {
+  background-color: $background-color-portfolio-2;
+}
+
+.revmatologen {
+  background-color: $background-color-revmatologen;
+}

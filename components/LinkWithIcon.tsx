@@ -15,6 +15,7 @@ interface LinkWithIcon {
   footer?: boolean;
   external?: boolean;
   button?: boolean;
+  listItem?: boolean;
 }
 
 const LinkWithIcon = ({
@@ -24,12 +25,15 @@ const LinkWithIcon = ({
   footer,
   external,
   button,
+  listItem,
 }: LinkWithIcon) => {
   const linkStyles = (() => {
     if (large) {
       return `${styles.link} ${styles.large}`;
     } else if (footer) {
       return `${styles.link} ${styles.footer}`;
+    } else if (listItem) {
+      return `${styles.link} ${styles.listItem}`;
     } else {
       return styles.link;
     }

@@ -1,0 +1,7 @@
+.wrapper {
+  align-items: center;
+  background-color: $background-color-primary;
+  display: flex;
+  flex-flow: column nowrap;
+  @include navbarMargin();
+}
