@@ -106,4 +106,5 @@
 .heading {
   @include header($max-width-header, $max-width-header-desktop);
   margin-bottom: $spacer-small;
+  text-align: left;
 }
