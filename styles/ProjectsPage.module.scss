@@ -1,7 +1,61 @@
 .wrapper {
+  @include navbarMargin();
+  margin-bottom: $spacer-large;
+
+  @include desktop() {
+    margin-bottom: $spacer-very-large;
+  }
+}
+
+.titleContainer {
   align-items: center;
-  background-color: $background-color-primary;
   display: flex;
   flex-flow: column nowrap;
-  @include navbarMargin();
+  justify-content: center;
+}
+
+.tag {
+  @include uppercase();
+  margin-bottom: $spacer-very-small;
+  text-align: center;
+}
+
+.title {
+  @include title();
+  margin-bottom: $spacer-medium;
+}
+
+.subHeader {
+  @include subheader();
+  max-width: $max-width-subheader-wider;
+  text-align: center;
+
+  @include desktop() {
+    max-width: $max-width-subheader-wider;
+    text-align: center;
+  }
+}
+
+.projectContainer {
+  width: 100%;
+}
+
+.projectGrid {
+  display: grid;
+  gap: $spacer-medium;
+  grid-template-columns: repeat(auto-fill, minmax(150px, $max-width-card));
+}
+
+.projectHeader {
+  @include header($max-width-header, $max-width-header-desktop);
+  font-size: $font-size-heading-medium;
+  font-weight: $font-weight-bold;
+  letter-spacing: -0.03em;
+  margin-bottom: $spacer-small;
+  text-align: left;
+
+  @include desktop() {
+    font-size: $font-size-heading-medium-desktop;
+    margin-bottom: $spacer-small-plus;
+  }
 }
