@@ -46,6 +46,7 @@
 
 .large {
   @include header($max-width-header, $max-width-header-desktop);
+  text-align: left;
 
   .marginRight {
     margin-right: $spacer-small;
@@ -69,4 +70,24 @@
 
 .button {
   stroke: $text-color-button;
+}
+
+.listItem {
+  font-size: $font-size-secondary;
+
+  @include desktop() {
+    font-size: $font-size-secondary-desktop;
+  }
+
+  .icon {
+    height: $font-size-secondary;
+    stroke: $text-color-emphasis;
+    stroke-width: 4;
+    width: $font-size-secondary;
+
+    @include desktop() {
+      height: $font-size-secondary-desktop;
+      width: $font-size-secondary-desktop;
+    }
+  }
 }
