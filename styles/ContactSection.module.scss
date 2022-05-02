@@ -55,7 +55,6 @@
 
 .imageContainer {
   border-radius: $border-radius-regular;
-  box-shadow: $shadow-image-medium;
   grid-area: image;
   height: 380px;
   margin-bottom: $spacer-medium;
@@ -65,7 +64,6 @@
   width: 100%;
 
   @include desktop() {
-    box-shadow: $shadow-image-large;
     height: 600px;
     margin-bottom: 0;
   }

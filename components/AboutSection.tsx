@@ -38,6 +38,7 @@ const AboutSection = () => {
           height={1536}
           objectPosition="20% 50%"
           size={ImageSize.LARGE}
+          noShadow
           className={styles.image}
         />
       </div>
