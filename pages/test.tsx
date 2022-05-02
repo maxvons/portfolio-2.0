@@ -25,6 +25,7 @@ import Footer from "../components/Footer";
 import ProjectsSection from "../components/ProjectsSection";
 import SocialSection from "../components/SocialSection";
 import ContactSection from "../components/ContactSection";
+import Timeline from "../components/Timeline";
 
 const Test: NextPage = () => {
   const [open, setOpen] = useState(false);
@@ -36,6 +37,51 @@ const Test: NextPage = () => {
       <ProjectsSection />
       <SocialSection />
       <ContactSection />
+      <Layout>
+        <Timeline
+          timelinePoints={[
+            {
+              date: "Oct. 1996",
+              location: "Bergen, Norway",
+              title: "Born in Bergen, Norway at the 18th of October",
+              description:
+                "Dolor velit facere ut consequatur laborum rerum dolorem ut. Possimus odio ipsam esse et repellat. Consequatur ut quisquam est eligendi autem soluta eos. Voluptas architecto dolorum aperiam qui asperiores reprehenderit sed sint.",
+              image: {
+                src: Portrait,
+                alt: "alt text",
+                width: 2000,
+                height: 2000,
+              },
+            },
+            {
+              date: "Oct. 1996",
+              location: "Bergen, Norway",
+              title: "Born in Bergen, Norway at the 18th of October",
+              description:
+                "Sequi reiciendis ut commodi voluptates harum est provident. Porro quaerat aut nam in et perferendis itaque. Laborum architecto dolores est ducimus molestiae unde voluptas et. Suscipit quia in dolores voluptas non voluptate est.",
+              image: {
+                src: Portrait,
+                alt: "alt text",
+                width: 2000,
+                height: 2000,
+              },
+            },
+            {
+              date: "Oct. 1996",
+              location: "Bergen, Norway",
+              title: "Born in Bergen, Norway at the 18th of October",
+              description:
+                "Et amet vitae distinctio rerum laudantium. Rerum occaecati animi qui enim eligendi. Et aliquam enim non soluta veniam nobis et nobis exercitationem.",
+              image: {
+                src: Portrait,
+                alt: "alt text",
+                width: 2000,
+                height: 2000,
+              },
+            },
+          ]}
+        />
+      </Layout>
       <Footer />
     </>
   );

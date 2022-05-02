@@ -1,0 +1,142 @@
+.points {
+  border: 1px solid black;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $point-gap;
+  width: 100%;
+
+  @include desktop() {
+    align-items: center;
+    gap: $point-gap-desktop;
+  }
+}
+
+.connector {
+  background-color: $timeline-color;
+  display: block;
+  height: 100%;
+  width: 4px;
+}
+
+.point {
+  column-gap: $spacer-medium;
+  display: grid;
+  grid-template-areas:
+    "connectorAndCircle        dateAndLocation dateAndLocation"
+    "connectorAndCircle        titleAndDescription       titleAndDescription"
+    "connectorAndCircle        image image"
+    "connectorAndCircle        image image"
+    "connectorAndCircle        image image";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-content: start;
+
+  @include desktop() {
+    align-items: start;
+    grid-template-areas:
+      "dateAndLocation connectorAndCircle titleAndDescription"
+      ".               connectorAndCircle image"
+      ".               connectorAndCircle image"
+      ".               connectorAndCircle image";
+  }
+
+  &:last-child {
+    .connector {
+      border-radius: $border-radius-regular;
+    }
+  }
+}
+
+.title {
+  @include normalText();
+  color: $text-color-emphasis;
+  font-family: $header-font;
+  font-weight: $font-weight-black;
+  line-height: $line-height-heading;
+  margin-bottom: $spacer-very-small;
+  max-width: $max-width-timeline-text;
+  text-align: left;
+
+  @include desktop() {
+    margin-bottom: $spacer-very-small-plus;
+    max-width: $max-width-timeline-text;
+  }
+}
+
+.dateAndLocation {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-mini;
+  grid-area: dateAndLocation;
+}
+
+.location {
+  @include uppercase();
+}
+
+.date {
+  @include header($max-width-header, $max-width-header-desktop);
+  font-family: $primary-font;
+  font-variation-settings: $sans-black;
+  letter-spacing: 0;
+  margin-bottom: $spacer-small;
+  text-align: start;
+  text-transform: uppercase;
+
+  @include desktop() {
+    margin-bottom: 0;
+  }
+}
+
+.titleAndDescription {
+  grid-area: titleAndDescription;
+  margin-bottom: $spacer-small;
+}
+
+.description {
+  color: $text-color-primary;
+  font-size: $font-size-secondary;
+  line-height: $line-height-text;
+  max-width: $max-width-timeline-text;
+
+  @include desktop() {
+    font-size: $font-size-secondary-desktop;
+  }
+}
+
+.connectorAndCircle {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  grid-area: connectorAndCircle;
+  height: calc(100% + $point-gap);
+  justify-content: flex-start;
+
+  @include desktop() {
+    height: calc(100% + $point-gap-desktop);
+  }
+}
+
+.circle {
+  background-color: $text-color-emphasis;
+  border-radius: $border-radius-round;
+  box-shadow: $shadow-circle;
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+
+.imageContainer {
+  border-radius: $border-radius-regular;
+  grid-area: image;
+  height: 250px;
+  max-width: 400px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @include desktop() {
+    height: 300px;
+    margin-bottom: 0;
+  }
+}
