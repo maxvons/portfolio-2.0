@@ -12,12 +12,12 @@ import LargeProject from "../components/LargeProject";
 import { Project } from "../types/types";
 
 // Styles.
-import styles from "../styles/ProjectsPage.module.scss";
+import styles from "../styles/Projects.module.scss";
 import Layout from "../components/Layout";
 import ProjectCard from "../components/ProjectCard";
 import Footer from "../components/Footer";
 
-const ProjectsPage: NextPage = () => {
+const Projects: NextPage = () => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -54,4 +54,4 @@ const ProjectsPage: NextPage = () => {
   );
 };
 
-export default ProjectsPage;
+export default Projects;
