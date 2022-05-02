@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export enum LinkSize {
   SMALL,
   LARGE,
@@ -33,4 +35,19 @@ export interface ProjectData {
   tags: string[];
   gitHref: string;
   href: string;
+}
+
+interface TimelinePointImage {
+  src: string | StaticImageData;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+export interface TimelinePoint {
+  date: string;
+  location: string;
+  title: string;
+  description?: string;
+  image?: TimelinePointImage;
 }
