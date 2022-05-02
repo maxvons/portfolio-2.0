@@ -99,7 +99,7 @@
 .imageGrid {
   display: none;
   gap: $spacer-medium;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
 
   @include desktop() {
@@ -110,18 +110,54 @@
 .imageContainer {
   border-radius: $border-radius-regular;
   box-shadow: $shadow-image-medium;
-  height: 800px;
+  height: 600px;
   overflow: hidden;
   position: relative;
   width: auto;
+
+  @include desktopWide() {
+    height: 800px;
+  }
 }
 
 .imageContainer:first-child {
+  grid-column: span 6;
+}
+
+.imageContainer:nth-child(2) {
+  grid-column: span 4;
+
+  @include desktopWide() {
+    grid-column: span 2;
+  }
+}
+
+.imageContainer:nth-child(3) {
+  grid-column: span 2;
+}
+
+.imageContainer:nth-child(4) {
   grid-column: span 3;
+
+  @include desktopWide() {
+    grid-column: span 2;
+  }
+}
+
+.imageContainer:nth-child(5) {
+  grid-column: span 3;
+
+  @include desktopWide() {
+    grid-column: span 2;
+  }
 }
 
 .imageContainer:nth-child(6) {
-  grid-column: span 2;
+  grid-column: span 6;
+
+  @include desktopWide() {
+    grid-column: span 4;
+  }
 }
 
 .swiper {
