@@ -36,6 +36,7 @@ const Landing = () => {
           objectPosition="50% 20%"
           size={ImageSize.AVATAR}
           round
+          noShadow
           className={styles.image}
         />
         <div className={styles.toolbar}>

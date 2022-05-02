@@ -15,6 +15,7 @@ interface CustomImageProps {
   objectPosition?: string;
   size: ImageSize;
   round?: boolean;
+  noShadow?: boolean;
   className?: string;
 }
 
@@ -26,34 +27,55 @@ const CustomImage = ({
   objectPosition,
   size,
   round,
+  noShadow,
   className,
 }: CustomImageProps) => {
   const getContainerStyles = () => {
     if (round) {
       switch (size) {
         case ImageSize.MEDIUM:
-          return `${styles.imageContainer}  ${styles.medium} ${styles.round} ${className}`;
+          return `${styles.imageContainer}  ${styles.medium} ${styles.round} ${
+            noShadow && styles.noShadow
+          } ${className}`;
         case ImageSize.LARGE:
-          return `${styles.imageContainer} ${styles.large} ${styles.round} ${className}`;
+          return `${styles.imageContainer} ${styles.large} ${styles.round} ${
+            noShadow && styles.noShadow
+          } ${className}`;
         case ImageSize.LARGEHORIZONTAL:
-          return `${styles.imageContainer} ${styles.largeHorizontal} ${styles.round} ${className}`;
+          return `${styles.imageContainer} ${styles.largeHorizontal} ${
+            styles.round
+          } ${noShadow && styles.noShadow} ${className}`;
         case ImageSize.AVATAR:
-          return `${styles.imageContainer} ${styles.avatar} ${styles.round} ${className}`;
+          return `${styles.imageContainer} ${styles.avatar} ${styles.round} ${
+            noShadow && styles.noShadow
+          } ${className}`;
         default:
-          return `${styles.imageContainer} ${styles.large} ${styles.round} ${className}`;
+          return `${styles.imageContainer} ${styles.large} ${styles.round} ${
+            noShadow && styles.noShadow
+          } ${className}`;
       }
     } else {
       switch (size) {
         case ImageSize.MEDIUM:
-          return `${styles.imageContainer} ${styles.medium} ${className}`;
+          return `${styles.imageContainer} ${styles.medium} ${
+            noShadow && styles.noShadow
+          } ${className}`;
         case ImageSize.LARGE:
-          return `${styles.imageContainer} ${styles.large} ${className}`;
+          return `${styles.imageContainer} ${styles.large} ${
+            noShadow && styles.noShadow
+          } ${className}`;
         case ImageSize.LARGEHORIZONTAL:
-          return `${styles.imageContainer} ${styles.largeHorizontal} ${className}`;
+          return `${styles.imageContainer} ${styles.largeHorizontal} ${
+            noShadow && styles.noShadow
+          } ${className}`;
         case ImageSize.AVATAR:
-          return `${styles.imageContainer} ${styles.avatar} ${className}`;
+          return `${styles.imageContainer} ${styles.avatar} ${
+            noShadow && styles.noShadow
+          } ${className}`;
         default:
-          return `${styles.imageContainer} ${styles.large} ${className}`;
+          return `${styles.imageContainer} ${styles.large} ${
+            noShadow && styles.noShadow
+          } ${className}`;
       }
     }
   };
