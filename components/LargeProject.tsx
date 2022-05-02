@@ -1,6 +1,13 @@
 // Next.js.
 import Image from "next/image";
 
+// Swiper.
+import { Pagination, Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+
 // Components.
 import LinkWithIcon from "./LinkWithIcon";
 
@@ -102,6 +109,33 @@ const LargeProject = ({ project }: LargeProjectProps) => {
             ))}
           </div>
         </div>
+        <Swiper
+          className={styles.swiper}
+          modules={[Pagination, Autoplay]}
+          pagination
+          autoplay={{ delay: 5000 }}
+          speed={500}
+          spaceBetween={0}
+          slidesPerView="auto"
+          grabCursor
+          loop
+        >
+          {projectImages.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div className={styles.imageSlide}>
+                <Image
+                  src={image}
+                  alt={projectImageAlts[index]}
+                  width={projectImageDimensions[index].width}
+                  height={projectImageDimensions[index].height}
+                  placeholder="blur"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
         <div className={styles.imageGrid}>
           {projectImages.map((image, index) => (
             <div key={index} className={styles.imageContainer}>

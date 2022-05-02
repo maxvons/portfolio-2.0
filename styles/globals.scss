@@ -57,6 +57,10 @@ h1, h2, h3, h4, h6, p {
   box-sizing: border-box;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: $primary-color !important;
+}
+
 // Recursive.
 @font-face {
   font-display: swap;

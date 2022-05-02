@@ -7,13 +7,15 @@
 }
 
 .container {
+  align-items: center;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   max-width: $max-width;
-  width: $page-width;
+  width: 100%;
 
   @include desktop() {
+    align-items: stretch;
     width: $page-width-desktop;
     @include contentPadding();
   }
@@ -23,6 +25,7 @@
   display: flex;
   flex-flow: column nowrap;
   margin-bottom: $spacer-large;
+  width: $page-width;
 
   @include desktop() {
     margin-bottom: $spacer-large-plus;
@@ -94,27 +97,92 @@
 }
 
 .imageGrid {
-  display: grid;
+  display: none;
   gap: $spacer-medium;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
+
+  @include desktop() {
+    display: grid;
+  }
 }
 
 .imageContainer {
   border-radius: $border-radius-regular;
   box-shadow: $shadow-image-medium;
-  height: 800px;
+  height: 600px;
   overflow: hidden;
   position: relative;
   width: auto;
+
+  @include desktopWide() {
+    height: 800px;
+  }
 }
 
 .imageContainer:first-child {
+  grid-column: span 6;
+}
+
+.imageContainer:nth-child(2) {
+  grid-column: span 4;
+
+  @include desktopWide() {
+    grid-column: span 2;
+  }
+}
+
+.imageContainer:nth-child(3) {
+  grid-column: span 2;
+}
+
+.imageContainer:nth-child(4) {
   grid-column: span 3;
+
+  @include desktopWide() {
+    grid-column: span 2;
+  }
+}
+
+.imageContainer:nth-child(5) {
+  grid-column: span 3;
+
+  @include desktopWide() {
+    grid-column: span 2;
+  }
 }
 
 .imageContainer:nth-child(6) {
-  grid-column: span 2;
+  grid-column: span 6;
+
+  @include desktopWide() {
+    grid-column: span 4;
+  }
+}
+
+.swiper {
+  @include desktop() {
+    display: none;
+  }
+  width: 100%;
+}
+
+.imageSlide {
+  align-items: center;
+  border-radius: $border-radius-regular;
+  box-shadow: $shadow-image-medium;
+  display: flex;
+  height: 250px;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 48px;
+  overflow: hidden;
+  position: relative;
+  width: $page-width;
+
+  @include tablet() {
+    height: 400px;
+  }
 }
 
 .wilfoBlog {
