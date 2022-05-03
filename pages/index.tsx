@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="preload"
-          href="/fonts/recursive/Recursive_VF_1.078--subset-GF_latin_basic.woff2"
+          href="/fonts/recursive/Recursive_VF_1.078.woff2"
           as="font"
           crossOrigin=""
         />
