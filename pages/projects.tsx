@@ -7,15 +7,15 @@ import { useState } from "react";
 // Components.
 import Navbar from "../components/Navbar";
 import LargeProject from "../components/LargeProject";
+import Layout from "../components/Layout";
+import ProjectCard from "../components/ProjectCard";
+import Footer from "../components/Footer";
 
 // Types.
 import { Project } from "../types/types";
 
 // Styles.
 import styles from "../styles/Projects.module.scss";
-import Layout from "../components/Layout";
-import ProjectCard from "../components/ProjectCard";
-import Footer from "../components/Footer";
 
 const Projects: NextPage = () => {
   const [open, setOpen] = useState(false);
