@@ -38,8 +38,6 @@ const ContactSection = () => {
           <Image
             src={MaxThumbsUpImg}
             alt="Maximilian smiling with thumbs up"
-            width={1347}
-            height={1653}
             objectPosition="50% 0%"
             placeholder="blur"
             layout="fill"

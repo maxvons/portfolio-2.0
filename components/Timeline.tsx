@@ -39,8 +39,6 @@ const Timeline = ({ timelinePoints }: TimelineProps) => {
               <Image
                 src={point.image.src}
                 alt={point.image.alt}
-                width={point.image.width}
-                height={point.image.height}
                 placeholder="blur"
                 layout="fill"
                 objectFit="cover"

@@ -151,14 +151,12 @@
   border-radius: $border-radius-regular;
   grid-area: image;
   height: 250px;
-  max-width: 400px;
   overflow: hidden;
   position: relative;
   width: 100%;
 
   @include desktop() {
-    height: 350px;
+    height: 400px;
     margin-bottom: 0;
-    max-width: 500px;
   }
 }

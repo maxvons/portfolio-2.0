@@ -40,8 +40,6 @@ export interface ProjectData {
 interface TimelinePointImage {
   src: string | StaticImageData;
   alt: string;
-  width: number;
-  height: number;
 }
 
 export interface TimelinePoint {
