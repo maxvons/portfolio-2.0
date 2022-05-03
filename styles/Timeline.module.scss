@@ -2,6 +2,7 @@
   display: flex;
   flex-flow: column nowrap;
   gap: $point-gap;
+  overflow: hidden;
   width: 100%;
 
   @include desktop() {
@@ -17,6 +18,29 @@
   width: 4px;
 }
 
+.circle {
+  background-color: $text-color-emphasis;
+  border-radius: $border-radius-round;
+  box-shadow: $shadow-circle;
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+
+.date {
+  @include header($max-width-header, $max-width-header-desktop);
+  font-family: $primary-font;
+  font-variation-settings: $sans-black;
+  letter-spacing: 0;
+  margin-bottom: $spacer-small;
+  text-align: start;
+  text-transform: uppercase;
+
+  @include desktopWide() {
+    margin-bottom: 0;
+  }
+}
+
 .point {
   column-gap: $spacer-medium;
   display: grid;
@@ -30,7 +54,7 @@
   grid-template-rows: auto;
   justify-content: start;
 
-  @include desktop() {
+  @include desktopWide() {
     align-items: start;
     grid-template-areas:
       "dateAndLocation connectorAndCircle titleAndDescription"
@@ -43,6 +67,14 @@
     .connector {
       border-radius: $border-radius-regular;
     }
+
+    .circle {
+      background-color: $primary-color;
+    }
+
+    .date {
+      color: $primary-color;
+    }
   }
 }
 
@@ -51,14 +83,14 @@
   color: $text-color-emphasis;
   font-family: $header-font;
   font-weight: $font-weight-black;
-  line-height: $line-height-heading;
+  line-height: $line-height-sub-title;
   margin-bottom: $spacer-very-small;
-  max-width: $max-width-timeline-text;
+  max-width: $max-width-text;
   text-align: left;
 
   @include desktop() {
     margin-bottom: $spacer-very-small-plus;
-    max-width: $max-width-timeline-text;
+    width: $max-width-timeline-text;
   }
 }
 
@@ -67,24 +99,15 @@
   flex-flow: column nowrap;
   gap: $spacer-mini;
   grid-area: dateAndLocation;
+
+  @include desktopWide() {
+    align-items: flex-end;
+    width: $max-width-text;
+  }
 }
 
 .location {
   @include uppercase();
-}
-
-.date {
-  @include header($max-width-header, $max-width-header-desktop);
-  font-family: $primary-font;
-  font-variation-settings: $sans-black;
-  letter-spacing: 0;
-  margin-bottom: $spacer-small;
-  text-align: start;
-  text-transform: uppercase;
-
-  @include desktop() {
-    margin-bottom: 0;
-  }
 }
 
 .titleAndDescription {
@@ -92,14 +115,21 @@
   margin-bottom: $spacer-small;
 }
 
+.descriptionContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-medium;
+}
+
 .description {
   color: $text-color-primary;
   font-size: $font-size-secondary;
   line-height: $line-height-text;
-  max-width: $max-width-timeline-text;
+  max-width: $max-width-text;
 
   @include desktop() {
     font-size: $font-size-secondary-desktop;
+    max-width: $max-width-timeline-text;
   }
 }
 
@@ -110,19 +140,11 @@
   grid-area: connectorAndCircle;
   height: calc(100% + $point-gap);
   justify-content: flex-start;
+  position: relative;
 
   @include desktop() {
     height: calc(100% + $point-gap-desktop);
   }
-}
-
-.circle {
-  background-color: $text-color-emphasis;
-  border-radius: $border-radius-round;
-  box-shadow: $shadow-circle;
-  display: block;
-  height: 20px;
-  width: 20px;
 }
 
 .imageContainer {
@@ -135,7 +157,8 @@
   width: 100%;
 
   @include desktop() {
-    height: 300px;
+    height: 350px;
     margin-bottom: 0;
+    max-width: 500px;
   }
 }
