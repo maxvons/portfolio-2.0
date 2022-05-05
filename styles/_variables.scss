@@ -112,6 +112,7 @@ $font-weight-black: 900;
 // Font variations.
 $sans-casual: "MONO" 0, "CASL" 1, "wght" $font-weight-regular, "slnt" 0, "CRSV" 0.5;
 $sans-casual-italic: "MONO" 0, "CASL" 1, "wght" $font-weight-regular, "slnt" -15, "CRSV" 0.5;
+$sans-casual-medium-italic: "MONO" 0, "CASL" 1, "wght" $font-weight-medium, "slnt" -15, "CRSV" 0.5;
 $sans-italic: "MONO" 0, "CASL" 0, "wght" $font-weight-regular, "slnt" -15, "CRSV" 0.5;
 $sans-casual-bold: "MONO" 0, "CASL" 1, "wght" $font-weight-bold, "slnt" 0, "CRSV" 0.5;
 $sans-bold: "MONO" 0, "CASL" 0, "wght" $font-weight-bold, "slnt" 0, "CRSV" 0.5;

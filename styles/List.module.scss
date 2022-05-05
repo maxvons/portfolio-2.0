@@ -1,0 +1,42 @@
+.listContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-small-plus;
+
+  @include desktop() {
+    gap: $spacer-medium;
+  }
+}
+
+.header {
+  @include subheader();
+  font-family: $header-font;
+  font-weight: $font-weight-bold;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+
+.list {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-small;
+  list-style: square;
+  margin: 0;
+  padding: 0;
+
+  @include desktop() {
+    gap: $spacer-small-plus;
+  }
+}
+
+.item {
+  color: $text-color-primary;
+  font-family: $primary-font;
+  font-size: $font-size-secondary;
+  font-variation-settings: $mono;
+  line-height: 1;
+
+  @include desktop() {
+    font-size: $font-size-secondary-desktop;
+  }
+}
