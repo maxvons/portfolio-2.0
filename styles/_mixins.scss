@@ -200,6 +200,10 @@
   font-variation-settings: $sans-casual-italic;
 }
 
+@mixin casualMediumItalicText() {
+  font-variation-settings: $sans-casual-medium-italic;
+}
+
 @mixin sectionPadding() {
   padding: $spacer-large 0;
 
