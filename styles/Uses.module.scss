@@ -1,0 +1,72 @@
+.wrapper {
+  @include navbarMargin();
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+
+  @include desktop() {
+    align-items: center;
+    @include contentPadding();
+  }
+}
+
+.titleContainer {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  margin-bottom: $spacer-large;
+
+  @include desktop() {
+    margin-bottom: $spacer-very-large;
+  }
+}
+
+.tag {
+  @include uppercase();
+  margin-bottom: $spacer-very-small;
+  text-align: center;
+}
+
+.title {
+  @include title();
+  margin-bottom: $spacer-medium;
+}
+
+.subHeader {
+  @include subheader();
+  max-width: $max-width-subheader-wider;
+  text-align: center;
+  @include casualItalicText();  /* TODO: Consider keeping or removing this. */
+
+  @include desktop() {
+    max-width: $max-width-subheader-wider;
+    text-align: center;
+  }
+}
+
+.imageContainer {
+  border-radius: $border-radius-regular;
+  grid-area: image;
+  height: 400px;
+  margin-bottom: $spacer-large;
+  max-width: 1000px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @include desktop() {
+    height: 650px;
+    margin-bottom: $spacer-very-large;
+  }
+}
+
+.listContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-medium;
+
+  @include desktop() {
+    gap: $spacer-large;
+  }
+}
