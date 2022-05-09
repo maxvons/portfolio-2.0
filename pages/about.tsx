@@ -47,7 +47,7 @@ const About: NextPage = () => {
           <div className={styles.imageContainer}>
             <Image
               src={MaxWithStormtrooperImg}
-              alt="Max with a stormtrooper in London"
+              alt="Max with a stormtrooper in London, England"
               placeholder="blur"
               layout="fill"
               objectFit="cover"
