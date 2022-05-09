@@ -25,7 +25,7 @@ const Landing = () => {
         </h2>
         <Button
           text="Grab my resume"
-          href="/resume"
+          href="/files/cv-maximilian-von-stephanides.pdf"
           className={styles.button}
         />
         <CustomImage

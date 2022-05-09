@@ -83,7 +83,11 @@ const Navbar = ({ open, onClick }: NavbarProps) => {
             <div>
               <h1 className={styles.heading}>Contact and resume</h1>
               <div className={styles.smallLinksContainer}>
-                <LinkWithIcon text="Grab my resume" href="/resume" external />
+                <LinkWithIcon
+                  text="Grab my resume"
+                  href="/files/cv-maximilian-von-stephanides.pdf"
+                  external
+                />
                 <LinkWithIcon
                   text="maximilianvons@gmail.com"
                   href="mailto:maximilianvons@gmail.com"
