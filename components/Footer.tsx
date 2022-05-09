@@ -39,7 +39,7 @@ const Footer = () => {
           <li>
             <LinkWithIcon
               text="Photography by Julie Liland"
-              href="https://google.com"
+              href="https://www.instagram.com/julieliland/"
               footer
               external
             />
