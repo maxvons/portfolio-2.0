@@ -1,7 +1,7 @@
 /* Components. */
 import CustomImage from "./CustomImage";
 import Button from "./Button";
-import Toolbar from "./Toolbar";
+import ToolBar from "./ToolBar";
 import Layout from "./Layout";
 
 /* Assets. */
@@ -40,7 +40,7 @@ const Landing = () => {
           className={styles.image}
         />
         <div className={styles.toolbar}>
-          <Toolbar />
+          <ToolBar />
         </div>
       </div>
     </Layout>

@@ -10,13 +10,13 @@ import LinkedInIcon from "./svgs/LinkedInIcon";
 import TwitterIcon from "./svgs/TwitterIcon";
 
 // Styles.
-import styles from "../styles/Toolbar.module.scss";
+import styles from "../styles/ToolBar.module.scss";
 
-interface ToolbarProps {
+interface ToolBarProps {
   dark?: boolean;
 }
 
-const Toolbar = ({ dark }: ToolbarProps) => {
+const ToolBar = ({ dark }: ToolBarProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.section}>
@@ -50,4 +50,4 @@ const Toolbar = ({ dark }: ToolbarProps) => {
   );
 };
 
-export default Toolbar;
+export default ToolBar;
