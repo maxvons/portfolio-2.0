@@ -1,7 +1,7 @@
 /* Components. */
 import CustomImage from "./CustomImage";
 import Button from "./Button";
-import Toolbar from "./ToolBar";
+import Toolbar from "./Toolbar";
 import Layout from "./Layout";
 
 /* Assets. */

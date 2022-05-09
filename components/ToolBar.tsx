@@ -1,4 +1,4 @@
-/* Components. */
+// Components.
 import IconButton from "./IconButton";
 import IconLink from "./IconLink";
 
@@ -9,7 +9,7 @@ import LightIcon from "./svgs/LightIcon";
 import LinkedInIcon from "./svgs/LinkedInIcon";
 import TwitterIcon from "./svgs/TwitterIcon";
 
-/* Styles. */
+// Styles.
 import styles from "../styles/Toolbar.module.scss";
 
 interface ToolbarProps {
