@@ -21,13 +21,31 @@ const AboutSection = () => {
         </h2>
         <div className={styles.textContainer}>
           <p className={`${styles.text} ${styles.marginBottomMedium}`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus ut
-            pharetra feugiat porttitor senectus. Maecenas viverra neque, sed
-            arcu fermentum volutpat felis, praesent sagittis.
+            For as long as I can remember, I&apos;ve been fascinated with
+            products, digital or otherwise, that not only function well but also
+            look <span className={styles.italic}>aesthetically pleasing</span>.
+            I&apos;ve long believed in the importance of good design in digital
+            products and services, and the effect it can have on the user
+            experience.
+          </p>
+          <p className={`${styles.text} ${styles.marginBottomMedium}`}>
+            The longer I&apos;ve been actively using and developing digital
+            experiences, the more I&apos;ve come to realize that{" "}
+            <span className={styles.italic}>simplicity</span> is the key to
+            achieving a good design. This is especially true in the current
+            landscape of the web, where something is competing for your
+            attention seemingly all the time.
+          </p>
+          <p className={`${styles.text} ${styles.marginBottomMedium}`}>
+            Due to these reasons, I strongly emphasize simplicity and aesthetics
+            when developing digital experiences. Together with the actual
+            content and functionality, I believe these factors form the core of
+            a good digital experience.
           </p>
           <p className={`${styles.text} ${styles.marginBottomMediumPlus}`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus ut
-            pharetra feugiat porttitor senectus.
+            My design interest together with my computer science education and
+            developer experience allow me to create beautiful, accessible,
+            simple, and intuitive digital products that stand out.
           </p>
           <LinkWithIcon text="Read my entire story" href="/about" />
         </div>

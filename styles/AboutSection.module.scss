@@ -16,6 +16,7 @@
   }
 
   @include desktopWide() {
+    align-items: center;
     column-gap: $spacer-medium;
     grid-template-areas:
       ".      .      .      .       image"
@@ -68,4 +69,8 @@
   @include desktopWide() {
     margin-bottom: $spacer-large;
   }
+}
+
+.italic {
+  @include italicText();
 }
