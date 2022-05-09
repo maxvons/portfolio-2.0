@@ -35,13 +35,11 @@
 
   @include desktop() {
     height: 450px;
-    max-width: 700px;
-    width: 620px;
+    max-width: 750px;
   }
 
   @include desktopWide() {
-    height: 80vh;
-    max-height: 650px;
+    height: 750px;
     width: 550px;
   }
 }
