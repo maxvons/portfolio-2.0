@@ -17,7 +17,7 @@ import MaxWithStormtrooperImg from "/public/images/max-with-stormtrooper.jpg";
 import MaxSmallImg from "/public/images/max-small.jpg";
 import ProgrammingImg from "/public/images/programming.jpg";
 import GraduationImg from "/public/images/graduation.jpg";
-import BjorknesImg from "/public/images/bjorknes.jpg";
+import MedicineImg from "/public/images/medicine.jpg";
 import MartinImg from "/public/images/martin.jpg";
 import DeliImg from "/public/images/deli.jpg";
 import IfiImg from "/public/images/ifi.jpg";
@@ -93,7 +93,7 @@ const About: NextPage = () => {
                   description:
                     "I studied medicine for a year in Oslo. I had most of my courses at the University of Oslo. I also had some extra courses at Bjørknes Høyskole.\nThis was my first time living alone and without family or close friends nearby, so the adjustment period was a bit rough, but I managed.",
                   image: {
-                    src: BjorknesImg,
+                    src: MedicineImg,
                     alt: "alt text",
                   },
                 },
