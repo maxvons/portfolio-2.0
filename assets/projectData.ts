@@ -100,7 +100,7 @@ const projectData = {
     tags: ["Next.js", "React", "TypeScript", "SCSS"],
     designTools: ["Figma"],
     gitHref: "",
-    href: "https://revmatologen.no",
+    href: "https://delightful-flower-009435a03.1.azurestaticapps.net/",
     image: RevmatologenMockup,
     images: [
       RevmatologenMockup,
