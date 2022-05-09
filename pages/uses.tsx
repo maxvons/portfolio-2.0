@@ -87,17 +87,17 @@ const Uses: NextPage = () => {
             <List
               header="Software"
               items={[
-                "LastPass (for all my passwords)",
-                "Spotify (for music)",
-                "Apple Music (for music in Dolby Atmos)",
-                "PastePal (for clipboard history)",
-                "Magnet (for window management)",
-                "Alfred (for Spotlight replacement)",
-                "Kap (for screen recordings and gifs)",
-                "Contrast (for color picker and contrast check)",
-                "Notion (for notes)",
-                "Obsidian (for notes in Markdown)",
-                "Numi (for scratchpad, calculations, and conversions)",
+                "LastPass - for all my passwords",
+                "Spotify - for music",
+                "Apple Music - for music in Dolby Atmos",
+                "PastePal - for clipboard history",
+                "Magnet - for window management",
+                "Alfred - for Spotlight replacement",
+                "Kap - for screen recordings and gifs",
+                "Contrast - for color picker and contrast check",
+                "Notion - for notes",
+                "Obsidian - for notes in Markdown",
+                "Numi - for scratchpad, calculations, and conversions",
               ]}
             />
             <List
