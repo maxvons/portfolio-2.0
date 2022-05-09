@@ -37,7 +37,6 @@
   @include subheader();
   max-width: $max-width-subheader-wider;
   text-align: center;
-  @include casualItalicText();  /* TODO: Consider keeping or removing this. */
 
   @include desktop() {
     max-width: $max-width-subheader-wider;
