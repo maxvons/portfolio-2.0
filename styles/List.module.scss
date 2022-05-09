@@ -23,7 +23,7 @@
   gap: $spacer-small;
   list-style: square;
   margin: 0;
-  padding: 0;
+  padding-left: $spacer-small;
 
   @include desktop() {
     gap: $spacer-small-plus;
