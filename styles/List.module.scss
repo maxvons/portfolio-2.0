@@ -10,6 +10,7 @@
 
 .header {
   @include subheader();
+  color: $text-color-emphasis;
   font-family: $header-font;
   font-weight: $font-weight-bold;
   letter-spacing: -0.03em;
