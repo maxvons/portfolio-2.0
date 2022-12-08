@@ -103,6 +103,7 @@ const Uses: NextPage = () => {
             <List
               header="Other devices"
               items={[
+                "iPhone 14 Pro Max",
                 "iPhone 11 Pro",
                 "AirPods 3",
                 "Apple Watch Series 6 44mm",
