@@ -6,7 +6,6 @@
 
   @include desktop() {
     align-items: center;
-    @include contentPadding();
   }
 }
 
