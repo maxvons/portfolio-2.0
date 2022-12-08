@@ -17,7 +17,7 @@ const projectData = {
     tags: ["Next.js", "React", "TypeScript", "SCSS"],
     designTools: ["Figma"],
     gitHref: "https://github.com/maxvons/portfolio-2.0",
-    href: "https://maxvons.dev",
+    href: "https://portfolio-maxvons.vercel.app/",
     image: PortfolioMockup,
     images: [
       PortfolioMockup,
