@@ -21,13 +21,6 @@ const ContactSection = () => {
             Feel free to shoot me an email if you want to discuss something
             related to business, technology or otherwise.
           </p>
-          <p className={`${styles.text} ${styles.marginBottomMediumPlus}`}>
-            I am currently looking for{" "}
-            <span className={styles.flair}>
-              summer internship opportunities
-            </span>{" "}
-            🌞
-          </p>
           <LinkWithIcon
             text="maximilianvons@gmail.com"
             href="mailto:maximilianvons@gmail.com"
