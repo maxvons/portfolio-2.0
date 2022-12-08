@@ -112,6 +112,7 @@
 @mixin uppercase() {
   color: $text-color-secondary;
   font-size: $font-size-tertiary;
+  font-variation-settings: $sans-bold;
   font-weight: $font-weight-bold;
   letter-spacing: 0.15em;
   text-transform: uppercase;
