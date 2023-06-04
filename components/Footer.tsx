@@ -7,6 +7,7 @@ import { internalLinks, externalLinks } from "../assets/linkData";
 
 /* Styles. */
 import styles from "../styles/Footer.module.scss";
+import NowPlaying from "./NowPlaying";
 
 const Footer = () => {
   return (
@@ -50,6 +51,7 @@ const Footer = () => {
           <span className={styles.flair}>Maximilian von Stephanides</span>
         </p>
       </div>
+      <NowPlaying />
     </Layout>
   );
 };
