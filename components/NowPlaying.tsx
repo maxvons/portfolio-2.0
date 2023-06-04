@@ -9,11 +9,29 @@ import ProgressBar from "./ProgressBar";
 const NowPlaying = () => {
   const { data, error, isLoading } = useSWR("/api/currently-playing", fetcher);
 
-  if (error) return <div>failed to load</div>;
-  if (isLoading) return <div>loading...</div>;
+  if (isLoading) return <div className={styles.container}>Loading...</div>;
 
   // Render data from Spotify API.
   const nowPlaying = deserializeNowPlaying(data);
+
+  if (nowPlaying.is_playing) {
+    return (
+      <div className={styles.container}>
+        <p className={styles.title}>Now Playing</p>
+        <div className={styles.data}>
+          <Spotify className={styles.icon} />
+          <div className={styles.songData}>
+            <p className={styles.songName}>{nowPlaying.name}</p>
+            <p className={styles.artists}>{renderArtists(nowPlaying)}</p>
+          </div>
+        </div>
+        <ProgressBar
+          progress_ms={nowPlaying.progress_ms}
+          total_ms={nowPlaying.duration_ms}
+        />
+      </div>
+    );
+  }
 
   return (
     <div className={styles.container}>
@@ -21,14 +39,11 @@ const NowPlaying = () => {
       <div className={styles.data}>
         <Spotify className={styles.icon} />
         <div className={styles.songData}>
-          <p className={styles.songName}>{nowPlaying.name}</p>{" "}
-          <p className={styles.artists}>{renderArtists(nowPlaying)}</p>
+          <p className={styles.songName}>-</p>
+          <p className={styles.artists}>-</p>
         </div>
       </div>
-      <ProgressBar
-        progress_ms={nowPlaying.progress_ms}
-        total_ms={nowPlaying.duration_ms}
-      />
+      <ProgressBar progress_ms={0} total_ms={0} />
     </div>
   );
 };
