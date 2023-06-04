@@ -4,6 +4,7 @@ import { deserializeNowPlaying } from "../utils/functions";
 import Spotify from "./svgs/Spotify";
 import styles from "../styles/NowPlaying.module.scss";
 import { Episode, Song } from "../types/types";
+import ProgressBar from "./ProgressBar";
 
 const NowPlaying = () => {
   const { data, error, isLoading } = useSWR("/api/currently-playing", fetcher);
@@ -24,6 +25,10 @@ const NowPlaying = () => {
           <p className={styles.artists}>{renderArtists(nowPlaying)}</p>
         </div>
       </div>
+      <ProgressBar
+        progress_ms={nowPlaying.progress_ms}
+        total_ms={nowPlaying.duration_ms}
+      />
     </div>
   );
 };
