@@ -11,6 +11,22 @@ const NowPlaying = () => {
 
   if (isLoading) return <div className={styles.container}>Loading...</div>;
 
+  if (error) {
+    return (
+      <div className={styles.container}>
+        <p className={styles.title}>Not playing</p>
+        <div className={styles.data}>
+          <Spotify className={styles.icon} />
+          <div className={styles.songData}>
+            <p className={styles.songName}>-</p>
+            <p className={styles.artists}>-</p>
+          </div>
+        </div>
+        <ProgressBar progress_ms={0} total_ms={0} />
+      </div>
+    );
+  }
+
   // Render data from Spotify API.
   const nowPlaying = deserializeNowPlaying(data);
 
@@ -32,20 +48,6 @@ const NowPlaying = () => {
       </div>
     );
   }
-
-  return (
-    <div className={styles.container}>
-      <p className={styles.title}>Now Playing</p>
-      <div className={styles.data}>
-        <Spotify className={styles.icon} />
-        <div className={styles.songData}>
-          <p className={styles.songName}>-</p>
-          <p className={styles.artists}>-</p>
-        </div>
-      </div>
-      <ProgressBar progress_ms={0} total_ms={0} />
-    </div>
-  );
 };
 
 function renderArtists(nowPlaying: Song | Episode): React.ReactNode {
