@@ -5,9 +5,15 @@ interface ProgressBarProps {
   progress_ms: number;
   total_ms: number;
   loading?: boolean;
+  noFill?: boolean;
 }
 
-const ProgressBar = ({ progress_ms, total_ms, loading }: ProgressBarProps) => {
+const ProgressBar = ({
+  progress_ms,
+  total_ms,
+  loading,
+  noFill,
+}: ProgressBarProps) => {
   const [progress, setProgress] = useState(progress_ms);
   const progressPercentage = (progress / total_ms) * 100;
 
@@ -26,6 +32,22 @@ const ProgressBar = ({ progress_ms, total_ms, loading }: ProgressBarProps) => {
     return (
       <div className={styles.container}>
         <div className={`${styles.progressBar} ${styles.loading}`}></div>
+        <div className={styles.timeContainer}>
+          <p className={`${styles.time} ${styles.currentTime}`}>
+            {formatTime(progress)}
+          </p>
+          <p className={`${styles.time} ${styles.totalTime}`}>
+            &nbsp;/ {formatTime(total_ms)}
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  if (noFill) {
+    return (
+      <div className={styles.container}>
+        <div className={styles.progressBar}></div>
         <div className={styles.timeContainer}>
           <p className={`${styles.time} ${styles.currentTime}`}>
             {formatTime(progress)}

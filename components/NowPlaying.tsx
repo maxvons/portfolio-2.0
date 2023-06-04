@@ -36,7 +36,7 @@ const NowPlaying = () => {
             <p className={styles.artists}>-</p>
           </div>
         </div>
-        <ProgressBar progress_ms={0} total_ms={0} />
+        <ProgressBar progress_ms={0} total_ms={0} noFill />
       </div>
     );
   }

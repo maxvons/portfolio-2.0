@@ -7,11 +7,14 @@
 }
 
 .progressBar {
-  animation: skeleton-loading 1s linear infinite alternate;
   background-color: $divider-color;
   border-radius: $border-radius-regular;
   height: 8px;
   width: 100%;
+}
+
+.loading {
+  animation: skeleton-loading 1s linear infinite alternate;
 }
 
 .progressBarFill {
