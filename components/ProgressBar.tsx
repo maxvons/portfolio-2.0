@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 interface ProgressBarProps {
   progress_ms: number;
   total_ms: number;
+  loading?: boolean;
 }
 
-const ProgressBar = ({ progress_ms, total_ms }: ProgressBarProps) => {
+const ProgressBar = ({ progress_ms, total_ms, loading }: ProgressBarProps) => {
   const [progress, setProgress] = useState(progress_ms);
   const progressPercentage = (progress / total_ms) * 100;
 
@@ -20,6 +21,22 @@ const ProgressBar = ({ progress_ms, total_ms }: ProgressBarProps) => {
 
     return () => clearInterval(interval);
   }, [total_ms]);
+
+  if (loading) {
+    return (
+      <div className={styles.container}>
+        <div className={`${styles.progressBar} ${styles.loading}`}></div>
+        <div className={styles.timeContainer}>
+          <p className={`${styles.time} ${styles.currentTime}`}>
+            {formatTime(progress)}
+          </p>
+          <p className={`${styles.time} ${styles.totalTime}`}>
+            &nbsp;/ {formatTime(total_ms)}
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.container}>

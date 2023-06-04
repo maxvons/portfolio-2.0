@@ -14,6 +14,7 @@
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
+  width: 100%;
   @include footer();
 }
 
@@ -33,6 +34,7 @@
 .songData {
   display: flex;
   flex-flow: column nowrap;
+  width: 100%;
 }
 
 .songName {
@@ -49,5 +51,40 @@
 
   @include desktop() {
     font-size: $font-size-tertiary-desktop;
+  }
+}
+
+.songNameSkeleton, .artistsSkeleton {
+  background-color: $divider-color;
+  border-radius: $border-radius-regular;
+}
+
+.songNameSkeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+  height: $font-size-secondary;
+  margin-bottom: $spacer-small;
+  max-width: 300px;
+
+  @include desktop() {
+    height: $font-size-secondary-desktop;
+  }
+}
+
+.artistsSkeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+  height: $font-size-tertiary;
+  max-width: 200px;
+
+  @include desktop() {
+    height: $font-size-tertiary-desktop;
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
   }
 }

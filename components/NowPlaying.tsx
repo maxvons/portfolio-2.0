@@ -9,7 +9,21 @@ import ProgressBar from "./ProgressBar";
 const NowPlaying = () => {
   const { data, error, isLoading } = useSWR("/api/currently-playing", fetcher);
 
-  if (isLoading) return <div className={styles.container}>Loading...</div>;
+  if (isLoading) {
+    return (
+      <div className={styles.container}>
+        <p className={styles.title}>Loading...</p>
+        <div className={styles.data}>
+          <Spotify className={styles.icon} />
+          <div className={styles.songData}>
+            <div className={styles.songNameSkeleton}></div>
+            <div className={styles.artistsSkeleton}></div>
+          </div>
+        </div>
+        <ProgressBar progress_ms={0} total_ms={0} loading />
+      </div>
+    );
+  }
 
   if (error) {
     return (

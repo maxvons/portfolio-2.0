@@ -7,6 +7,7 @@
 }
 
 .progressBar {
+  animation: skeleton-loading 1s linear infinite alternate;
   background-color: $divider-color;
   border-radius: $border-radius-regular;
   height: 8px;
@@ -39,4 +40,13 @@
 
 .totalTime {
   color: $text-color-secondary;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
 }
