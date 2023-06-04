@@ -49,3 +49,21 @@ export interface TimelinePoint {
   description?: string;
   image?: TimelinePointImage;
 }
+
+export interface Song {
+  name: string;
+  url: string;
+  artists: string[];
+  duration_ms: number;
+  progress_ms: number;
+  is_playing: boolean;
+}
+
+export interface Episode {
+  name: string;
+  url: string;
+  showName: string;
+  duration_ms: number;
+  progress_ms: number;
+  is_playing: boolean;
+}

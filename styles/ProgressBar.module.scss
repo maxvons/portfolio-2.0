@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-small;
+  max-width: $max-width-text;
+  width: 100%;
+}
+
+.progressBar {
+  background-color: $divider-color;
+  border-radius: $border-radius-regular;
+  height: 8px;
+  width: 100%;
+}
+
+.progressBarFill {
+  background-color: $spotify-color;
+  border-radius: $border-radius-regular;
+  height: 100%;
+  transition: width $animation-duration ease;
+}
+
+.timeContainer {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.time {
+  font-size: $font-size-tertiary;
+
+  @include desktop() {
+    font-size: $font-size-tertiary;
+  }
+}
+
+.currentTime {
+  color: $text-color-secondary;
+}
+
+.totalTime {
+  color: $text-color-secondary;
+}

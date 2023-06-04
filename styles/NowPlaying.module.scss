@@ -1,0 +1,53 @@
+.container {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $spacer-very-small;
+  width: 100%;
+
+  @include desktop() {
+    gap: $spacer-small;
+  }
+}
+
+.data {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  @include footer();
+}
+
+.title {
+  @include uppercase();
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-right: $spacer-very-small;
+
+  @include desktop() {
+    margin-right: $spacer-very-small-plus;
+  }
+}
+
+.songData {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.songName {
+  -webkit-box-orient: vertical;
+  color: $text-color-emphasis;
+  display: -webkit-box;
+  font-variation-settings: $sans-bold;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.artists {
+  color: $text-color-secondary;
+
+  @include desktop() {
+    font-size: $font-size-tertiary-desktop;
+  }
+}
