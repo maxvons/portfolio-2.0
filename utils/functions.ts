@@ -1,6 +1,6 @@
 // Util functions here.
 
-import { Episode, Song } from "../types/types";
+import { Artist, Episode, Song } from "../types/types";
 
 function deserializeNowPlaying(data: any): Song | Episode {
   if (data.currently_playing_type === "episode") {
@@ -24,4 +24,32 @@ function deserializeNowPlaying(data: any): Song | Episode {
   };
 }
 
-export { deserializeNowPlaying };
+function deserializeTopTenArtists(data: any): Artist[] {
+  if (data.items) {
+    return data.items.map((item: any) => ({
+      name: item.name,
+      url: item.artistUrl,
+      images: item.images,
+    }));
+  }
+
+  return [];
+}
+
+function deserializeTopTenSongs(data: any): Song[] {
+  if (data.items) {
+    return data.items.map((item: any) => ({
+      name: item.title,
+      url: item.songUrl,
+      artists: item.artist,
+    }));
+  }
+
+  return [];
+}
+
+export {
+  deserializeNowPlaying,
+  deserializeTopTenSongs,
+  deserializeTopTenArtists,
+};
