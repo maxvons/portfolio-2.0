@@ -16,6 +16,7 @@ import SetupImg from "/public/images/setup.png";
 import styles from "../styles/Uses.module.scss";
 import List from "../components/List";
 import Footer from "../components/Footer";
+import Title from "../components/Title";
 
 const Uses: NextPage = () => {
   const [open, setOpen] = useState(false);
@@ -25,14 +26,11 @@ const Uses: NextPage = () => {
       <Navbar open={open} onClick={() => setOpen(!open)} />
       <Layout noPadding>
         <div className={styles.wrapper}>
-          {/* TODO: Extract this div and contents to a component.  */}
-          <div className={styles.titleContainer}>
-            <p className={styles.tag}>My setup, tools, software, and others</p>
-            <h1 className={styles.title}>What I use</h1>
-            <h2 className={styles.subHeader}>
-              These are the tools I use everyday to get stuff done.
-            </h2>
-          </div>
+          <Title
+            title="What I use"
+            subTitle="These are the tools I use everyday to get stuff done."
+            tag="My setup, tools, software, and others"
+          />
           <div className={styles.imageContainer}>
             <Image
               src={SetupImg}
