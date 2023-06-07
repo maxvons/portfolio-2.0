@@ -15,7 +15,7 @@ export default async function handler(
   const { items } = await response;
 
   const topTenTracks = items.slice(0, 10).map((track: any) => ({
-    artist: track.artists.map((_artist: any) => _artist.name).join(", "),
+    artist: track.artists,
     songUrl: track.external_urls.spotify,
     title: track.name,
   }));
