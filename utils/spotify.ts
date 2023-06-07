@@ -12,6 +12,7 @@ const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
 const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks`;
+const TOP_ARTISTS_ENDPOINT = `https://api.spotify.com/v1/me/top/artists`;
 
 const getAccessToken = async () => {
   const params = new URLSearchParams();
@@ -53,4 +54,17 @@ const getTopTracks = async () => {
   );
 };
 
-export { getCurrentlyPlaying, getTopTracks };
+const getTopArtists = async () => {
+  const { access_token } = await getAccessToken();
+
+  return fetch(
+    `${TOP_ARTISTS_ENDPOINT}?time_range=short_term&limit=10&offset=5`,
+    {
+      headers: {
+        Authorization: `Bearer ${access_token}`,
+      },
+    },
+  );
+};
+
+export { getCurrentlyPlaying, getTopTracks, getTopArtists };
