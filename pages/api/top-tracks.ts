@@ -18,6 +18,7 @@ export default async function handler(
     artist: track.artists,
     songUrl: track.external_urls.spotify,
     title: track.name,
+    album: track.album,
   }));
 
   return res.status(200).json(topTenTracks);
