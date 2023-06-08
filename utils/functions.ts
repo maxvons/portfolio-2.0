@@ -15,9 +15,10 @@ function deserializeNowPlaying(data: any): Song | Episode {
   }
 
   return {
+    spotifyId: data.item ? data.item.id : "",
     name: data.item ? data.item.name : "",
     url: data.item ? data.item.external_urls.spotify : "",
-    artists: data.item.artists.map((artist: any) => artist.name),
+    artists: data.item.artists,
     duration_ms: data.item.duration_ms,
     progress_ms: data.progress_ms,
     is_playing: data.is_playing,
@@ -38,9 +39,11 @@ function deserializeTopTenArtists(data: any): Artist[] {
 
 function deserializeTopTenSongs(data: any): Song[] {
   return data.map((song: any) => ({
+    spotifyId: song.id,
     name: song.title,
     url: song.songUrl,
-    artists: song.artist,
+    artists: song.artists,
+    album: song.album,
   }));
 }
 

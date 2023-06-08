@@ -54,8 +54,8 @@ const NowPlaying = () => {
         </div>
       </div>
       <ProgressBar
-        progress_ms={nowPlaying.progress_ms}
-        total_ms={nowPlaying.duration_ms}
+        progress_ms={nowPlaying.progress_ms ? nowPlaying.progress_ms : 0}
+        total_ms={nowPlaying.duration_ms ? nowPlaying.duration_ms : 0}
       />
     </div>
   );
@@ -63,7 +63,8 @@ const NowPlaying = () => {
 
 function renderArtists(nowPlaying: Song | Episode): React.ReactNode {
   if ("artists" in nowPlaying) {
-    return nowPlaying.artists.join(" · ");
+    const artists = nowPlaying.artists.map((artist) => artist.name);
+    return artists.join(" · ");
   } else {
     return nowPlaying.showName;
   }

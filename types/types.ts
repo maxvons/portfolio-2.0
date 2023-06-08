@@ -62,9 +62,10 @@ export interface TimelinePoint {
 }
 
 export interface Song {
+  spotifyId: string;
   name: string;
   url: string;
-  artists: string[];
+  artists: Artist[];
   duration_ms?: number;
   progress_ms?: number;
   is_playing?: boolean;
