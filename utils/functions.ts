@@ -37,15 +37,11 @@ function deserializeTopTenArtists(data: any): Artist[] {
 }
 
 function deserializeTopTenSongs(data: any): Song[] {
-  if (data.items) {
-    return data.items.map((item: any) => ({
-      name: item.title,
-      url: item.songUrl,
-      artists: item.artist,
-    }));
-  }
-
-  return [];
+  return data.map((song: any) => ({
+    name: song.title,
+    url: song.songUrl,
+    artists: song.artist,
+  }));
 }
 
 export {
