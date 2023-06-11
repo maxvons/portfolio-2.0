@@ -37,10 +37,12 @@ $border-color-card: #EBE7FF;
 $divider-color: #E1E1E1;
 $timeline-color: #EAEAEA;
 $spotify-color: #1DB954;
+$skeleton-color: #E1E1E1;
 
 // Shadows.
 $shadow-image-large: 0 12px 30px rgb(106 106 106 / 20%);
 $shadow-image-medium: 0 10px 25px rgb(106 106 106 / 20%);
+$shadow-image-small: 0 6px 15px rgb(106 106 106 / 20%);
 $shadow-image-portfolio-medium: 0 6px 15px rgb(51 0 255 / 10%);
 $shadow-image-portfolio-large: 0 10px 25px rgb(51 0 255 / 10%);
 $shadow-image-wilfo-medium: 0 6px 15px rgb(236 0 53 / 10%);
@@ -81,6 +83,8 @@ $max-width-subheader-wider: 1000px;
 $max-width-button: 500px;
 $max-width-card: 400px;
 $max-width-social-card: 250px;
+$max-width-spotify-album-img: 320px;
+$max-width-spotify-card: 700px;
 
 // Widhts.
 $page-width: 90%;

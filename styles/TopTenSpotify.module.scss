@@ -1,0 +1,49 @@
+.wrapper {
+  @include navbarMargin();
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+
+  @include desktop() {
+    align-items: center;
+    @include contentPadding();
+  }
+}
+
+.topTenContainer {
+  display: grid;
+  gap: $spacer-medium;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+
+  @include desktop() {
+    gap: $spacer-medium-plus;
+    grid-template-columns: repeat(auto-fit, minmax($max-width-spotify-album-img, 1fr));
+  }
+}
+
+.divider {
+  @include divider();
+  margin-bottom: $spacer-medium;
+
+  @include desktop() {
+    margin-bottom: $spacer-large;
+  }
+}
+
+.header {
+  align-self: flex-start;
+  margin-bottom: $spacer-medium;
+  @include header($max-width-header, $max-width-header-desktop);
+
+  @include desktop() {
+    margin-bottom: $spacer-large;
+    text-align: left;
+  }
+}
+
+.noMargin {
+  margin: 0;
+}

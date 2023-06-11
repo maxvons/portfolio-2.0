@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "blurhash": "^2.0.5",
     "classnames": "^2.3.1",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
+    "sharp": "^0.32.1",
     "swiper": "^8.1.4",
     "swr": "^2.1.5",
     "typescript": "^4.5.3"

@@ -1,0 +1,61 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+
+  @include desktop() {
+    align-items: flex-start;
+  }
+}
+
+%imageContainerShared {
+  border-radius: $border-radius-regular;
+  box-shadow: $shadow-image-small;
+  height: $max-width-spotify-album-img;
+  margin-bottom: $spacer-small-plus;
+  max-width: $max-width-spotify-album-img;
+  width: 100%;
+}
+
+.imageContainer {
+  @extend %imageContainerShared;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.name {
+  @include header($max-width-header, $max-width-header-desktop);
+  font-family: $primary-font;
+  font-size: $font-size-primary;
+  font-variation-settings: $sans-bold;
+  letter-spacing: -0.03em;
+  margin-bottom: $spacer-very-small;
+  text-align: center;
+
+  @include desktop() {
+    font-size: $font-size-primary-desktop;
+    text-align: left;
+  }
+}
+
+.imageSkeleton {
+  @extend %imageContainerShared;
+  background-color: $skeleton-color;
+  width: 100%;
+  @include skeletonLoading();
+}
+
+.nameSkeleton {
+  background-color: $skeleton-color;
+  border-radius: $border-radius-regular;
+  height: $font-size-heading-medium;
+  margin-bottom: $spacer-very-small;
+  max-width: 150px;
+  width: 100%;
+  @include skeletonLoading();
+
+  @include desktop() {
+    height: $font-size-heading-medium-desktop;
+  }
+}

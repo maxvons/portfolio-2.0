@@ -55,12 +55,12 @@
 }
 
 .songNameSkeleton, .artistsSkeleton {
-  background-color: $divider-color;
+  background-color: $skeleton-color;
   border-radius: $border-radius-regular;
 }
 
 .songNameSkeleton {
-  animation: skeleton-loading 1s linear infinite alternate;
+  @include skeletonLoading();
   height: $font-size-secondary;
   margin-bottom: $spacer-small;
   max-width: 300px;
@@ -71,20 +71,11 @@
 }
 
 .artistsSkeleton {
-  animation: skeleton-loading 1s linear infinite alternate;
+  @include skeletonLoading();
   height: $font-size-tertiary;
   max-width: 200px;
 
   @include desktop() {
     height: $font-size-tertiary-desktop;
-  }
-}
-
-@keyframes skeleton-loading {
-  0% {
-    background-color: hsl(200, 20%, 80%);
-  }
-  100% {
-    background-color: hsl(200, 20%, 95%);
   }
 }

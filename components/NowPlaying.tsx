@@ -1,6 +1,6 @@
 import useSWR from "swr";
 import fetcher from "../utils/fetcher";
-import { deserializeNowPlaying } from "../utils/functions";
+import { deserializeNowPlaying, renderArtists } from "../utils/functions";
 import Spotify from "./svgs/Spotify";
 import styles from "../styles/NowPlaying.module.scss";
 import { Episode, Song } from "../types/types";
@@ -54,19 +54,11 @@ const NowPlaying = () => {
         </div>
       </div>
       <ProgressBar
-        progress_ms={nowPlaying.progress_ms}
-        total_ms={nowPlaying.duration_ms}
+        progress_ms={nowPlaying.progress_ms ? nowPlaying.progress_ms : 0}
+        total_ms={nowPlaying.duration_ms ? nowPlaying.duration_ms : 0}
       />
     </div>
   );
 };
-
-function renderArtists(nowPlaying: Song | Episode): React.ReactNode {
-  if ("artists" in nowPlaying) {
-    return nowPlaying.artists.join(" · ");
-  } else {
-    return nowPlaying.showName;
-  }
-}
 
 export default NowPlaying;

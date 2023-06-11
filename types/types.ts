@@ -42,6 +42,17 @@ interface TimelinePointImage {
   alt: string;
 }
 
+export interface SpotifyImage {
+  url: string;
+  height: number;
+  width: number;
+}
+
+export interface SpotifyAlbum {
+  name: string;
+  images: SpotifyImage[];
+}
+
 export interface TimelinePoint {
   date: string;
   location: string;
@@ -51,12 +62,23 @@ export interface TimelinePoint {
 }
 
 export interface Song {
+  spotifyId: string;
   name: string;
   url: string;
-  artists: string[];
-  duration_ms: number;
-  progress_ms: number;
-  is_playing: boolean;
+  artists: Artist[];
+  duration_ms?: number;
+  progress_ms?: number;
+  is_playing?: boolean;
+  album?: SpotifyAlbum;
+  blurhash?: string;
+}
+
+export interface Artist {
+  spotifyId: string;
+  name: string;
+  url: string;
+  images?: SpotifyImage[];
+  blurhash?: string;
 }
 
 export interface Episode {
