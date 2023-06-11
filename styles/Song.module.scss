@@ -58,9 +58,11 @@
 
 .nameSkeleton {
   background-color: $skeleton-color;
+  border-radius: $border-radius-regular;
   height: $font-size-heading-medium;
   margin-bottom: $spacer-very-small;
-  max-width: 300px;
+  max-width: 280px;
+  width: 100%;
   @include skeletonLoading();
 
   @include desktop() {
@@ -70,8 +72,10 @@
 
 .artistsSkeleton {
   background-color: $skeleton-color;
+  border-radius: $border-radius-regular;
   height: $font-size-secondary;
   max-width: 200px;
+  width: 100%;
   @include skeletonLoading();
 
   @include desktop() {
