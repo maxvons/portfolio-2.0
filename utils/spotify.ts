@@ -44,27 +44,21 @@ const getCurrentlyPlaying = async () => {
 const getTopTracks = async () => {
   const { access_token } = await getAccessToken();
 
-  return fetch(
-    `${TOP_TRACKS_ENDPOINT}?time_range=short_term&limit=10&offset=5`,
-    {
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-      },
+  return fetch(`${TOP_TRACKS_ENDPOINT}?time_range=short_term&limit=10`, {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
     },
-  );
+  });
 };
 
 const getTopArtists = async () => {
   const { access_token } = await getAccessToken();
 
-  return fetch(
-    `${TOP_ARTISTS_ENDPOINT}?time_range=short_term&limit=10&offset=5`,
-    {
-      headers: {
-        Authorization: `Bearer ${access_token}`,
-      },
+  return fetch(`${TOP_ARTISTS_ENDPOINT}?time_range=short_term&limit=10`, {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
     },
-  );
+  });
 };
 
 export { getCurrentlyPlaying, getTopTracks, getTopArtists };
