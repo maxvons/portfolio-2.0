@@ -3,6 +3,7 @@
   align-items: flex-start;
   display: flex;
   flex-flow: column nowrap;
+  width: 100%;
 
   @include desktop() {
     align-items: center;
@@ -15,10 +16,11 @@
   gap: $spacer-medium;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
+  width: 100%;
 
   @include desktop() {
     gap: $spacer-medium-plus;
-    grid-template-columns: repeat(auto-fit, minmax($max-width-spotify-album-img, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax($max-width-spotify-album-img, 1fr));
   }
 }
 

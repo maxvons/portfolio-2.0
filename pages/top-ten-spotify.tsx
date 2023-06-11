@@ -5,10 +5,14 @@ import styles from "../styles/TopTenSpotify.module.scss";
 import Layout from "../components/Layout";
 import Navbar from "../components/Navbar";
 import { useState } from "react";
-import { deserializeTopTenSongs } from "../utils/functions";
+import {
+  deserializeTopTenArtists,
+  deserializeTopTenSongs,
+} from "../utils/functions";
 import Title from "../components/Title";
 import Song from "../components/Song";
 import Footer from "../components/Footer";
+import Artist from "../components/Artist";
 
 const TopTenSpotify: NextPage = () => {
   const [open, setOpen] = useState(false);
@@ -23,7 +27,7 @@ const TopTenSpotify: NextPage = () => {
     isLoading: artistIsLoading,
   } = useSWR("/api/top-artists", fetcher);
 
-  if (songError) {
+  if (songError || artistError) {
     return <div>Error...</div>;
   }
 
@@ -51,7 +55,7 @@ const TopTenSpotify: NextPage = () => {
             ) : (
               <>
                 {deserializeTopTenSongs(songs).map((song, index) => (
-                  <Song key={index} song={song} />
+                  <Song key={song.spotifyId} song={song} />
                 ))}
               </>
             )}
@@ -65,16 +69,16 @@ const TopTenSpotify: NextPage = () => {
             My favorite artists on Spotify right now.
           </h2>
           <div className={styles.topTenContainer}>
-            {songIsLoading ? (
+            {artistIsLoading ? (
               <>
                 {[...Array(10)].map((index) => (
-                  <Song key={index} loading />
+                  <Artist key={index} loading />
                 ))}
               </>
             ) : (
               <>
-                {deserializeTopTenSongs(songs).map((song, index) => (
-                  <Song key={index} song={song} />
+                {deserializeTopTenArtists(artists).map((artist, index) => (
+                  <Artist key={artist.spotifyId} artist={artist} />
                 ))}
               </>
             )}
