@@ -1,4 +1,4 @@
-// Util functions here.
+import { decode } from "blurhash";
 
 import { Artist, Episode, Song } from "../types/types";
 
@@ -44,7 +44,29 @@ function deserializeTopTenSongs(data: any): Song[] {
     url: song.songUrl,
     artists: song.artists,
     album: song.album,
+    blurhash: song.blurhash,
   }));
+}
+
+function createBlurUrl(
+  blurhash: string,
+  width: number,
+  height: number,
+): string {
+  const pixels = decode(blurhash, width, height);
+  const clamped = new Uint8ClampedArray(pixels);
+  const imageData = new ImageData(clamped, width, height);
+  const canvas = document.createElement("canvas");
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext("2d");
+
+  if (ctx) {
+    ctx.putImageData(imageData, 0, 0);
+    return canvas.toDataURL();
+  }
+
+  return "";
 }
 
 function renderArtists(item: Song | Episode): React.ReactNode {
@@ -55,9 +77,11 @@ function renderArtists(item: Song | Episode): React.ReactNode {
     return item.showName;
   }
 }
+
 export {
   deserializeNowPlaying,
   deserializeTopTenSongs,
   deserializeTopTenArtists,
+  createBlurUrl,
   renderArtists,
 };

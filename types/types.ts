@@ -70,6 +70,7 @@ export interface Song {
   progress_ms?: number;
   is_playing?: boolean;
   album?: SpotifyAlbum;
+  blurhash?: string;
 }
 
 export interface Artist {
