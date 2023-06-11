@@ -26,15 +26,13 @@ function deserializeNowPlaying(data: any): Song | Episode {
 }
 
 function deserializeTopTenArtists(data: any): Artist[] {
-  if (data.items) {
-    return data.items.map((item: any) => ({
-      name: item.name,
-      url: item.artistUrl,
-      images: item.images,
-    }));
-  }
-
-  return [];
+  return data.map((item: any) => ({
+    spotifyId: item.id,
+    name: item.name,
+    url: item.artistUrl,
+    images: item.images,
+    blurhash: item.blurhash,
+  }));
 }
 
 function deserializeTopTenSongs(data: any): Song[] {

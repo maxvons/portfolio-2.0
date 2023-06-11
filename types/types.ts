@@ -42,7 +42,7 @@ interface TimelinePointImage {
   alt: string;
 }
 
-interface SpotifyImage {
+export interface SpotifyImage {
   url: string;
   height: number;
   width: number;
@@ -74,9 +74,11 @@ export interface Song {
 }
 
 export interface Artist {
+  spotifyId: string;
   name: string;
   url: string;
   images?: SpotifyImage[];
+  blurhash?: string;
 }
 
 export interface Episode {
