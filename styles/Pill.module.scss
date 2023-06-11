@@ -1,0 +1,32 @@
+.pill {
+  @include resetButton();
+  align-items: center;
+  background-color: $background-color-pill;
+  border: 1px solid $border-color-pill;
+  border-radius: $border-radius-rounded;
+  color: $text-color-emphasis;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: $font-size-tertiary;
+  font-variation-settings: $sans;
+  font-weight: $font-weight-regular;
+  justify-content: center;
+  padding: $spacer-small $spacer-medium;
+
+  @include desktop() {
+    font-size: $font-size-tertiary-desktop;
+  }
+}
+
+.icon {
+  height: $font-size-tertiary;
+  margin-left: $spacer-small;
+  stroke: $text-color-emphasis;
+  stroke-width: 2;
+  width: $font-size-tertiary;
+
+  @include desktop() {
+    height: $font-size-tertiary-desktop;
+    width: $font-size-tertiary-desktop;
+  }
+}

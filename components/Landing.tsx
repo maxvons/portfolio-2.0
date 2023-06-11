@@ -3,6 +3,7 @@ import CustomImage from "./CustomImage";
 import Button from "./Button";
 import ToolBar from "./ToolBar";
 import Layout from "./Layout";
+import Pill from "./Pill";
 
 /* Assets. */
 import Portrait from "/public/images/portrait.jpg";
@@ -17,7 +18,7 @@ const Landing = () => {
   return (
     <Layout noPadding>
       <div className={`${styles.container} ${styles.marginTop}`}>
-        <p className={styles.tag}>My name is</p>
+        <Pill text="Check out my Spotify top 10" href="/top-ten-spotify" />
         <h1 className={styles.title}>Maximilian</h1>
         <h2 className={styles.subTitle}>
           I create <span className={styles.flair}>exceptional</span> digital

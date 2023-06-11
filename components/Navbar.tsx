@@ -47,6 +47,11 @@ const Navbar = ({ open, onClick }: NavbarProps) => {
               <LinkWithIcon text="About me" href="/about" large />
               <LinkWithIcon text="My projects" href="/projects" large />
               <LinkWithIcon text="What I use" href="/uses" large />
+              <LinkWithIcon
+                text="What I'm grooving to"
+                href="/top-ten-spotify"
+                large
+              />
             </div>
             <div className={styles.linkSection}>
               <LinkWithIcon

@@ -51,10 +51,12 @@
 .title {
   grid-area: title;
   margin-bottom: $spacer-small;
+  margin-top: $spacer-very-small-plus;
   @include title();
 
   @include desktop() {
     margin-bottom: $spacer-medium;
+    margin-top: $spacer-small-plus;
   }
 }
 
