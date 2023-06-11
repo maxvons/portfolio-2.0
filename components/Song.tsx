@@ -1,7 +1,7 @@
 import { Song } from "../types/types";
 import styles from "../styles/Song.module.scss";
 import Image from "next/image";
-import SpotifyAlbumImg from "/public/images/spotify-album-image.jpg";
+import SpotifyPlaceholderImg from "/public/images/spotify-placeholder-image.jpg";
 import { createBlurUrl, renderArtists } from "../utils/functions";
 
 interface SongProps {
@@ -43,7 +43,7 @@ const Song = ({ song, loading }: SongProps) => {
             />
           ) : (
             <Image
-              src={SpotifyAlbumImg}
+              src={SpotifyPlaceholderImg}
               alt="Spotify album cover"
               layout="fill"
               objectPosition="center"
