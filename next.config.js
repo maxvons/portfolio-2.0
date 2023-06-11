@@ -5,6 +5,9 @@ const nextConfig = {
   sassOptions: {
     prependData: `@import "variables"; @import "mixins";`,
   },
+  images: {
+    domains: ["i.scdn.co"],
+  },
 };
 
 module.exports = nextConfig;
