@@ -1,6 +1,6 @@
 import useSWR from "swr";
 import fetcher from "../utils/fetcher";
-import { deserializeNowPlaying } from "../utils/functions";
+import { deserializeNowPlaying, renderArtists } from "../utils/functions";
 import Spotify from "./svgs/Spotify";
 import styles from "../styles/NowPlaying.module.scss";
 import { Episode, Song } from "../types/types";
@@ -60,14 +60,5 @@ const NowPlaying = () => {
     </div>
   );
 };
-
-function renderArtists(nowPlaying: Song | Episode): React.ReactNode {
-  if ("artists" in nowPlaying) {
-    const artists = nowPlaying.artists.map((artist) => artist.name);
-    return artists.join(" · ");
-  } else {
-    return nowPlaying.showName;
-  }
-}
 
 export default NowPlaying;

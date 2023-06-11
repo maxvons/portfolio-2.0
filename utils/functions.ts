@@ -47,8 +47,17 @@ function deserializeTopTenSongs(data: any): Song[] {
   }));
 }
 
+function renderArtists(item: Song | Episode): React.ReactNode {
+  if ("artists" in item) {
+    const artists = item.artists.map((artist) => artist.name);
+    return artists.join(" · ");
+  } else {
+    return item.showName;
+  }
+}
 export {
   deserializeNowPlaying,
   deserializeTopTenSongs,
   deserializeTopTenArtists,
+  renderArtists,
 };
