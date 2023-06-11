@@ -1,5 +1,8 @@
 import { Song } from "../types/types";
 import styles from "../styles/Song.module.scss";
+import Image from "next/image";
+import SpotifyAlbumImg from "/public/images/spotify-album-image.jpg";
+import { createBlurUrl, renderArtists } from "../utils/functions";
 
 interface SongProps {
   song?: Song;
@@ -10,7 +13,9 @@ const Song = ({ song, loading }: SongProps) => {
   if (loading) {
     return (
       <div className={styles.container}>
-        <p>Loading...</p>
+        <div className={styles.imageSkeleton} />
+        <div className={styles.nameSkeleton} />
+        <div className={styles.artistsSkeleton} />
       </div>
     );
   }
@@ -18,14 +23,37 @@ const Song = ({ song, loading }: SongProps) => {
   if (song) {
     return (
       <div className={styles.container}>
-        <p>{song.name}</p>
-        <p>{song.url}</p>
-        <div>
-          {song.artists.map((artist, index) => (
-            <p key={index}>{artist.name}</p>
-          ))}
-        </div>
-        <p>{song.album && song.album.name}</p>
+        <a
+          className={styles.imageContainer}
+          href={song.url}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {song.album ? (
+            <Image
+              src={song.album.images[0].url}
+              alt={`Album cover for ${song.album.name}`}
+              layout="fill"
+              objectPosition="center"
+              objectFit="cover"
+              placeholder="blur"
+              blurDataURL={
+                song.blurhash ? createBlurUrl(song.blurhash, 32, 32) : undefined
+              }
+            />
+          ) : (
+            <Image
+              src={SpotifyAlbumImg}
+              alt="Spotify album cover"
+              layout="fill"
+              objectPosition="center"
+              objectFit="cover"
+              placeholder="blur"
+            />
+          )}
+        </a>
+        <p className={styles.name}>{song.name}</p>
+        <p className={styles.artists}>{renderArtists(song)}</p>
       </div>
     );
   }
