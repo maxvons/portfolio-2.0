@@ -81,10 +81,10 @@ const Navbar = ({ open, onClick }: NavbarProps) => {
             </div>
           </div>
           <div className={styles.column}>
-            <div>
+            {/* <div>
               <h1 className={styles.heading}>Theme</h1>
               <ThemeToggle />
-            </div>
+            </div> */}
             <div>
               <h1 className={styles.heading}>Contact and resume</h1>
               <div className={styles.smallLinksContainer}>

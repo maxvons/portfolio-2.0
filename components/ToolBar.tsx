@@ -34,7 +34,7 @@ const ToolBar = ({ dark }: ToolBarProps) => {
           Icon={TwitterIcon}
         />
       </div>
-      <div className={styles.section}>
+      {/* <div className={styles.section}>
         <IconButton
           Icon={LightIcon}
           onClick={() => console.log("clicked")}
@@ -45,7 +45,7 @@ const ToolBar = ({ dark }: ToolBarProps) => {
           onClick={() => console.log("clicked")}
           active={!dark}
         />
-      </div>
+      </div> */}
     </div>
   );
 };
