@@ -10,7 +10,7 @@ import Layout from "../components/Layout";
 import Navbar from "../components/Navbar";
 
 // Assets.
-import SetupImg from "/public/images/setup.png";
+import SetupImg from "/public/images/setup.jpg";
 
 // Styles.
 import styles from "../styles/Uses.module.scss";
