@@ -18,16 +18,4 @@
 
 .title {
   @include title();
-  margin-bottom: $spacer-medium;
-}
-
-.subHeader {
-  @include subheader();
-  max-width: $max-width-subheader-wider;
-  text-align: center;
-
-  @include desktop() {
-    max-width: $max-width-subheader-wider;
-    text-align: center;
-  }
 }

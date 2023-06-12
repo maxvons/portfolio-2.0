@@ -24,15 +24,12 @@ const Projects: NextPage = () => {
   return (
     <>
       <Navbar open={open} onClick={() => setOpen(!open)} />
-      <Layout noPadding>
-        <div className={styles.wrapper}>
-          <Title
-            title="My projects"
-            subTitle="The projects I'm the most proud of."
-            tag="Personal websites, to-do lists, blogs, web apps"
-          />
-        </div>
-      </Layout>
+      <div className={styles.wrapper}>
+        <Title
+          title="My projects"
+          tag="Personal websites, to-do lists, blogs, web apps"
+        />
+      </div>
       <LargeProject project={Project.PORTFOLIONEW} />
       <LargeProject project={Project.WILFO} />
       <LargeProject project={Project.REVMATOLOGEN} />

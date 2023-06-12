@@ -1,10 +1,5 @@
 .wrapper {
   @include navbarMargin();
-  margin-bottom: $spacer-large;
-
-  @include desktop() {
-    margin-bottom: $spacer-very-large;
-  }
 }
 
 .titleContainer {

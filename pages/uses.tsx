@@ -28,7 +28,6 @@ const Uses: NextPage = () => {
         <div className={styles.wrapper}>
           <Title
             title="What I use"
-            subTitle="These are the tools I use everyday to get stuff done."
             tag="My setup, tools, software, and others"
           />
           <div className={styles.imageContainer}>

@@ -37,12 +37,7 @@ const About: NextPage = () => {
       <Navbar open={open} onClick={() => setOpen(!open)} />
       <Layout noPadding>
         <div className={styles.wrapper}>
-          <Title
-            title="Who am I?"
-            subTitle="How a young boy fascinated with Star Wars and other nerdy stuff
-              ended up as a startup founder."
-            tag="Developer, designer, and dreamer"
-          />
+          <Title title="Who am I?" tag="Developer, designer, and dreamer" />
           <div className={styles.imageContainer}>
             <Image
               src={MaxWithStormtrooperImg}

@@ -1,11 +1,10 @@
 .wrapper {
   @include navbarMargin();
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   flex-flow: column nowrap;
 
   @include desktop() {
-    align-items: center;
     @include contentPadding();
   }
 }

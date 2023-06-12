@@ -37,11 +37,7 @@ const TopTenSpotify: NextPage = () => {
       <Navbar open={open} onClick={() => setOpen(!open)} />
       <Layout noPadding>
         <div className={styles.wrapper}>
-          <Title
-            title="My music"
-            subTitle="My top songs and artists on Spotify."
-            tag="What I listen to the most"
-          />
+          <Title title="My music" tag="What I listen to the most" />
           <h2 className={styles.header}>
             My favorite songs on Spotify right now.
           </h2>
