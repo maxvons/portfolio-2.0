@@ -29,7 +29,7 @@ function deserializeTopTenArtists(data: any): Artist[] {
   return data.map((item: any) => ({
     spotifyId: item.id,
     name: item.name,
-    url: item.artistUrl,
+    url: item.url,
     images: item.images,
     blurhash: item.blurhash,
   }));

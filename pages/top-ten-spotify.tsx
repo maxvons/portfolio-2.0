@@ -77,7 +77,7 @@ const TopTenSpotify: NextPage = () => {
               </>
             ) : (
               <>
-                {deserializeTopTenArtists(artists).map((artist, index) => (
+                {deserializeTopTenArtists(artists).map((artist) => (
                   <Artist key={artist.spotifyId} artist={artist} />
                 ))}
               </>
