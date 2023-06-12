@@ -8,10 +8,9 @@
   display: flex;
   flex-flow: row nowrap;
   font-size: $font-size-tertiary;
-  font-variation-settings: $sans;
-  font-weight: $font-weight-regular;
+  gap: 6px;
   justify-content: center;
-  padding: $spacer-small $spacer-medium;
+  padding: $spacer-small $spacer-small-plus;
 
   @include desktop() {
     font-size: $font-size-tertiary-desktop;
@@ -20,13 +19,32 @@
 
 .icon {
   height: $font-size-tertiary;
-  margin-left: $spacer-small;
+  margin-left: $spacer-very-small;
   stroke: $text-color-emphasis;
-  stroke-width: 2;
+  stroke-width: 3.5;
   width: $font-size-tertiary;
 
   @include desktop() {
     height: $font-size-tertiary-desktop;
     width: $font-size-tertiary-desktop;
   }
+}
+
+.text {
+  font-variation-settings: $mono-bold;
+  font-weight: $font-weight-bold;
+}
+
+.flair {
+  background: linear-gradient(45deg, $primary-color, $secondary-color);
+  background-clip: text;
+  font-variation-settings: $mono-bold;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.15em;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+.dot {
+  color: $text-color-secondary;
 }

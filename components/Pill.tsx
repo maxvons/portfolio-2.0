@@ -11,7 +11,9 @@ const Pill = ({ text, href }: PillProps) => {
   return (
     <Link href={href}>
       <a className={styles.pill}>
-        {text}
+        <span className={styles.flair}>New</span>
+        <span className={styles.dot}>·</span>
+        <span className={styles.text}>{text}</span>
         <InternalLinkIcon className={styles.icon} />
       </a>
     </Link>
