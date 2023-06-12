@@ -25,6 +25,10 @@ const internalLinks: LinkCollection = {
       name: "Uses",
       href: "/uses",
     },
+    {
+      name: "Music",
+      href: "/top-ten-spotify",
+    },
   ],
 };
 
