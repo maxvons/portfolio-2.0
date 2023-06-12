@@ -1,5 +1,6 @@
 .wrapper {
   @include navbarMargin();
+  width: 100%;
 }
 
 .titleContainer {
