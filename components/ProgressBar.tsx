@@ -16,17 +16,24 @@ const ProgressBar = ({
 }: ProgressBarProps) => {
   const [progress, setProgress] = useState(progress_ms);
   const progressPercentage = (progress / total_ms) * 100;
+  const isPlaying = progress_ms !== total_ms;
+
+  useEffect(() => {
+    setProgress(progress_ms);
+  }, [progress_ms]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setProgress((prevProgress) => {
-        const newProgress = prevProgress + 1000;
-        return newProgress <= total_ms ? newProgress : total_ms;
-      });
+      if (isPlaying) {
+        setProgress((prevProgress) => {
+          const newProgress = prevProgress + 1000;
+          return newProgress <= total_ms ? newProgress : total_ms;
+        });
+      }
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [total_ms]);
+  }, [isPlaying, total_ms]);
 
   if (loading) {
     return (

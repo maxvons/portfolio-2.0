@@ -54,7 +54,7 @@ const TopTenSpotify: NextPage = () => {
               </>
             ) : (
               <>
-                {deserializeTopTenSongs(songs).map((song, index) => (
+                {deserializeTopTenSongs(songs).map((song) => (
                   <Song key={song.spotifyId} song={song} />
                 ))}
               </>
