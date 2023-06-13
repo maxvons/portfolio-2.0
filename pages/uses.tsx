@@ -45,11 +45,11 @@ const Uses: NextPage = () => {
               items={[
                 'M1 Max MacBook Pro 16" with 32GB RAM and 2TB SSD',
                 'M1 iPad Pro 11" 128GB',
-                "Samsung C34J791 Ultrawide monitor",
-                "Keychron K2 Wireless Mechanical Keyboard (v2) with KBDFANS PBT DSA keycaps",
-                "Logitech MX Master 3 Mouse",
+                "Samsung C34J791 ultrawide monitor",
+                "Logitech MX Mechanical Mini keyboard",
+                "Logitech MX Master 3 mouse",
                 "AirPods Max",
-                "TwelveSouth Curve Laptop Stand",
+                "TwelveSouth Curve laptop stand",
                 "IKEA BEKANT 160x80cm standing desk",
                 "IKEA JÄRVFJÄLLET office chair",
               ]}
