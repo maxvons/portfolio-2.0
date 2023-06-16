@@ -10,18 +10,6 @@
   }
 }
 
-.titleContainer {
-  align-items: center;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  margin-bottom: $spacer-large;
-
-  @include desktop() {
-    margin-bottom: $spacer-very-large;
-  }
-}
-
 .imageContainer {
   border-radius: $border-radius-regular;
   grid-area: image;
