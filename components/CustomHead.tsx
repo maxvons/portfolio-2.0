@@ -4,10 +4,11 @@ import Head from "next/head";
 interface CustomHeadProps {
   title: string;
   description: string;
-  image: string;
+  url?: string;
+  image?: string;
 }
 
-const CustomHead = ({ title, description, image }: CustomHeadProps) => {
+const CustomHead = ({ title, description, url, image }: CustomHeadProps) => {
   return (
     <Head>
       <meta charSet="UTF-8" />
@@ -16,6 +17,7 @@ const CustomHead = ({ title, description, image }: CustomHeadProps) => {
       <meta name="description" content={description} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+      <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
       <meta name="twitter:card" content="summary"></meta>
     </Head>

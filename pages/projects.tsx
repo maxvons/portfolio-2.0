@@ -1,5 +1,6 @@
 // Next.js.
-import { NextPage } from "next";
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
+import { useRouter } from "next/router";
 
 // React.
 import { useState } from "react";
@@ -17,12 +18,22 @@ import { Project } from "../types/types";
 // Styles.
 import styles from "../styles/Projects.module.scss";
 import Title from "../components/Title";
+import CustomHead from "../components/CustomHead";
 
-const Projects: NextPage = () => {
+const Projects: NextPage = ({
+  baseUrl,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <>
+      <CustomHead
+        title="Projects"
+        description="Maximilian's projects"
+        url={`${baseUrl}${router.asPath}`}
+        image="/images/projects.jpg"
+      />
       <Navbar open={open} onClick={() => setOpen(!open)} />
       <div className={styles.wrapper}>
         <Title
@@ -46,6 +57,15 @@ const Projects: NextPage = () => {
       <Footer />
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  return {
+    props: {
+      baseUrl,
+    },
+  };
 };
 
 export default Projects;
