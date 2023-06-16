@@ -1,8 +1,8 @@
 import { Project } from "../types/types";
 
-import PortfolioMockup from "/public/images/portfolio-new-mockup.png";
-import WilfoMockup from "/public/images/wilfo-mockup.png";
-import RevmatologenMockup from "/public/images/revmatologen-mockup.png";
+import PortfolioMockup from "/public/images/portfolio-new-mockup.jpg";
+import WilfoMockup from "/public/images/wilfo-mockup.jpg";
+import RevmatologenMockup from "/public/images/revmatologen-mockup.jpg";
 
 // TODO: Refactor this into two different objects.
 const projectData = {
