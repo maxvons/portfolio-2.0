@@ -1,0 +1,53 @@
+.icon {
+  display: flex;
+  height: 12px;
+  justify-content: space-between;
+  padding-bottom: 1px;
+  position: relative;
+  width: 12px;
+
+  @include desktop() {
+    height: 14px;
+    width: 14px;
+  }
+
+  span {
+    animation: bounce 2.2s ease infinite alternate;
+    background-color: $spotify-color;
+    border-radius: 3px;
+    content: '';
+    height: 100%;
+    transform-origin: bottom;
+    width: 3px;
+
+    &:nth-of-type(2) {
+      animation-delay: -2.2s; /* Start at the end of animation */
+    }
+
+    &:nth-of-type(3) {
+      animation-delay: -3.7s; /* Start mid-way of return of animation */
+    }
+  }
+}
+
+@keyframes bounce {
+  10% {
+    transform: scaleY(0.3); /* start by scaling to 30% */
+  }
+
+  30% {
+    transform: scaleY(1); /* scale up to 100% */
+  }
+
+  60% {
+    transform: scaleY(0.5); /* scale down to 50% */
+  }
+
+  80% {
+    transform: scaleY(0.75); /* scale up to 75% */
+  }
+
+  100% {
+    transform: scaleY(0.6); /* scale down to 60% */
+  }
+}
