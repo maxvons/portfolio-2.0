@@ -29,6 +29,17 @@ export enum Social {
   TWITTER,
 }
 
+export enum NowPlaying {
+  SONG,
+  EPISODE,
+}
+
+export enum HttpStatusCode {
+  OK = 200,
+  NO_CONTENT = 204,
+  INTERNAL_SERVER_ERROR = 500,
+}
+
 export interface ProjectData {
   title: string;
   description: string;
@@ -82,6 +93,7 @@ export interface Artist {
 }
 
 export interface Episode {
+  spotifyId: string;
   name: string;
   url: string;
   showName: string;
