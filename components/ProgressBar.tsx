@@ -6,6 +6,7 @@ interface ProgressBarProps {
   total_ms: number;
   loading?: boolean;
   noFill?: boolean;
+  playing?: boolean;
 }
 
 const ProgressBar = ({
@@ -13,10 +14,11 @@ const ProgressBar = ({
   total_ms,
   loading,
   noFill,
+  playing,
 }: ProgressBarProps) => {
   const [progress, setProgress] = useState(progress_ms);
   const progressPercentage = (progress / total_ms) * 100;
-  const isPlaying = progress_ms !== total_ms;
+  const finished = progress_ms === total_ms;
 
   useEffect(() => {
     setProgress(progress_ms);
@@ -24,7 +26,7 @@ const ProgressBar = ({
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (isPlaying) {
+      if (!finished && playing) {
         setProgress((prevProgress) => {
           const newProgress = prevProgress + 1000;
           return newProgress <= total_ms ? newProgress : total_ms;
@@ -33,7 +35,7 @@ const ProgressBar = ({
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [isPlaying, total_ms]);
+  }, [finished, playing, total_ms]);
 
   if (loading) {
     return (
