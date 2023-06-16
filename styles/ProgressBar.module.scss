@@ -30,19 +30,13 @@
 }
 
 .time {
+  color: $text-color-secondary;
   font-size: $font-size-tertiary;
+  font-variation-settings: $mono;
 
   @include desktop() {
     font-size: $font-size-tertiary;
   }
-}
-
-.currentTime {
-  color: $text-color-secondary;
-}
-
-.totalTime {
-  color: $text-color-secondary;
 }
 
 @keyframes skeleton-loading {

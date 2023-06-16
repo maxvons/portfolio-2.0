@@ -42,12 +42,8 @@ const ProgressBar = ({
       <div className={styles.container}>
         <div className={`${styles.progressBar} ${styles.loading}`}></div>
         <div className={styles.timeContainer}>
-          <p className={`${styles.time} ${styles.currentTime}`}>
-            {formatTime(progress)}
-          </p>
-          <p className={`${styles.time} ${styles.totalTime}`}>
-            &nbsp;/ {formatTime(total_ms)}
-          </p>
+          <p className={styles.time}>{formatTime(progress)}</p>
+          <p className={styles.time}>&nbsp;/ {formatTime(total_ms)}</p>
         </div>
       </div>
     );
@@ -58,12 +54,8 @@ const ProgressBar = ({
       <div className={styles.container}>
         <div className={styles.progressBar}></div>
         <div className={styles.timeContainer}>
-          <p className={`${styles.time} ${styles.currentTime}`}>
-            {formatTime(progress)}
-          </p>
-          <p className={`${styles.time} ${styles.totalTime}`}>
-            &nbsp;/ {formatTime(total_ms)}
-          </p>
+          <p className={styles.time}>{formatTime(progress)}</p>
+          <p className={styles.time}>&nbsp;/ {formatTime(total_ms)}</p>
         </div>
       </div>
     );
