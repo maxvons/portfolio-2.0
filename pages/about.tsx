@@ -1,5 +1,6 @@
 // Next.js.
-import { NextPage } from "next";
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 // React.
@@ -30,12 +31,22 @@ import IfiMasterImg from "/public/images/ifi-master.jpg";
 // Styles.
 import styles from "../styles/About.module.scss";
 import Title from "../components/Title";
+import CustomHead from "../components/CustomHead";
 
-const About: NextPage = () => {
+const About: NextPage = ({
+  baseUrl,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <>
+      <CustomHead
+        title="Maximilian von Stephanides"
+        description="Maximilian is a developer passionate about digital products that work, are fast, and look good. For as long as he can remember, he's been fascinated by products — digital or otherwise — that not only function well, but also look aesthetically pleasing and have that X factor. Maximilian is a very thorough person, who many would describe as a perfectionist. His attention to detail and drive to always deliver his best work is part of what makes him a great developer.His design interest together with his computer science education, developer experience, and attention to detail allow Maximilian to create beautiful, accessible, simple, and intuitive digital experiences that stand out."
+        url={`${baseUrl}${router.asPath}`}
+        image="/images/about.jpg"
+      />
       <Navbar open={open} onClick={() => setOpen(!open)} />
       <Layout noPadding>
         <div className={styles.wrapper}>
@@ -195,6 +206,15 @@ const About: NextPage = () => {
       <Footer />
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  return {
+    props: {
+      baseUrl,
+    },
+  };
 };
 
 export default About;

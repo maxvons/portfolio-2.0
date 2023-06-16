@@ -1,6 +1,7 @@
 // Next.js.
-import { NextPage } from "next";
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 // React.
 import { useState } from "react";
@@ -17,12 +18,22 @@ import styles from "../styles/Uses.module.scss";
 import List from "../components/List";
 import Footer from "../components/Footer";
 import Title from "../components/Title";
+import CustomHead from "../components/CustomHead";
 
-const Uses: NextPage = () => {
+const Uses: NextPage = ({
+  baseUrl,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <>
+      <CustomHead
+        title="Uses"
+        description="Maximilian's setup, tools, software, and other stuff"
+        url={`${baseUrl}${router.asPath}`}
+        image="/images/uses.jpg"
+      />
       <Navbar open={open} onClick={() => setOpen(!open)} />
       <Layout noPadding>
         <div className={styles.wrapper}>
@@ -113,6 +124,15 @@ const Uses: NextPage = () => {
       <Footer />
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  return {
+    props: {
+      baseUrl,
+    },
+  };
 };
 
 export default Uses;

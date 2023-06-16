@@ -1,4 +1,5 @@
-import { NextPage } from "next";
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next";
+import { useRouter } from "next/router";
 import useSWR from "swr";
 import fetcher from "../utils/fetcher";
 import styles from "../styles/TopTenSpotify.module.scss";
@@ -13,9 +14,13 @@ import Title from "../components/Title";
 import Song from "../components/Song";
 import Footer from "../components/Footer";
 import Artist from "../components/Artist";
+import CustomHead from "../components/CustomHead";
 
-const TopTenSpotify: NextPage = () => {
+const TopTenSpotify: NextPage = ({
+  baseUrl,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
   const {
     data: songs,
     error: songError,
@@ -28,12 +33,28 @@ const TopTenSpotify: NextPage = () => {
   } = useSWR("/api/top-artists", fetcher);
 
   if (songError || artistError) {
-    return <div>Error...</div>;
+    return (
+      <>
+        <CustomHead
+          title="My music"
+          description="Maximilian's top ten songs and artists"
+          url={`${baseUrl}${router.asPath}`}
+          image="/images/music.jpg"
+        />
+        <div>Error...</div>;
+      </>
+    );
   }
 
   // Render songs and artists from Spotify API.
   return (
     <>
+      <CustomHead
+        title="My music"
+        description="Maximilian's top ten songs and artists on Spotify"
+        url={`${baseUrl}${router.asPath}`}
+        image="/images/music.jpg"
+      />
       <Navbar open={open} onClick={() => setOpen(!open)} />
       <Layout noPadding>
         <div className={styles.wrapper}>
@@ -84,6 +105,15 @@ const TopTenSpotify: NextPage = () => {
       <Footer />
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  return {
+    props: {
+      baseUrl,
+    },
+  };
 };
 
 export default TopTenSpotify;
