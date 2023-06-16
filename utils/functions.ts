@@ -5,6 +5,7 @@ import { Artist, Episode, Song } from "../types/types";
 function deserializeNowPlaying(data: any): Song | Episode {
   if (data.currently_playing_type === "episode") {
     return {
+      spotifyId: data.item ? data.item.id : "",
       name: data.item ? data.item.name : "",
       url: data.item ? data.item.external_urls.spotify : "",
       showName: data.item ? data.item.show.name : "",
