@@ -18,6 +18,18 @@
   @include footer();
 }
 
+.titleContainer {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: $spacer-very-small-plus;
+}
+
+.paused {
+  align-items: center;
+  gap: $spacer-very-small;
+}
+
 .title {
   @include uppercase();
 }
@@ -28,6 +40,17 @@
 
   @include desktop() {
     margin-right: $spacer-very-small-plus;
+  }
+}
+
+.pauseIcon {
+  height: $font-size-tertiary;
+  stroke: $text-color-secondary;
+  width: $font-size-tertiary;
+
+  @include desktop() {
+    height: $font-size-tertiary-desktop;
+    width: $font-size-tertiary-desktop;
   }
 }
 
