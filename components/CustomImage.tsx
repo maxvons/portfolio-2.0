@@ -10,8 +10,6 @@ import styles from "../styles/CustomImage.module.scss";
 interface CustomImageProps {
   src: StaticImageData | string;
   alt: string;
-  width: number;
-  height: number;
   objectPosition?: string;
   size: ImageSize;
   round?: boolean;
@@ -22,8 +20,6 @@ interface CustomImageProps {
 const CustomImage = ({
   src,
   alt,
-  width,
-  height,
   objectPosition,
   size,
   round,
@@ -89,8 +85,6 @@ const CustomImage = ({
         layout="fill"
         objectFit="cover"
         objectPosition={objectPosition}
-        width={width}
-        height={height}
         /* Consider adding the `sizes` prop here. */
       />
     </div>

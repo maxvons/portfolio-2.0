@@ -52,8 +52,6 @@ const AboutSection = () => {
         <CustomImage
           src={MaxWithSetupImg}
           alt="Max with setup"
-          width={2048}
-          height={1536}
           objectPosition="20% 50%"
           size={ImageSize.LARGE}
           noShadow

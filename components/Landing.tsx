@@ -32,8 +32,6 @@ const Landing = () => {
         <CustomImage
           src={Portrait}
           alt="Portrait of Maximilian"
-          width={2052}
-          height={3078}
           objectPosition="50% 20%"
           size={ImageSize.AVATAR}
           round

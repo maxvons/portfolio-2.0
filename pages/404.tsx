@@ -5,7 +5,6 @@ import Title from "../components/Title";
 import Layout from "../components/Layout";
 import styles from "../styles/Custom404.module.scss";
 import LinkWithIcon from "../components/LinkWithIcon";
-import CustomHead from "../components/CustomHead";
 
 const Custom404: NextPage = () => {
   const [open, setOpen] = useState(false);
