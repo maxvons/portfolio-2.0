@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getCurrentlyPlaying } from "../../utils/spotify";
+import { HttpStatusCode } from "../../types/types";
 
 type Data = {
   progress_ms: number;
@@ -12,18 +13,24 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>,
 ) {
-  const response = await getCurrentlyPlaying().then((res) => res.json());
-  const { progress_ms, is_playing, item, currently_playing_type } =
-    await response;
+  try {
+    const response = await getCurrentlyPlaying();
+    const { status } = await response;
 
-  if (!is_playing) {
-    return res.status(200);
+    if (status === HttpStatusCode.OK) {
+      const data = await response.json();
+      const { progress_ms, is_playing, item, currently_playing_type } =
+        await data;
+      return res.status(200).json({
+        progress_ms,
+        is_playing,
+        item,
+        currently_playing_type,
+      });
+    } else if (status === HttpStatusCode.NO_CONTENT) {
+      return res.status(204).end();
+    }
+  } catch (error) {
+    return res.status(500).end();
   }
-
-  return res.status(200).json({
-    progress_ms,
-    is_playing,
-    item,
-    currently_playing_type,
-  });
 }
