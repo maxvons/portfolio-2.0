@@ -126,8 +126,6 @@ const LargeProject = ({ project }: LargeProjectProps) => {
                 <Image
                   src={image}
                   alt={projectImageAlts[index]}
-                  width={projectImageDimensions[index].width}
-                  height={projectImageDimensions[index].height}
                   placeholder="blur"
                   layout="fill"
                   objectFit="cover"
@@ -142,8 +140,6 @@ const LargeProject = ({ project }: LargeProjectProps) => {
               <Image
                 src={image}
                 alt={projectImageAlts[index]}
-                width={projectImageDimensions[index].width}
-                height={projectImageDimensions[index].height}
                 placeholder="blur"
                 layout="fill"
                 objectFit="cover"

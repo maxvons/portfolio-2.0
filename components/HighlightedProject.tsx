@@ -90,8 +90,6 @@ const HighlightedProject = ({
         <Image
           src={projectImage}
           alt={projectImageAlt}
-          width={projectImageWidth}
-          height={projectImageHeight}
           placeholder="blur"
           layout="fill"
           objectFit="cover"
