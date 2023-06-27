@@ -33,11 +33,11 @@
 }
 
 .header {
-  align-self: flex-start;
   margin-bottom: $spacer-medium;
   @include header($max-width-header, $max-width-header-desktop);
 
   @include desktop() {
+    align-self: flex-start;
     margin-bottom: $spacer-large;
     text-align: left;
   }
