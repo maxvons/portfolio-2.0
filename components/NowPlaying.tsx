@@ -28,7 +28,7 @@ const NowPlaying = () => {
   }
 
   if (error || !data) {
-    renderNotPlaying();
+    return renderNotPlaying();
   }
 
   // Render data from Spotify API.
