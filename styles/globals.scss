@@ -58,8 +58,7 @@ h1, h2, h3, h4, h6, p {
   font-display: swap;
   font-family: "Recursive";
   font-weight: 300 1000;
-  src: local(''),
-    url("/fonts/recursive/Recursive_VF_1.078.woff2") format("woff2");
+  src: url("/fonts/recursive/Recursive_VF_1.078.woff2") format("woff2");
 }
 
 // Open Sauce Sans Bold.
@@ -68,8 +67,7 @@ h1, h2, h3, h4, h6, p {
   font-family: "Open Sauce Sans";
   font-style: normal;
   font-weight: 700;
-  src: local(''),
-    url("/fonts/open-sauce-sans/OpenSauceSans-Bold.ttf") format("ttf");
+  src: url("/fonts/open-sauce-sans/OpenSauceSans-Bold.ttf") format("truetype");
 }
 
 // Open Sauce Sans Extra Bold.
@@ -78,8 +76,7 @@ h1, h2, h3, h4, h6, p {
   font-family: "Open Sauce Sans";
   font-style: normal;
   font-weight: 800;
-  src: local(''),
-    url("/fonts/open-sauce-sans/OpenSauceSans-ExtraBold.ttf") format("ttf");
+  src: url("/fonts/open-sauce-sans/OpenSauceSans-ExtraBold.ttf") format("truetype");
 }
 
 // Open Sauce Sans Black.
@@ -88,6 +85,5 @@ h1, h2, h3, h4, h6, p {
   font-family: "Open Sauce Sans";
   font-style: normal;
   font-weight: 900;
-  src: local(''),
-    url("/fonts/open-sauce-sans/OpenSauceSans-Black.ttf") format("ttf");
+  src: url("/fonts/open-sauce-sans/OpenSauceSans-Black.ttf") format("truetype");
 }
