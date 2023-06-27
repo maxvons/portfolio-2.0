@@ -46,3 +46,9 @@
 .noMargin {
   margin: 0;
 }
+
+.text {
+  @include normalText();
+  margin-bottom: $spacer-medium;
+  text-align: center;
+}

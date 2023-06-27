@@ -15,6 +15,7 @@ import Song from "../components/Song";
 import Footer from "../components/Footer";
 import Artist from "../components/Artist";
 import CustomHead from "../components/CustomHead";
+import LinkWithIcon from "../components/LinkWithIcon";
 
 const TopTenSpotify: NextPage = ({
   baseUrl,
@@ -32,7 +33,7 @@ const TopTenSpotify: NextPage = ({
     isLoading: artistIsLoading,
   } = useSWR("/api/top-artists", fetcher);
 
-  if (songError || artistError) {
+  if (songError && artistError) {
     return (
       <>
         <CustomHead
@@ -41,12 +42,56 @@ const TopTenSpotify: NextPage = ({
           url={`${baseUrl}${router.asPath}`}
           image="/images/music.jpg"
         />
-        <div>Error...</div>;
+        <Navbar open={open} onClick={() => setOpen(!open)} />
+        <Layout noPadding>
+          <div className={styles.wrapper}>
+            <Title title="My music" tag="What I listen to the most" />
+            <p className={styles.text}>
+              Something went wrong either on my side or on Spotify&apos;s side
+              😢
+            </p>
+            <LinkWithIcon text="Go back home" href="/" />
+          </div>
+        </Layout>
       </>
     );
   }
 
-  // Render songs and artists from Spotify API.
+  // Render songs from Spotify API.
+  if (!songError && artistError) {
+    return (
+      <>
+        <CustomHead
+          title="My music"
+          description="Maximilian's top ten songs on Spotify"
+          url={`${baseUrl}${router.asPath}`}
+          image="/images/music.jpg"
+        />
+        <Navbar open={open} onClick={() => setOpen(!open)} />
+        {renderSongs(songs, songIsLoading)}
+        <Footer />
+      </>
+    );
+  }
+
+  // Render artists from Spotify API.
+  if (songError && !artistError) {
+    return (
+      <>
+        <CustomHead
+          title="My music"
+          description="Maximilian's top ten artists on Spotify"
+          url={`${baseUrl}${router.asPath}`}
+          image="/images/music.jpg"
+        />
+        <Navbar open={open} onClick={() => setOpen(!open)} />
+        {renderArtists(artists, artistIsLoading, songError)}
+        <Footer />
+      </>
+    );
+  }
+
+  // Render songs and artists from Spotify Api.
   return (
     <>
       <CustomHead
@@ -56,6 +101,16 @@ const TopTenSpotify: NextPage = ({
         image="/images/music.jpg"
       />
       <Navbar open={open} onClick={() => setOpen(!open)} />
+      {renderSongs(songs, songIsLoading)}
+      {renderArtists(artists, artistIsLoading)}
+      <Footer />
+    </>
+  );
+};
+
+function renderSongs(songs: any, songIsLoading: boolean) {
+  return (
+    <>
       <Layout noPadding>
         <div className={styles.wrapper}>
           <Title title="My music" tag="What I listen to the most" />
@@ -79,6 +134,43 @@ const TopTenSpotify: NextPage = ({
           </div>
         </div>
       </Layout>
+    </>
+  );
+}
+
+function renderArtists(
+  artists: any,
+  artistIsLoading: boolean,
+  songError?: boolean,
+) {
+  if (songError) {
+    return (
+      <Layout>
+        <div className={`${styles.wrapper} ${styles.noMargin}`}>
+          <Title title="My music" tag="What I listen to the most" />
+          <h2 className={styles.header}>
+            My favorite artists on Spotify right now.
+          </h2>
+          <div className={styles.topTenContainer}>
+            {artistIsLoading ? (
+              <>
+                {[...Array(10)].map((index) => (
+                  <Artist key={index} loading />
+                ))}
+              </>
+            ) : (
+              <>
+                {deserializeTopTenArtists(artists).map((artist) => (
+                  <Artist key={artist.spotifyId} artist={artist} />
+                ))}
+              </>
+            )}
+          </div>
+        </div>
+      </Layout>
+    );
+  } else {
+    return (
       <Layout>
         <span className={styles.divider} />
         <div className={`${styles.wrapper} ${styles.noMargin}`}>
@@ -102,10 +194,9 @@ const TopTenSpotify: NextPage = ({
           </div>
         </div>
       </Layout>
-      <Footer />
-    </>
-  );
-};
+    );
+  }
+}
 
 export const getStaticProps: GetStaticProps = async () => {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
