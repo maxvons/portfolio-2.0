@@ -8,6 +8,15 @@ const nextConfig = {
   images: {
     domains: ["i.scdn.co"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/thesis",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
