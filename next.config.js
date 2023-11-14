@@ -11,7 +11,7 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/thesis",
+        source: "/thesis/download",
         destination: "/",
         permanent: true,
       },
