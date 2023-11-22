@@ -12,7 +12,8 @@ const nextConfig = {
     return [
       {
         source: "/thesis/download",
-        destination: "/",
+        destination:
+          "https://drive.google.com/file/d/1-b2hzCxrXo5alA0QrUZffEyf3uWHDRSz/view?usp=share_link",
         permanent: true,
       },
     ];
